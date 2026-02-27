@@ -217,6 +217,60 @@ Write (Markdown / MDX / OpenAPI)
 
 ---
 
+### 📄 Docs-as-Code Portal
+
+> *A traditional documentation portal explaining the Docs-as-Code methodology — what it is, how the pipeline works, and how to use the platform.*
+
+[![Live Site](https://img.shields.io/badge/Live%20Site-sulagnasasmal.github.io-a78bfa?style=flat-square&logo=githubpages&logoColor=white)](https://sulagnasasmal.github.io/docs-as-code-portal/)
+[![GitHub Repo](https://img.shields.io/badge/GitHub-docs--as--code--portal-181717?style=flat-square&logo=github)](https://github.com/SulagnaSasmal/docs-as-code-portal)
+
+#### What is it?
+
+A full documentation portal — built as a portal, not a dashboard — that explains the Docs-as-Code methodology, the five-stage pipeline, and how the Documentation Center platform works. It reads like real product documentation: left nav, table of contents, code examples, step-by-step guides, callouts, comparison tables, and prev/next navigation.
+
+#### Why I built it
+
+To demonstrate the difference between a **documentation system** (the dashboard) and a **documentation portal** (this site) — and to show I can build both. This project is also self-referential: the Docs-as-Code portal is itself built using Docs-as-Code principles, hosted on GitHub Pages, version-controlled in Git.
+
+#### Who it's for
+
+| Audience | What they find here |
+|---|---|
+| Recruiters / hiring managers | Proof of portal-quality writing across 16 pages of structured technical content |
+| Documentation engineers | CI/CD workflow YAML, Vale config, branching strategy, multi-format output setup |
+| Technical writers | Getting started guide, style linting examples, commit conventions, PR process |
+| Engineering teams | Why Docs-as-Code matters, how to integrate docs into a software CI pipeline |
+
+#### How it's structured
+
+```
+Getting Started
+├── Introduction — what the platform is, purpose, who it's for
+├── What is Docs-as-Code? — methodology, 5 principles, traditional vs DaC comparison
+└── Quick Start Guide — prerequisites, setup steps, first pipeline run
+
+Core Concepts
+├── The Docs Pipeline — all 5 stages in detail
+├── Version Control — branching strategy, commit conventions, PR process
+├── CI/CD Integration — GitHub Actions workflow, build triggers, deploy targets
+├── Style Linting — Vale config, rule categories, before/after examples
+└── Multi-Format Output — HTML, PDF, OpenAPI JSON, search index
+
+Platform Modules (6 guides)
+└── Dashboard · Live Editor · Content Map · Style Linter · Build Outputs · Configuration
+
+Reference
+├── Configuration Schema — full field reference with examples
+└── Changelog
+```
+
+#### Key concepts demonstrated
+
+`Documentation portal design` · `16-page structured content` · `GitHub Actions CI/CD` · `Vale linting`
+`MkDocs configuration` · `Branching strategy` · `Docs-as-Code methodology` · `Self-hosted on GitHub Pages`
+
+---
+
 ## Skills & Tools
 
 | Category | Tools & Technologies |
@@ -240,7 +294,8 @@ This portfolio is a living document — updated as new projects are added.
 |---|---|---|
 | ✅ Live | [VaultPay API Docs](https://github.com/SulagnaSasmal/vaultpay-api-docs) | Fintech payment API reference with NICE Actimize compliance coverage |
 | ✅ Live | [CaseForge API Docs](https://github.com/SulagnaSasmal/caseforge-api-docs) | Enterprise AML case management & SAR filing API docs |
-| ✅ Live | [DocForge Platform](https://github.com/SulagnaSasmal/Docs-as-Code-Platform) | Interactive Docs-as-Code platform dashboard |
+| ✅ Live | [Documentation Center Dashboard](https://github.com/SulagnaSasmal/Docs-as-Code-Platform) | Interactive Docs-as-Code platform dashboard |
+| ✅ Live | [Docs-as-Code Portal](https://github.com/SulagnaSasmal/docs-as-code-portal) | Traditional documentation portal explaining the DaC methodology |
 | 🔜 Coming | *More projects* | Adding as I build — check back soon |
 
 ---
