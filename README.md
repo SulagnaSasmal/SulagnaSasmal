@@ -9,7 +9,7 @@ My work spans fintech API references, enterprise compliance platforms, and end-t
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-sulagnasasmal-0A66C2?style=flat-square&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/sulagnasasmal)
 [![GitHub followers](https://img.shields.io/github/followers/SulagnaSasmal?style=flat-square&logo=github&label=Follow)](https://github.com/SulagnaSasmal)
-[![Portfolio](https://img.shields.io/badge/Portfolio-DocForge%20Platform-E8A84C?style=flat-square&logo=githubpages&logoColor=black)](https://sulagnasasmal.github.io/Docs-as-Code-Platform/docforge-platform.html)
+[![Portfolio](https://img.shields.io/badge/Portfolio-Documentation%20Center%20Platform-E8A84C?style=flat-square&logo=githubpages&logoColor=black)](https://sulagnasasmal.github.io/Documentation-Center-Platform/docforge-platform.html)
 
 </div>
 
@@ -168,8 +168,8 @@ Reference
 
 > *An interactive demonstration of a complete Docs-as-Code platform — from Markdown authoring through CI/CD validation to multi-format publishing.*
 
-[![Live Site](https://img.shields.io/badge/Live%20Site-sulagnasasmal.github.io-a78bfa?style=flat-square&logo=githubpages&logoColor=white)](https://sulagnasasmal.github.io/Docs-as-Code-Platform/docforge-platform.html)
-[![GitHub Repo](https://img.shields.io/badge/GitHub-Docs--as--Code--Platform-181717?style=flat-square&logo=github)](https://github.com/SulagnaSasmal/Docs-as-Code-Platform)
+[![Live Site](https://img.shields.io/badge/Live%20Site-sulagnasasmal.github.io-a78bfa?style=flat-square&logo=githubpages&logoColor=white)](https://sulagnasasmal.github.io/Documentation-Center-Platform/docforge-platform.html)
+[![GitHub Repo](https://img.shields.io/badge/GitHub-Documentation--Center--Platform-181717?style=flat-square&logo=github)](https://github.com/SulagnaSasmal/Documentation-Center-Platform)
 
 #### What is it?
 
@@ -294,7 +294,7 @@ This portfolio is a living document — updated as new projects are added.
 |---|---|---|
 | ✅ Live | [VaultPay API Docs](https://github.com/SulagnaSasmal/vaultpay-api-docs) | Fintech payment API reference with NICE Actimize compliance coverage |
 | ✅ Live | [CaseForge API Docs](https://github.com/SulagnaSasmal/caseforge-api-docs) | Enterprise AML case management & SAR filing API docs |
-| ✅ Live | [Documentation Center Dashboard](https://github.com/SulagnaSasmal/Docs-as-Code-Platform) | Interactive Docs-as-Code platform dashboard |
+| ✅ Live | [Documentation Center Dashboard](https://github.com/SulagnaSasmal/Documentation-Center-Platform) | Interactive Docs-as-Code platform dashboard |
 | ✅ Live | [Docs-as-Code Portal](https://github.com/SulagnaSasmal/docs-as-code-portal) | Traditional documentation portal explaining the DaC methodology |
 | 🔜 Coming | *More projects* | Adding as I build — check back soon |
 
