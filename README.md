@@ -301,6 +301,46 @@ Reference
 
 ---
 
+---
+
+## Tools I've Built
+
+Beyond documentation, I build automation tools that solve real workflow problems.
+
+---
+
+### 🎬 PPT → MP4 Documentation Automation
+
+> *An end-to-end pipeline that converts PowerPoint presentations into narrated MP4 videos — no screen recording, no manual voiceover.*
+
+[![GitHub Repo](https://img.shields.io/badge/GitHub-ppt--to--mp4--doc--automation-181717?style=flat-square&logo=github)](https://github.com/SulagnaSasmal/ppt-to-mp4-doc-automation)
+[![Python](https://img.shields.io/badge/Python-FastAPI-3776AB?style=flat-square&logo=python&logoColor=white)](https://github.com/SulagnaSasmal/ppt-to-mp4-doc-automation)
+[![Azure TTS](https://img.shields.io/badge/Azure-Text--to--Speech-0078D4?style=flat-square&logo=microsoft-azure&logoColor=white)](https://github.com/SulagnaSasmal/ppt-to-mp4-doc-automation)
+
+#### What it does
+
+Fully automated pipeline: upload a `.pptx` → get back a narrated `.mp4`. No manual recording, no screen capture.
+
+```
+PowerPoint file
+  └─► Extract slide notes (python-pptx)
+        └─► Generate AI narration (Azure TTS — Jenny Neural)
+              └─► Set slide timings (PowerPoint COM automation)
+                    └─► Export animated video (PowerPoint CreateVideo)
+                          └─► Mux audio + video (FFmpeg)
+                                └─► Download final.mp4
+```
+
+#### Why I built it
+
+Documentation teams spend hours recording walkthroughs manually. This tool eliminates that — write your slide notes once, get a narrated video automatically. Built to demonstrate that technical writers can engineer the tools their teams depend on, not just document them.
+
+#### Tech stack
+
+`Python` · `FastAPI` · `Azure Text-to-Speech` · `win32com (PowerPoint COM)` · `FFmpeg` · `Jinja2` · `pywin32`
+
+---
+
 ## Skills & Tools
 
 | Category | Tools & Technologies |
@@ -327,6 +367,7 @@ This portfolio is a living document — updated as new projects are added.
 | ✅ Live | [Documentation Center Dashboard](https://github.com/SulagnaSasmal/Documentation-Center-Platform) | Interactive Docs-as-Code platform dashboard |
 | ✅ Live | [Docs-as-Code Portal](https://github.com/SulagnaSasmal/docs-as-code-portal) | Traditional documentation portal explaining the DaC methodology |
 | ✅ Live | [Personal Portfolio Site](https://github.com/SulagnaSasmal/sulagnasasmal-site) | Light-theme personal site — work, background, expertise, and a bit of personality |
+| 🛠️ Built | [PPT → MP4 Automation](https://github.com/SulagnaSasmal/ppt-to-mp4-doc-automation) | Python tool: PowerPoint + Azure TTS + FFmpeg → narrated video pipeline |
 | 🔜 Coming | *More projects* | Adding as I build — check back soon |
 
 ---
