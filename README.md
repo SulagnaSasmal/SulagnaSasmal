@@ -313,6 +313,7 @@ Beyond documentation, I build automation tools that solve real workflow problems
 
 > *A full-stack AI application that converts raw content into polished, MSTP-compliant documentation — with auto-compliance checking, one-click fixes, and context-aware generation.*
 
+[![Live Demo](https://img.shields.io/badge/Live%20Demo-doccraft--ten.vercel.app-4c6ef5?style=flat-square&logo=vercel&logoColor=white)](https://doccraft-ten.vercel.app/)
 [![GitHub Repo](https://img.shields.io/badge/GitHub-Doccraft-181717?style=flat-square&logo=github)](https://github.com/SulagnaSasmal/Doccraft)
 [![Next.js](https://img.shields.io/badge/Next.js_14-App_Router-000000?style=flat-square&logo=next.js&logoColor=white)](https://github.com/SulagnaSasmal/Doccraft)
 [![OpenAI](https://img.shields.io/badge/OpenAI-GPT--4o-412991?style=flat-square&logo=openai&logoColor=white)](https://github.com/SulagnaSasmal/Doccraft)
@@ -411,7 +412,7 @@ This portfolio is a living document — updated as new projects are added.
 | ✅ Live | [Docs-as-Code Portal](https://github.com/SulagnaSasmal/docs-as-code-portal) | Traditional documentation portal explaining the DaC methodology |
 | ✅ Live | [Personal Portfolio Site](https://github.com/SulagnaSasmal/sulagnasasmal-site) | Light-theme personal site — work, background, expertise, and a bit of personality |
 | 🛠️ Built | [PPT → MP4 Automation](https://github.com/SulagnaSasmal/ppt-to-mp4-doc-automation) | Python tool: PowerPoint + Azure TTS + FFmpeg → narrated video pipeline |
-| 🚀 Live | [DocCraft AI](https://github.com/SulagnaSasmal/Doccraft) | Next.js + GPT-4o app: raw content → MSTP-compliant documentation with auto-compliance and one-click fixes |
+| 🚀 Live | [DocCraft AI](https://doccraft-ten.vercel.app/) | Next.js + GPT-4o app: raw content → MSTP-compliant documentation with auto-compliance and one-click fixes |
 | 🔜 Coming | *More projects* | Adding as I build — check back soon |
 
 ---
