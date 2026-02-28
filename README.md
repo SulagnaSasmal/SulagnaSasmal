@@ -309,6 +309,48 @@ Beyond documentation, I build automation tools that solve real workflow problems
 
 ---
 
+### 🤖 DocCraft AI — Intelligent Documentation Generator
+
+> *A full-stack AI application that converts raw content into polished, MSTP-compliant documentation — with auto-compliance checking, one-click fixes, and context-aware generation.*
+
+[![GitHub Repo](https://img.shields.io/badge/GitHub-Doccraft-181717?style=flat-square&logo=github)](https://github.com/SulagnaSasmal/Doccraft)
+[![Next.js](https://img.shields.io/badge/Next.js_14-App_Router-000000?style=flat-square&logo=next.js&logoColor=white)](https://github.com/SulagnaSasmal/Doccraft)
+[![OpenAI](https://img.shields.io/badge/OpenAI-GPT--4o-412991?style=flat-square&logo=openai&logoColor=white)](https://github.com/SulagnaSasmal/Doccraft)
+
+#### What it does
+
+Feed DocCraft raw content — meeting notes, specs, screenshots, anything — and it produces publication-ready documentation. It thinks like a senior technical writer: analyzing gaps, asking clarifying questions, and then generating structured output aligned to your existing style.
+
+```
+Upload raw content + context docs (style guide, glossary, OpenAPI spec)
+  └─► AI gap analysis → clarifying Q&A loop
+        └─► GPT-4o generates structured documentation
+              └─► MSTP compliance check runs automatically
+                    └─► One-click Fix per issue (instant replace or AI rewrite)
+                          └─► Export: HTML · Markdown · PDF
+```
+
+#### Key features
+
+| Feature | What it does |
+|---|---|
+| **Context Layer** | Upload previous docs, glossaries, style guides, or OpenAPI specs — AI writes consistently with your existing content |
+| **Structured glossary** | Upload a JSON glossary with `forbidden_terms` / `preferred_terms` to enforce terminology automatically |
+| **MSTP Compliance Mode** | Auto-runs after generation — checks forbidden words, passive voice, Title Case headings, non-imperative steps, callout format |
+| **One-click Fix** | Instant string replace for terminology; AI-assisted rewrite for voice/structure issues |
+| **Inline AI editing** | Select any text → Simplify, Expand, Add Example, Make Concise |
+| **PDF export** | Print-ready formatting via browser print dialog — zero extra dependencies |
+
+#### Why I built it
+
+To demonstrate that a technical writer can engineer the tools that eliminate manual documentation work — not just describe them. DocCraft is a full production-quality Next.js application deployed on Vercel, with a real AI pipeline, style enforcement engine, and compliance workflow.
+
+#### Tech stack
+
+`Next.js 14` · `TypeScript` · `Tailwind CSS` · `OpenAI GPT-4o / GPT-4o-mini` · `React Markdown` · `Vercel`
+
+---
+
 ### 🎬 PPT → MP4 Documentation Automation
 
 > *An end-to-end pipeline that converts PowerPoint presentations into narrated MP4 videos — no screen recording, no manual voiceover.*
@@ -351,8 +393,9 @@ Documentation teams spend hours recording walkthroughs manually. This tool elimi
 | **API documentation** | REST APIs, webhooks, request/response schemas, curl examples, SDK guides |
 | **Compliance domains** | PCI DSS, BSA/AML, FinCEN, FATF, GDPR, SOC 2, ISO 27001, PSD2/SCA |
 | **NICE Actimize suite** | IFM-AI (fraud), SAM (AML), CDD (KYC), Sanctions Screening |
-| **Dev tools** | Git, GitHub, VS Code, Python, HTML/CSS, Bash |
-| **Methodologies** | Docs-as-Code, structured authoring, topic-based writing, information architecture |
+| **Dev tools** | Git, GitHub, VS Code, Python, HTML/CSS, Bash, TypeScript, Next.js |
+| **AI & automation** | OpenAI GPT-4o, Azure TTS, FastAPI, FFmpeg, GitHub Copilot, Claude, Napkin AI |
+| **Methodologies** | Docs-as-Code, structured authoring, topic-based writing, information architecture, MSTP |
 
 ---
 
@@ -368,6 +411,7 @@ This portfolio is a living document — updated as new projects are added.
 | ✅ Live | [Docs-as-Code Portal](https://github.com/SulagnaSasmal/docs-as-code-portal) | Traditional documentation portal explaining the DaC methodology |
 | ✅ Live | [Personal Portfolio Site](https://github.com/SulagnaSasmal/sulagnasasmal-site) | Light-theme personal site — work, background, expertise, and a bit of personality |
 | 🛠️ Built | [PPT → MP4 Automation](https://github.com/SulagnaSasmal/ppt-to-mp4-doc-automation) | Python tool: PowerPoint + Azure TTS + FFmpeg → narrated video pipeline |
+| 🚀 Live | [DocCraft AI](https://github.com/SulagnaSasmal/Doccraft) | Next.js + GPT-4o app: raw content → MSTP-compliant documentation with auto-compliance and one-click fixes |
 | 🔜 Coming | *More projects* | Adding as I build — check back soon |
 
 ---
