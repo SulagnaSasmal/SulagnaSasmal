@@ -1,4 +1,4 @@
-<img align="right" src="assets/Sulagnapic2.jpeg" width="190" alt="Sulagna Sasmal" />
+
 
 # Hi, I'm Sulagna 👋
 
