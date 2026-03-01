@@ -1,67 +1,85 @@
-<div align="center">
+<img align="right" src="assets/Sulagnapic2.jpeg" width="190" alt="Sulagna Sasmal" />
 
-# Hi, I'm Sulagna Sasmal 👋
+# Hi, I'm Sulagna 👋
 
-**Technical Writer · Documentation Engineer · API Documentation Specialist**
+**Senior Technical Writer · Documentation Architect · FinTech Specialist**
 
-I build documentation systems that behave like software — version-controlled, peer-reviewed, automatically built, and published.
-My work spans fintech API references, enterprise compliance platforms, and end-to-end Docs-as-Code pipelines.
+19 years writing documentation for payments, fraud prevention, and compliance platforms — at Fundtech, SunGard, Avaya, and NICE Actimize. I build documentation systems that behave like software.
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-sulagnasasmal-0A66C2?style=flat-square&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/sulagnasasmal)
-[![GitHub followers](https://img.shields.io/github/followers/SulagnaSasmal?style=flat-square&logo=github&label=Follow)](https://github.com/SulagnaSasmal)
 [![Portfolio](https://img.shields.io/badge/Portfolio-sulagnasasmal.github.io-E8A84C?style=flat-square&logo=githubpages&logoColor=black)](https://sulagnasasmal.github.io/sulagnasasmal-site/)
+[![GitHub followers](https://img.shields.io/github/followers/SulagnaSasmal?style=flat-square&logo=github&label=Follow)](https://github.com/SulagnaSasmal)
 
-</div>
-
----
-
-## About Me
-
-I specialize in **technical documentation for regulated industries** — primarily financial technology, compliance platforms, and developer-facing APIs. My documentation work is aligned to enterprise standards including **NICE Actimize** (IFM, SAM, CDD, Sanctions), **PCI DSS**, **BSA/AML**, **FATF**, and **FinCEN** regulatory frameworks.
-
-My approach treats documentation the way engineers treat code:
-
-- ✍️ **Write** in Markdown / structured formats
-- 🔀 **Review** via Git pull requests
-- ⚙️ **Build** with CI/CD pipelines (GitHub Actions, MkDocs, Sphinx)
-- 🔍 **Validate** with automated style linting (Vale)
-- 🚀 **Publish** continuously to GitHub Pages / Netlify / S3
+<br clear="right" />
 
 ---
 
-## Portfolio Projects
+## What I do
 
-Each project below is a fully authored, end-to-end documentation site — built using Docs-as-Code principles and hosted on GitHub Pages.
+- 📝 **Developer API references** — REST endpoints, webhooks, OAuth, error codes (Stripe / Plaid quality bar)
+- 🏛️ **Enterprise admin docs** — MadCap Flare HTML, regulated platforms, step-by-step procedures
+- ⚙️ **Docs-as-Code pipelines** — Vale linting, GitHub Actions, MkDocs, GitHub Pages
+- 🤖 **AI-assisted documentation tools** — Next.js + GPT-4o
+- 💳 **FinTech domain depth** — ACH, Fedwire, SWIFT, RTP/FedNow, OFAC, BSA/AML, ISO 20022
 
 ---
 
-### 🌐 Personal Portfolio Site
+## Tools & tech
 
-> *A light-theme personal portfolio showcasing my work, background, and expertise — built as a static site and hosted on GitHub Pages.*
+![MkDocs](https://img.shields.io/badge/MkDocs-526CFE?style=flat-square&logo=materialformkdocs&logoColor=white)
+![GitHub Actions](https://img.shields.io/badge/GitHub_Actions-2088FF?style=flat-square&logo=githubactions&logoColor=white)
+![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-181717?style=flat-square&logo=github&logoColor=white)
+![Next.js](https://img.shields.io/badge/Next.js-000000?style=flat-square&logo=nextdotjs&logoColor=white)
+![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white)
+![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white)
+![Azure TTS](https://img.shields.io/badge/Azure_TTS-0078D4?style=flat-square&logo=microsoftazure&logoColor=white)
+![OpenAI](https://img.shields.io/badge/OpenAI_GPT--4o-412991?style=flat-square&logo=openai&logoColor=white)
+![Vale](https://img.shields.io/badge/Vale_linting-333333?style=flat-square&logoColor=white)
+![Git](https://img.shields.io/badge/Git-F05032?style=flat-square&logo=git&logoColor=white)
+
+---
+
+## Portfolio at a glance
+
+| Project | Type | |
+|---|---|---|
+| **PayPlus REST API Developer Reference** | Developer API reference | [View →](https://sulagnasasmal.github.io/payments-api-guide/) |
+| **PayPlus Enterprise Administration Guide** | Enterprise admin docs | [View →](https://sulagnasasmal.github.io/payplus-admin-guide/) |
+| **US Payments Hub** | Operations & compliance reference | [View →](https://sulagnasasmal.github.io/us-payments-hub/) |
+| **VaultPay API Docs** | Fintech payment API reference | [View →](https://sulagnasasmal.github.io/vaultpay-api-docs/) |
+| **CaseForge API Docs** | Enterprise AML & SAR filing API | [View →](https://sulagnasasmal.github.io/caseforge-api-docs/) |
+| **DocForge Platform** | Docs-as-Code platform dashboard | [View →](https://sulagnasasmal.github.io/Documentation-Center-Platform/docforge-platform.html) |
+| **Docs-as-Code Portal** | DaC methodology documentation | [View →](https://sulagnasasmal.github.io/docs-as-code-portal/) |
+| **DocCraft AI** | Next.js + GPT-4o docs generator | [View →](https://doccraft-ten.vercel.app/) |
+| **PPT → MP4 Automation** | Python narrated video pipeline | [GitHub →](https://github.com/SulagnaSasmal/ppt-to-mp4-doc-automation) |
+
+---
+
+## GitHub stats
+
+<p>
+  <img height="155" src="https://github-readme-stats.vercel.app/api?username=SulagnaSasmal&show_icons=true&theme=default&hide_border=true&count_private=true" />
+  <img height="155" src="https://github-readme-stats.vercel.app/api/top-langs/?username=SulagnaSasmal&layout=compact&theme=default&hide_border=true&langs_count=6" />
+</p>
+
+---
+
+## Documentation projects
+
+Each project below is a fully authored, end-to-end documentation site — built using Docs-as-Code principles or enterprise HTML, hosted on GitHub Pages.
+
+---
+
+### 🌐 Personal portfolio site
+
+> *A light-theme personal portfolio showcasing my work, background, and expertise.*
 
 [![Live Site](https://img.shields.io/badge/Live%20Site-sulagnasasmal.github.io-E8A84C?style=flat-square&logo=githubpages&logoColor=black)](https://sulagnasasmal.github.io/sulagnasasmal-site/)
 [![GitHub Repo](https://img.shields.io/badge/GitHub-sulagnasasmal--site-181717?style=flat-square&logo=github)](https://github.com/SulagnaSasmal/sulagnasasmal-site)
 
-#### What is it?
+A hand-coded personal portfolio site — single HTML file, no frameworks. Covers my professional background, featured documentation projects, compliance expertise, experience timeline, and a personal section on travel and food.
 
-A hand-coded personal portfolio site — built as a single HTML file with no frameworks. Inspired by the minimal, content-first design pattern of leading technical portfolio sites. Covers my professional background, featured documentation projects, compliance expertise, experience timeline, and a personal section on travel and food.
-
-#### Why I built it
-
-To have a human-facing home on the web — a place that shows not just *what* I've built, but *who I am* as a practitioner. The technical portfolio projects demonstrate depth; this site shows the full picture.
-
-#### Who it's for
-
-| Audience | What they find here |
-|---|---|
-| Recruiters / hiring managers | Full professional background, featured work, skills, and contact |
-| Collaborators | Links to all portfolio projects with context on each |
-| Anyone curious | A glimpse into the person behind the documentation |
-
-#### Key design decisions
-
-`Light theme` · `Amber accent (#E8A84C)` · `Inter + Outfit + JetBrains Mono` · `No frameworks`
-`Single HTML file` · `GitHub Pages hosted` · `Mobile-friendly layout`
+`Light theme` · `Amber accent (#E8A84C)` · `Inter + Outfit + JetBrains Mono` · `No frameworks` · `GitHub Pages`
 
 ---
 
@@ -72,78 +90,26 @@ To have a human-facing home on the web — a place that shows not just *what* I'
 [![Live Site](https://img.shields.io/badge/Live%20Site-sulagnasasmal.github.io-14b8a6?style=flat-square&logo=githubpages&logoColor=white)](https://sulagnasasmal.github.io/vaultpay-api-docs/)
 [![GitHub Repo](https://img.shields.io/badge/GitHub-vaultpay--api--docs-181717?style=flat-square&logo=github)](https://github.com/SulagnaSasmal/vaultpay-api-docs)
 
-#### What is it?
-
-A comprehensive REST API reference for **VaultPay** — a fictional but realistically modelled payment processing platform. The documentation covers the complete payments lifecycle from authentication through settlement, dispute resolution, and compliance reporting. Written and structured to match the quality bar of real-world developer portals (Stripe, Adyen, Braintree).
-
-#### Why I built it
-
-To demonstrate professional-grade **fintech API documentation** skills in a single, self-contained portfolio piece. The goal was to show I can document not just endpoints, but the entire ecosystem around a payment API: authentication patterns, webhook security, test data, error handling, compliance obligations, and risk intelligence integrations.
-
-#### Who it's for
+A comprehensive REST API reference for **VaultPay** — a realistically modelled fintech payment platform. Documents the complete payments lifecycle: authentication, settlement, disputes, and compliance reporting. Structured to match the quality bar of real-world developer portals (Stripe, Adyen, Braintree).
 
 | Audience | What they find here |
 |---|---|
 | Backend developers | Complete endpoint reference, request/response schemas, curl examples, SDKs |
 | Compliance teams | PCI DSS, PSD2/SCA, BSA/AML, GDPR coverage, AML alert management |
-| QA / Sandbox users | Test card numbers, ACH bank accounts, decline codes, webhook test events |
 | Security engineers | HMAC-SHA256 webhook verification, 3D Secure flow, SCA exemption handling |
 
-#### How it's structured
-
-```
-Getting Started
-├── Authentication (API keys, OAuth, request signing)
-├── Idempotency & Pagination
-└── Test Data (success/decline cards, 3DS cards, ACH accounts)
-
-Core API
-├── Payments (create, capture, cancel, list)
-├── Refunds (full and partial)
-├── Payouts (bank transfers, FX)
-└── Customers & Payment Methods
-
-Compliance & Risk (NICE Actimize aligned)
-├── Risk Scoring — IFM-AI model, risk signals, velocity checks
-├── 3D Secure / SCA — auth flow, exemption framework (PSD2)
-├── Disputes — lifecycle, evidence submission, webhooks
-├── AML Monitoring — SAM transaction monitoring, structuring, PEP flags
-├── KYC Verification — CDD identity checks, document verification
-└── Sanctions Screening — OFAC, UN, EU, HMT, PEP, Adverse Media
-
-Webhooks
-├── Event reference (25+ event types)
-└── Signature verification (HMAC-SHA256)
-
-Reference
-├── Error codes
-├── Rate limits
-└── Changelog
-```
-
-#### Key standards covered
-
-`PCI DSS Level 1` · `SOC 2 Type II` · `ISO 27001` · `GDPR` · `CCPA` · `BSA/AML` · `PSD2 / SCA` · `FATF`
-**NICE Actimize**: IFM-AI (fraud/risk) · SAM (AML monitoring) · CDD (KYC) · Sanctions
+`PCI DSS Level 1` · `PSD2 / SCA` · `BSA/AML` · `FATF` · `NICE Actimize: IFM-AI · SAM · CDD · Sanctions`
 
 ---
 
-### ⚖️ CaseForge Enterprise Case Management API Docs
+### ⚖️ CaseForge Enterprise Case Management API
 
-> *API reference for an enterprise AML/compliance case management platform, covering SAR filing, tamper-evident audit trails, and regulatory workflow automation.*
+> *API reference for an enterprise AML/compliance case management platform — SAR filing, tamper-evident audit trails, regulatory workflow automation.*
 
 [![Live Site](https://img.shields.io/badge/Live%20Site-sulagnasasmal.github.io-E8A84C?style=flat-square&logo=githubpages&logoColor=black)](https://sulagnasasmal.github.io/caseforge-api-docs/caseforge-api-docs.html)
 [![GitHub Repo](https://img.shields.io/badge/GitHub-caseforge--api--docs-181717?style=flat-square&logo=github)](https://github.com/SulagnaSasmal/caseforge-api-docs)
 
-#### What is it?
-
-A v10.2 API reference for **CaseForge** — an enterprise compliance case management platform used by financial institutions to manage AML investigations, file Suspicious Activity Reports (SARs) with FinCEN, and maintain tamper-evident audit trails. The documentation is styled for an enterprise audience (compliance officers, legal teams, system integrators) rather than consumer developers.
-
-#### Why I built it
-
-To demonstrate my ability to document **high-stakes, regulated enterprise software** where accuracy and completeness are non-negotiable. Case management and SAR filing APIs require precise documentation of status lifecycles, required fields, error conditions, and regulatory filing procedures — a very different challenge from standard CRUD API docs.
-
-#### Who it's for
+A v10.2 API reference for **CaseForge** — an enterprise compliance platform for managing AML investigations, filing SARs with FinCEN, and maintaining tamper-evident audit trails. Written for compliance officers, legal teams, and system integrators.
 
 | Audience | What they find here |
 |---|---|
@@ -152,45 +118,7 @@ To demonstrate my ability to document **high-stakes, regulated enterprise softwa
 | AML analysts | Alert ingestion, case assignment, escalation paths, goAML export |
 | Legal / Audit teams | Tamper-evident audit trail, SHA-256 hash chaining, signed PDF export |
 
-#### How it's structured
-
-```
-Getting Started
-├── Authentication (Bearer tokens, API key rotation)
-├── Compliance & Security (SOC 2, ISO 27001, FedRAMP, FinCEN BSA, FATF, GDPR)
-└── Sandbox Environment (test credentials, pre-loaded case types)
-
-Case Management
-├── Work Items (create, list, update, assign, close)
-├── Case Workflows (state machine, transition rules)
-└── Attachments & Evidence
-
-SAR Management (v10.2)
-├── POST /api/v1/sars — Create draft SAR
-├── GET /api/v1/sars — List / filter SARs
-├── PATCH /api/v1/sars/{id}/status — Transition status
-└── SAR Status Lifecycle: draft → pending_review → approved → filed → returned → withdrawn
-
-Audit Trail
-├── GET /api/v1/audit/events — Query tamper-evident log
-├── POST /api/v1/audit/export — Export (JSON / CSV / signed PDF)
-└── SHA-256 hash chain integrity model
-
-Notifications & Webhooks
-├── POST /api/v1/webhooks — Register endpoint
-├── GET /api/v1/webhooks — List subscriptions
-└── 15 event types: case.*, sar.*, policy.*, audit.*, user.*
-
-Reference
-├── Error codes & status transitions
-├── Rate limits
-└── Changelog (v10.2)
-```
-
-#### Key standards covered
-
-`FinCEN BSA e-filing` · `FATF Recommendation 20` · `EU AMLD6` · `FINRA Rule 3310` · `GDPR / CCPA`
-`SOC 2 Type II` · `ISO 27001` · `FedRAMP (in process)` · `goAML` · `ACAMS`
+`FinCEN BSA e-filing` · `FATF Recommendation 20` · `EU AMLD6` · `SOC 2 Type II` · `ISO 27001`
 
 ---
 
@@ -201,35 +129,7 @@ Reference
 [![Live Site](https://img.shields.io/badge/Live%20Site-sulagnasasmal.github.io-a78bfa?style=flat-square&logo=githubpages&logoColor=white)](https://sulagnasasmal.github.io/Documentation-Center-Platform/docforge-platform.html)
 [![GitHub Repo](https://img.shields.io/badge/GitHub-Documentation--Center--Platform-181717?style=flat-square&logo=github)](https://github.com/SulagnaSasmal/Documentation-Center-Platform)
 
-#### What is it?
-
-A fully interactive **Docs-as-Code platform dashboard** built as a single-page application. It demonstrates the complete documentation engineering pipeline — from writing in Markdown to style-linting, building multi-format outputs, and deploying via CI/CD. The platform includes 6 interactive modules: Dashboard, Live Editor, Content Map, Style Linter, Build Outputs, and Configuration.
-
-#### Why I built it
-
-To show platform-level documentation engineering thinking, not just writing skill. This project demonstrates I understand the **tooling, infrastructure, and automation** that modern documentation teams depend on — and that I can design, document, and demonstrate those systems clearly.
-
-#### Who it's for
-
-| Audience | What they find here |
-|---|---|
-| Engineering managers | End-to-end Docs-as-Code workflow with CI/CD integration |
-| Documentation teams | Platform capabilities: editor, linter, content map, build outputs |
-| Recruiters / hiring managers | Evidence of platform-level technical documentation thinking |
-| Collaborators | Living portfolio hub linking to all project repos |
-
-#### How the pipeline works
-
-```
-Write (Markdown / MDX / OpenAPI)
-  └─► Commit & Pull Request (Git / GitHub)
-        └─► CI Pipeline triggers (GitHub Actions)
-              ├─► Style Lint (Vale rules — passive voice, terminology, broken links)
-              ├─► Build (MkDocs / Sphinx / Hugo → HTML, PDF, OpenAPI JSON)
-              └─► Deploy (GitHub Pages / Netlify / S3 CDN)
-```
-
-#### Platform modules
+A fully interactive Docs-as-Code platform dashboard — a single-page application with six modules demonstrating the complete documentation engineering pipeline.
 
 | Module | What it does |
 |---|---|
@@ -240,64 +140,20 @@ Write (Markdown / MDX / OpenAPI)
 | **Build Outputs** | View and download HTML site, PDF manual, OpenAPI spec, search index per build |
 | **Configuration** | Site metadata, nav structure, theme tokens, lint rules, CI triggers, deploy targets |
 
-#### Key concepts demonstrated
-
-`Docs-as-Code` · `Single-source publishing` · `CI/CD for documentation` · `Vale style linting`
-`Multi-format output` · `Git-native versioning` · `GitHub Pages deployment` · `Information architecture`
+`Docs-as-Code` · `CI/CD for documentation` · `Vale style linting` · `Multi-format output` · `GitHub Pages`
 
 ---
 
 ### 📄 Docs-as-Code Portal
 
-> *A traditional documentation portal explaining the Docs-as-Code methodology — what it is, how the pipeline works, and how to use the platform.*
+> *A full documentation portal explaining the Docs-as-Code methodology — what it is, how the pipeline works, and how to use the platform.*
 
 [![Live Site](https://img.shields.io/badge/Live%20Site-sulagnasasmal.github.io-a78bfa?style=flat-square&logo=githubpages&logoColor=white)](https://sulagnasasmal.github.io/docs-as-code-portal/)
 [![GitHub Repo](https://img.shields.io/badge/GitHub-docs--as--code--portal-181717?style=flat-square&logo=github)](https://github.com/SulagnaSasmal/docs-as-code-portal)
 
-#### What is it?
+A 16-page documentation portal that explains the Docs-as-Code methodology, the five-stage pipeline, and how the Documentation Center platform works. Built like real product documentation — left nav, table of contents, code examples, step-by-step guides, callouts, comparison tables, and prev/next navigation. Self-referential: the portal is itself built using Docs-as-Code principles.
 
-A full documentation portal — built as a portal, not a dashboard — that explains the Docs-as-Code methodology, the five-stage pipeline, and how the Documentation Center platform works. It reads like real product documentation: left nav, table of contents, code examples, step-by-step guides, callouts, comparison tables, and prev/next navigation.
-
-#### Why I built it
-
-To demonstrate the difference between a **documentation system** (the dashboard) and a **documentation portal** (this site) — and to show I can build both. This project is also self-referential: the Docs-as-Code portal is itself built using Docs-as-Code principles, hosted on GitHub Pages, version-controlled in Git.
-
-#### Who it's for
-
-| Audience | What they find here |
-|---|---|
-| Recruiters / hiring managers | Proof of portal-quality writing across 16 pages of structured technical content |
-| Documentation engineers | CI/CD workflow YAML, Vale config, branching strategy, multi-format output setup |
-| Technical writers | Getting started guide, style linting examples, commit conventions, PR process |
-| Engineering teams | Why Docs-as-Code matters, how to integrate docs into a software CI pipeline |
-
-#### How it's structured
-
-```
-Getting Started
-├── Introduction — what the platform is, purpose, who it's for
-├── What is Docs-as-Code? — methodology, 5 principles, traditional vs DaC comparison
-└── Quick Start Guide — prerequisites, setup steps, first pipeline run
-
-Core Concepts
-├── The Docs Pipeline — all 5 stages in detail
-├── Version Control — branching strategy, commit conventions, PR process
-├── CI/CD Integration — GitHub Actions workflow, build triggers, deploy targets
-├── Style Linting — Vale config, rule categories, before/after examples
-└── Multi-Format Output — HTML, PDF, OpenAPI JSON, search index
-
-Platform Modules (6 guides)
-└── Dashboard · Live Editor · Content Map · Style Linter · Build Outputs · Configuration
-
-Reference
-├── Configuration Schema — full field reference with examples
-└── Changelog
-```
-
-#### Key concepts demonstrated
-
-`Documentation portal design` · `16-page structured content` · `GitHub Actions CI/CD` · `Vale linting`
-`MkDocs configuration` · `Branching strategy` · `Docs-as-Code methodology` · `Self-hosted on GitHub Pages`
+`Documentation portal design` · `16-page structured content` · `GitHub Actions CI/CD` · `Vale linting` · `MkDocs`
 
 ---
 
@@ -308,27 +164,16 @@ Reference
 [![Live Site](https://img.shields.io/badge/Live%20Site-sulagnasasmal.github.io-14b8a6?style=flat-square&logo=githubpages&logoColor=white)](https://sulagnasasmal.github.io/us-payments-hub/)
 [![GitHub Repo](https://img.shields.io/badge/GitHub-us--payments--hub-181717?style=flat-square&logo=github)](https://github.com/SulagnaSasmal/us-payments-hub)
 
-#### What is it?
-
-An eight-page HTML documentation site covering ACH, Fedwire, SWIFT, RTP, FedNow, and Card Networks — the full landscape of US payment rails. The site documents how each rail works, who owns it, what message standards it uses, key compliance requirements, and how it compares to the others. A dedicated scenarios page walks through 12 real-world payment situations across the rails.
-
-#### Why I built it
-
-To demonstrate that I can document the payment infrastructure itself — not just the APIs and platforms built on top of it. This kind of reference is what a new payments analyst, a bank operations trainer, or a compliance team building a desk reference would actually reach for. It draws directly on my experience at Fundtech India (2008–2010), where I documented the CashIn and Global CASHplus payment hub systems that are the direct predecessors of Finastra GlobalPAYplus.
-
-#### Who it's for
+An eight-page HTML site covering ACH, Fedwire, SWIFT, RTP, FedNow, and Card Networks — the full landscape of US payment rails. Documents how each rail works, who owns it, message standards, key compliance requirements, and 12 real-world payment scenarios. Draws directly on my Fundtech India experience (2008–2010) documenting CashIn and Global CASHplus, the direct predecessors of Finastra GlobalPAYplus.
 
 | Audience | What they find here |
 |---|---|
 | Bank operations staff | How each rail works, cutoff times, settlement windows, failure handling |
 | Compliance analysts | OFAC, BSA Travel Rule, AML obligations by rail |
-| Payments engineers | Message standards (ISO 20022, NACHA, SWIFT MT/MX), routing number and BIC lookup |
+| Payments engineers | Message standards (ISO 20022, NACHA, SWIFT MT/MX), routing and BIC lookup |
 | Payments onboarding teams | 12 scenario walkthroughs across all rails |
 
-#### Coverage
-
-`ACH` · `Fedwire (ISO 20022 March 2025)` · `SWIFT (MT + MX + gpi)` · `TCH RTP` · `FedNow` · `Card Networks`
-`12 scenario walkthroughs` · `MadCap Flare-inspired enterprise HTML` · `GitHub Pages hosted`
+`ACH` · `Fedwire (ISO 20022 March 2025)` · `SWIFT (MT + MX + gpi)` · `TCH RTP` · `FedNow` · `Card Networks` · `12 scenario walkthroughs`
 
 ---
 
@@ -339,15 +184,7 @@ To demonstrate that I can document the payment infrastructure itself — not jus
 [![Live Site](https://img.shields.io/badge/Live%20Site-sulagnasasmal.github.io-E8A84C?style=flat-square&logo=githubpages&logoColor=black)](https://sulagnasasmal.github.io/payplus-admin-guide/)
 [![GitHub Repo](https://img.shields.io/badge/GitHub-payplus--admin--guide-181717?style=flat-square&logo=github)](https://github.com/SulagnaSasmal/payplus-admin-guide)
 
-#### What is it?
-
-A full system administration guide for **PayPlus Enterprise v3.2** — a fictional but realistically modeled multi-rail payment hub for financial institutions. The guide covers everything a bank IT administrator needs: installation, user management, payment rail connector configuration, workflow engine, monitoring and alerts, compliance controls (OFAC, BSA, AML), and troubleshooting.
-
-#### Why I built it
-
-To demonstrate my ability to document enterprise on-premises financial software at the depth that real bank IT teams need. This is the companion admin guide to the PayPlus REST API reference — together they show both sides of platform documentation. The product model draws on my Fundtech India experience documenting CashIn and Global CASHplus, the direct ancestors of GlobalPAYplus.
-
-#### Who it's for
+A full system administration guide for **PayPlus Enterprise v3.2** — a realistically modeled multi-rail payment hub for financial institutions. Covers installation, RBAC/LDAP/SSO, payment rail connector configuration, workflow engine, monitoring, OFAC/BSA/AML compliance controls, and troubleshooting.
 
 | Audience | What they find here |
 |---|---|
@@ -356,19 +193,10 @@ To demonstrate my ability to document enterprise on-premises financial software 
 | Payments operations | Connector config per rail, approval workflows, STP rules, bulk ACH |
 | Compliance officers | OFAC screening engine, hold queue actions, BSA Travel Rule by rail, AML integration |
 
-#### Structure
-
 ```
-Installation — system requirements, 7-step procedure, DB setup, post-install validation
-User Management — 5 built-in roles, permissions matrix, LDAP, SAML 2.0 SSO
-Payment Rail Connectors — ACH, Fedwire (ISO 20022), SWIFT (SAA/MQ), RTP, FedNow
-Workflow Engine — payment lifecycle, approval models, rules engine (5 types), STP, bulk ACH
-Monitoring & Alerts — dashboard, queue monitor, 10 built-in alert rules, SLA tracking
-Compliance Configuration — OFAC engine, hold queue, AML adapter, BSA Travel Rule, audit trail
-Troubleshooting — error codes 1xxx–5xxx, common issues, log locations, support escalation
+Installation · User Management · Payment Rail Connectors · Workflow Engine
+Monitoring & Alerts · Compliance Configuration · Troubleshooting
 ```
-
-#### Key concepts covered
 
 `RBAC` · `LDAP / SAML 2.0 SSO` · `ISO 20022 pacs.008/pacs.009` · `OFAC sanctions screening`
 `BSA Travel Rule (31 CFR 103.33)` · `AML integration (NICE Actimize / Oracle FCCM)` · `MadCap Flare-inspired HTML`
@@ -382,15 +210,7 @@ Troubleshooting — error codes 1xxx–5xxx, common issues, log locations, suppo
 [![Live Site](https://img.shields.io/badge/Live%20Site-sulagnasasmal.github.io-E8A84C?style=flat-square&logo=githubpages&logoColor=black)](https://sulagnasasmal.github.io/payments-api-guide/)
 [![GitHub Repo](https://img.shields.io/badge/GitHub-payments--api--guide-181717?style=flat-square&logo=github)](https://github.com/SulagnaSasmal/payments-api-guide)
 
-#### What is it?
-
-A developer-facing REST API reference for **PayPlus REST API v2.1** — the integration layer of the PayPlus Enterprise payment hub. Written and structured to match the quality bar of leading fintech developer portals (Stripe, Plaid). It covers authentication, ACH payments, instant payments (RTP/FedNow), wire transfers (Fedwire/SWIFT), webhooks, and a complete error code reference.
-
-#### Why I built it
-
-To demonstrate the full range of API documentation challenges in a single, self-contained project: synchronous vs. asynchronous patterns, webhook security (HMAC-SHA256 verification with a Python code example), multi-rail endpoint design, ISO 20022 message concepts, and regulatory error codes — all in a readable, developer-first format.
-
-#### Who it's for
+A developer-facing REST API reference for **PayPlus REST API v2.1**. Written to match the quality bar of leading fintech developer portals (Stripe, Plaid) — authentication, ACH payments, instant payments (RTP/FedNow), wire transfers (Fedwire/SWIFT), webhooks, and a complete error code reference.
 
 | Audience | What they find here |
 |---|---|
@@ -399,22 +219,12 @@ To demonstrate the full range of API documentation challenges in a single, self-
 | Security engineers | HMAC-SHA256 webhook verification with replay protection |
 | Compliance teams | OFAC error handling, BSA Travel Rule required fields, ACH return codes |
 
-#### Structure
-
 ```
-Authentication — OAuth 2.0 client credentials, API key, scopes, idempotency, rate limiting
-ACH Payments — initiate, batch submit, status, return details (R01–R85), reversal
-Instant Payments — RTP/FedNow (synchronous), Request for Payment, rail selection logic
-Wire Transfers — Fedwire/SWIFT, payment recall (camt.056), UETR, IMAD/OMAD
-Webhooks — HMAC-SHA256 verification, 14 event types, retry logic, payload examples
-Error Codes — HTTP status table, validation/auth/business rule errors, ACH/ISO 20022 return codes
+Authentication · ACH Payments · Instant Payments (RTP/FedNow) · Wire Transfers
+Webhooks · Error Codes
 ```
 
-#### Key concepts covered
-
-`OAuth 2.0` · `Synchronous instant payment API` · `Webhook HMAC-SHA256 verification`
-`ISO 20022 (pacs.008, camt.056)` · `ACH return codes R01–R85` · `UETR / SWIFT gpi`
-`Developer API reference style (Stripe/Plaid-inspired)` · `JSON request/response examples`
+`OAuth 2.0` · `Webhook HMAC-SHA256` · `ISO 20022 (pacs.008, camt.056)` · `ACH return codes R01–R85` · `SWIFT gpi / UETR`
 
 ---
 
@@ -435,9 +245,7 @@ Beyond documentation, I build automation tools that solve real workflow problems
 [![Next.js](https://img.shields.io/badge/Next.js_14-App_Router-000000?style=flat-square&logo=next.js&logoColor=white)](https://github.com/SulagnaSasmal/Doccraft)
 [![OpenAI](https://img.shields.io/badge/OpenAI-GPT--4o-412991?style=flat-square&logo=openai&logoColor=white)](https://github.com/SulagnaSasmal/Doccraft)
 
-#### What it does
-
-Feed DocCraft raw content — meeting notes, specs, screenshots, anything — and it produces publication-ready documentation. It thinks like a senior technical writer: analyzing gaps, asking clarifying questions, and then generating structured output aligned to your existing style.
+Feed DocCraft raw content — meeting notes, specs, screenshots, anything — and it produces publication-ready documentation. It thinks like a senior technical writer: analyzing gaps, asking clarifying questions, then generating structured output aligned to your existing style.
 
 ```
 Upload raw content + context docs (style guide, glossary, OpenAPI spec)
@@ -448,22 +256,12 @@ Upload raw content + context docs (style guide, glossary, OpenAPI spec)
                           └─► Export: HTML · Markdown · PDF
 ```
 
-#### Key features
-
 | Feature | What it does |
 |---|---|
 | **Context Layer** | Upload previous docs, glossaries, style guides, or OpenAPI specs — AI writes consistently with your existing content |
-| **Structured glossary** | Upload a JSON glossary with `forbidden_terms` / `preferred_terms` to enforce terminology automatically |
-| **MSTP Compliance Mode** | Auto-runs after generation — checks forbidden words, passive voice, Title Case headings, non-imperative steps, callout format |
+| **MSTP Compliance Mode** | Auto-runs after generation — checks forbidden words, passive voice, Title Case headings, non-imperative steps |
 | **One-click Fix** | Instant string replace for terminology; AI-assisted rewrite for voice/structure issues |
 | **Inline AI editing** | Select any text → Simplify, Expand, Add Example, Make Concise |
-| **PDF export** | Print-ready formatting via browser print dialog — zero extra dependencies |
-
-#### Why I built it
-
-To demonstrate that a technical writer can engineer the tools that eliminate manual documentation work — not just describe them. DocCraft is a full production-quality Next.js application deployed on Vercel, with a real AI pipeline, style enforcement engine, and compliance workflow.
-
-#### Tech stack
 
 `Next.js 14` · `TypeScript` · `Tailwind CSS` · `OpenAI GPT-4o / GPT-4o-mini` · `React Markdown` · `Vercel`
 
@@ -477,27 +275,18 @@ To demonstrate that a technical writer can engineer the tools that eliminate man
 [![Python](https://img.shields.io/badge/Python-FastAPI-3776AB?style=flat-square&logo=python&logoColor=white)](https://github.com/SulagnaSasmal/ppt-to-mp4-doc-automation)
 [![Azure TTS](https://img.shields.io/badge/Azure-Text--to--Speech-0078D4?style=flat-square&logo=microsoft-azure&logoColor=white)](https://github.com/SulagnaSasmal/ppt-to-mp4-doc-automation)
 
-#### What it does
-
 Fully automated pipeline: upload a `.pptx` → get back a narrated `.mp4`. No manual recording, no screen capture.
 
 ```
 PowerPoint file
   └─► Extract slide notes (python-pptx)
         └─► Generate AI narration (Azure TTS — Jenny Neural)
-              └─► Set slide timings (PowerPoint COM automation)
-                    └─► Export animated video (PowerPoint CreateVideo)
-                          └─► Mux audio + video (FFmpeg)
-                                └─► Download final.mp4
+              └─► Export animated video (PowerPoint COM)
+                    └─► Mux audio + video (FFmpeg)
+                          └─► Download final.mp4
 ```
 
-#### Why I built it
-
-Documentation teams spend hours recording walkthroughs manually. This tool eliminates that — write your slide notes once, get a narrated video automatically. Built to demonstrate that technical writers can engineer the tools their teams depend on, not just document them.
-
-#### Tech stack
-
-`Python` · `FastAPI` · `Azure Text-to-Speech` · `win32com (PowerPoint COM)` · `FFmpeg` · `Jinja2` · `pywin32`
+`Python` · `FastAPI` · `Azure Text-to-Speech` · `PowerPoint COM` · `FFmpeg` · `pywin32`
 
 ---
 
@@ -514,26 +303,6 @@ Documentation teams spend hours recording walkthroughs manually. This tool elimi
 | **Dev tools** | Git, GitHub, VS Code, Python, HTML/CSS, Bash, TypeScript, Next.js |
 | **AI & automation** | OpenAI GPT-4o, Azure TTS, FastAPI, FFmpeg, GitHub Copilot, Claude, Napkin AI |
 | **Methodologies** | Docs-as-Code, structured authoring, topic-based writing, information architecture, MSTP |
-
----
-
-## What's Next
-
-This portfolio is a living document — updated as new projects are added.
-
-| Status | Project | Description |
-|---|---|---|
-| ✅ Live | [VaultPay API Docs](https://github.com/SulagnaSasmal/vaultpay-api-docs) | Fintech payment API reference with NICE Actimize compliance coverage |
-| ✅ Live | [CaseForge API Docs](https://github.com/SulagnaSasmal/caseforge-api-docs) | Enterprise AML case management & SAR filing API docs |
-| ✅ Live | [Documentation Center Dashboard](https://github.com/SulagnaSasmal/Documentation-Center-Platform) | Interactive Docs-as-Code platform dashboard |
-| ✅ Live | [Docs-as-Code Portal](https://github.com/SulagnaSasmal/docs-as-code-portal) | Traditional documentation portal explaining the DaC methodology |
-| ✅ Live | [Personal Portfolio Site](https://github.com/SulagnaSasmal/sulagnasasmal-site) | Light-theme personal site — work, background, expertise, and a bit of personality |
-| ✅ Live | [US Payments Hub](https://sulagnasasmal.github.io/us-payments-hub/) | Enterprise HTML reference — all 6 US payment rails, operations and compliance |
-| ✅ Live | [PayPlus Admin Guide](https://sulagnasasmal.github.io/payplus-admin-guide/) | 8-section enterprise HTML admin guide for a multi-rail payment hub |
-| ✅ Live | [PayPlus REST API Docs](https://sulagnasasmal.github.io/payments-api-guide/) | 6-section developer API reference — ACH, instant payments, Fedwire/SWIFT, webhooks |
-| 🛠️ Built | [PPT → MP4 Automation](https://github.com/SulagnaSasmal/ppt-to-mp4-doc-automation) | Python tool: PowerPoint + Azure TTS + FFmpeg → narrated video pipeline |
-| 🚀 Live | [DocCraft AI](https://doccraft-ten.vercel.app/) | Next.js + GPT-4o app: raw content → MSTP-compliant documentation with auto-compliance and one-click fixes |
-| 🔜 Coming | *More projects* | Adding as I build — check back soon |
 
 ---
 
