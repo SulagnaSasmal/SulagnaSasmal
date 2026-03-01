@@ -301,6 +301,121 @@ Reference
 
 ---
 
+### 💳 US Payments Hub — Operations & Compliance Reference
+
+> *An enterprise-grade reference site covering all six US payment rails — written for bank operations teams, compliance analysts, and payments professionals.*
+
+[![Live Site](https://img.shields.io/badge/Live%20Site-sulagnasasmal.github.io-14b8a6?style=flat-square&logo=githubpages&logoColor=white)](https://sulagnasasmal.github.io/us-payments-hub/)
+[![GitHub Repo](https://img.shields.io/badge/GitHub-us--payments--hub-181717?style=flat-square&logo=github)](https://github.com/SulagnaSasmal/us-payments-hub)
+
+#### What is it?
+
+An eight-page HTML documentation site covering ACH, Fedwire, SWIFT, RTP, FedNow, and Card Networks — the full landscape of US payment rails. The site documents how each rail works, who owns it, what message standards it uses, key compliance requirements, and how it compares to the others. A dedicated scenarios page walks through 12 real-world payment situations across the rails.
+
+#### Why I built it
+
+To demonstrate that I can document the payment infrastructure itself — not just the APIs and platforms built on top of it. This kind of reference is what a new payments analyst, a bank operations trainer, or a compliance team building a desk reference would actually reach for. It draws directly on my experience at Fundtech India (2008–2010), where I documented the CashIn and Global CASHplus payment hub systems that are the direct predecessors of Finastra GlobalPAYplus.
+
+#### Who it's for
+
+| Audience | What they find here |
+|---|---|
+| Bank operations staff | How each rail works, cutoff times, settlement windows, failure handling |
+| Compliance analysts | OFAC, BSA Travel Rule, AML obligations by rail |
+| Payments engineers | Message standards (ISO 20022, NACHA, SWIFT MT/MX), routing number and BIC lookup |
+| Payments onboarding teams | 12 scenario walkthroughs across all rails |
+
+#### Coverage
+
+`ACH` · `Fedwire (ISO 20022 March 2025)` · `SWIFT (MT + MX + gpi)` · `TCH RTP` · `FedNow` · `Card Networks`
+`12 scenario walkthroughs` · `MadCap Flare-inspired enterprise HTML` · `GitHub Pages hosted`
+
+---
+
+### 🏛️ PayPlus Enterprise Administration Guide
+
+> *An eight-section system administration guide for a fictional enterprise payment hub — modeled on the GlobalPAYplus class of multi-rail payment platforms.*
+
+[![GitHub Repo](https://img.shields.io/badge/GitHub-payplus--admin--guide-181717?style=flat-square&logo=github)](https://github.com/SulagnaSasmal/payplus-admin-guide)
+
+#### What is it?
+
+A full system administration guide for **PayPlus Enterprise v3.2** — a fictional but realistically modeled multi-rail payment hub for financial institutions. The guide covers everything a bank IT administrator needs: installation, user management, payment rail connector configuration, workflow engine, monitoring and alerts, compliance controls (OFAC, BSA, AML), and troubleshooting.
+
+#### Why I built it
+
+To demonstrate my ability to document enterprise on-premises financial software at the depth that real bank IT teams need. This is the companion admin guide to the PayPlus REST API reference — together they show both sides of platform documentation. The product model draws on my Fundtech India experience documenting CashIn and Global CASHplus, the direct ancestors of GlobalPAYplus.
+
+#### Who it's for
+
+| Audience | What they find here |
+|---|---|
+| System administrators | Installation, Java/DB requirements, post-install validation, upgrade procedure |
+| IT security teams | RBAC model, LDAP/AD integration, SAML 2.0 SSO, password policy, session controls |
+| Payments operations | Connector config per rail, approval workflows, STP rules, bulk ACH |
+| Compliance officers | OFAC screening engine, hold queue actions, BSA Travel Rule by rail, AML integration |
+
+#### Structure
+
+```
+Installation — system requirements, 7-step procedure, DB setup, post-install validation
+User Management — 5 built-in roles, permissions matrix, LDAP, SAML 2.0 SSO
+Payment Rail Connectors — ACH, Fedwire (ISO 20022), SWIFT (SAA/MQ), RTP, FedNow
+Workflow Engine — payment lifecycle, approval models, rules engine (5 types), STP, bulk ACH
+Monitoring & Alerts — dashboard, queue monitor, 10 built-in alert rules, SLA tracking
+Compliance Configuration — OFAC engine, hold queue, AML adapter, BSA Travel Rule, audit trail
+Troubleshooting — error codes 1xxx–5xxx, common issues, log locations, support escalation
+```
+
+#### Key concepts covered
+
+`RBAC` · `LDAP / SAML 2.0 SSO` · `ISO 20022 pacs.008/pacs.009` · `OFAC sanctions screening`
+`BSA Travel Rule (31 CFR 103.33)` · `AML integration (NICE Actimize / Oracle FCCM)` · `MadCap Flare-inspired HTML`
+
+---
+
+### ⚡ PayPlus REST API Developer Reference
+
+> *A six-section developer API reference for the same fictional payment hub — structured to the quality bar of leading fintech developer portals.*
+
+[![GitHub Repo](https://img.shields.io/badge/GitHub-payments--api--guide-181717?style=flat-square&logo=github)](https://github.com/SulagnaSasmal/payments-api-guide)
+
+#### What is it?
+
+A developer-facing REST API reference for **PayPlus REST API v2.1** — the integration layer of the PayPlus Enterprise payment hub. Written and structured to match the quality bar of leading fintech developer portals (Stripe, Plaid). It covers authentication, ACH payments, instant payments (RTP/FedNow), wire transfers (Fedwire/SWIFT), webhooks, and a complete error code reference.
+
+#### Why I built it
+
+To demonstrate the full range of API documentation challenges in a single, self-contained project: synchronous vs. asynchronous patterns, webhook security (HMAC-SHA256 verification with a Python code example), multi-rail endpoint design, ISO 20022 message concepts, and regulatory error codes — all in a readable, developer-first format.
+
+#### Who it's for
+
+| Audience | What they find here |
+|---|---|
+| Integration developers | OAuth 2.0, endpoint reference, request/response schemas, JSON examples |
+| Core banking engineers | Idempotency, async ACH/wire pattern, synchronous instant payment response |
+| Security engineers | HMAC-SHA256 webhook verification with replay protection |
+| Compliance teams | OFAC error handling, BSA Travel Rule required fields, ACH return codes |
+
+#### Structure
+
+```
+Authentication — OAuth 2.0 client credentials, API key, scopes, idempotency, rate limiting
+ACH Payments — initiate, batch submit, status, return details (R01–R85), reversal
+Instant Payments — RTP/FedNow (synchronous), Request for Payment, rail selection logic
+Wire Transfers — Fedwire/SWIFT, payment recall (camt.056), UETR, IMAD/OMAD
+Webhooks — HMAC-SHA256 verification, 14 event types, retry logic, payload examples
+Error Codes — HTTP status table, validation/auth/business rule errors, ACH/ISO 20022 return codes
+```
+
+#### Key concepts covered
+
+`OAuth 2.0` · `Synchronous instant payment API` · `Webhook HMAC-SHA256 verification`
+`ISO 20022 (pacs.008, camt.056)` · `ACH return codes R01–R85` · `UETR / SWIFT gpi`
+`Developer API reference style (Stripe/Plaid-inspired)` · `JSON request/response examples`
+
+---
+
 ---
 
 ## Tools I've Built
@@ -411,6 +526,9 @@ This portfolio is a living document — updated as new projects are added.
 | ✅ Live | [Documentation Center Dashboard](https://github.com/SulagnaSasmal/Documentation-Center-Platform) | Interactive Docs-as-Code platform dashboard |
 | ✅ Live | [Docs-as-Code Portal](https://github.com/SulagnaSasmal/docs-as-code-portal) | Traditional documentation portal explaining the DaC methodology |
 | ✅ Live | [Personal Portfolio Site](https://github.com/SulagnaSasmal/sulagnasasmal-site) | Light-theme personal site — work, background, expertise, and a bit of personality |
+| ✅ Live | [US Payments Hub](https://sulagnasasmal.github.io/us-payments-hub/) | Enterprise HTML reference — all 6 US payment rails, operations and compliance |
+| 🛠️ Built | [PayPlus Admin Guide](https://github.com/SulagnaSasmal/payplus-admin-guide) | 8-section enterprise HTML admin guide for a multi-rail payment hub |
+| 🛠️ Built | [PayPlus REST API Docs](https://github.com/SulagnaSasmal/payments-api-guide) | 6-section developer API reference — ACH, instant payments, Fedwire/SWIFT, webhooks |
 | 🛠️ Built | [PPT → MP4 Automation](https://github.com/SulagnaSasmal/ppt-to-mp4-doc-automation) | Python tool: PowerPoint + Azure TTS + FFmpeg → narrated video pipeline |
 | 🚀 Live | [DocCraft AI](https://doccraft-ten.vercel.app/) | Next.js + GPT-4o app: raw content → MSTP-compliant documentation with auto-compliance and one-click fixes |
 | 🔜 Coming | *More projects* | Adding as I build — check back soon |
