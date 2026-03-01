@@ -336,6 +336,7 @@ To demonstrate that I can document the payment infrastructure itself — not jus
 
 > *An eight-section system administration guide for a fictional enterprise payment hub — modeled on the GlobalPAYplus class of multi-rail payment platforms.*
 
+[![Live Site](https://img.shields.io/badge/Live%20Site-sulagnasasmal.github.io-E8A84C?style=flat-square&logo=githubpages&logoColor=black)](https://sulagnasasmal.github.io/payplus-admin-guide/)
 [![GitHub Repo](https://img.shields.io/badge/GitHub-payplus--admin--guide-181717?style=flat-square&logo=github)](https://github.com/SulagnaSasmal/payplus-admin-guide)
 
 #### What is it?
@@ -378,6 +379,7 @@ Troubleshooting — error codes 1xxx–5xxx, common issues, log locations, suppo
 
 > *A six-section developer API reference for the same fictional payment hub — structured to the quality bar of leading fintech developer portals.*
 
+[![Live Site](https://img.shields.io/badge/Live%20Site-sulagnasasmal.github.io-E8A84C?style=flat-square&logo=githubpages&logoColor=black)](https://sulagnasasmal.github.io/payments-api-guide/)
 [![GitHub Repo](https://img.shields.io/badge/GitHub-payments--api--guide-181717?style=flat-square&logo=github)](https://github.com/SulagnaSasmal/payments-api-guide)
 
 #### What is it?
@@ -527,8 +529,8 @@ This portfolio is a living document — updated as new projects are added.
 | ✅ Live | [Docs-as-Code Portal](https://github.com/SulagnaSasmal/docs-as-code-portal) | Traditional documentation portal explaining the DaC methodology |
 | ✅ Live | [Personal Portfolio Site](https://github.com/SulagnaSasmal/sulagnasasmal-site) | Light-theme personal site — work, background, expertise, and a bit of personality |
 | ✅ Live | [US Payments Hub](https://sulagnasasmal.github.io/us-payments-hub/) | Enterprise HTML reference — all 6 US payment rails, operations and compliance |
-| 🛠️ Built | [PayPlus Admin Guide](https://github.com/SulagnaSasmal/payplus-admin-guide) | 8-section enterprise HTML admin guide for a multi-rail payment hub |
-| 🛠️ Built | [PayPlus REST API Docs](https://github.com/SulagnaSasmal/payments-api-guide) | 6-section developer API reference — ACH, instant payments, Fedwire/SWIFT, webhooks |
+| ✅ Live | [PayPlus Admin Guide](https://sulagnasasmal.github.io/payplus-admin-guide/) | 8-section enterprise HTML admin guide for a multi-rail payment hub |
+| ✅ Live | [PayPlus REST API Docs](https://sulagnasasmal.github.io/payments-api-guide/) | 6-section developer API reference — ACH, instant payments, Fedwire/SWIFT, webhooks |
 | 🛠️ Built | [PPT → MP4 Automation](https://github.com/SulagnaSasmal/ppt-to-mp4-doc-automation) | Python tool: PowerPoint + Azure TTS + FFmpeg → narrated video pipeline |
 | 🚀 Live | [DocCraft AI](https://doccraft-ten.vercel.app/) | Next.js + GPT-4o app: raw content → MSTP-compliant documentation with auto-compliance and one-click fixes |
 | 🔜 Coming | *More projects* | Adding as I build — check back soon |
