@@ -43,6 +43,7 @@
 
 | Project | Type | |
 |---|---|---|
+| **FraudShield AI Engine Documentation** | AI fraud detection · risk models · API · explainability | [View →](https://sulagnasasmal.github.io/fraudshield-docs/) |
 | **PayPlus REST API Developer Reference** | Developer API reference | [View →](https://sulagnasasmal.github.io/payments-api-guide/) |
 | **PayPlus Enterprise Administration Guide** | Enterprise admin docs | [View →](https://sulagnasasmal.github.io/payplus-admin-guide/) |
 | **US Payments Hub** | Operations & compliance reference | [View →](https://sulagnasasmal.github.io/us-payments-hub/) |
@@ -225,6 +226,32 @@ Webhooks · Error Codes
 ```
 
 `OAuth 2.0` · `Webhook HMAC-SHA256` · `ISO 20022 (pacs.008, camt.056)` · `ACH return codes R01–R85` · `SWIFT gpi / UETR`
+
+---
+
+### 🛡️ FraudShield AI Engine — Documentation
+
+> *Enterprise documentation for an AI-powered fraud detection platform — risk scoring models, REST API reference, model explainability, and regulatory compliance.*
+
+[![Live Site](https://img.shields.io/badge/Live%20Site-sulagnasasmal.github.io-7c3aed?style=flat-square&logo=githubpages&logoColor=white)](https://sulagnasasmal.github.io/fraudshield-docs/)
+[![GitHub Repo](https://img.shields.io/badge/GitHub-fraudshield--docs-181717?style=flat-square&logo=github)](https://github.com/SulagnaSasmal/fraudshield-docs)
+
+A 9-section enterprise HTML documentation site for **FraudShield AI Engine** — a fictional AI fraud detection platform grounded in real NICE Actimize IFM/AMP architecture. Demonstrates expertise at the intersection of fraud domain knowledge, AI/ML model documentation, REST API reference writing, and financial regulatory compliance.
+
+| Audience | What they find here |
+|---|---|
+| Fraud Operations analysts | Risk scoring model, score ranges, threshold tuning, false positive handling (suppression, whitelisting, step-up challenge flow) |
+| Data Scientists / Model Owners | Model input features (200+ Risk Indicators), champion/challenger retraining cycle, drift triggers, training data requirements |
+| Integration Engineers | Full REST API reference — POST /score, step-up result, case feedback — with JSON request/response examples, error codes, rate limits |
+| Compliance Officers | Audit log schema, model explainability output, SR 11-7, GDPR Article 22, CFPB adverse action, BSA/AML SAR tagging |
+
+```
+Risk Scoring Model · Model Input Features · System Configuration · Threshold Tuning
+False Positive Handling · Model Retraining Cycle · API Integration · Audit & Explainability
+```
+
+`AI / ML Models` · `Risk Indicators (200+)` · `Champion/Challenger Framework` · `GDPR Art. 22`
+`SR 11-7 Model Risk` · `BSA/AML` · `CFPB Adverse Action` · `REST API Reference` · `MadCap Flare-inspired HTML`
 
 ---
 
