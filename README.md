@@ -1,4 +1,4 @@
-
+﻿
 
 # Hi, I'm Sulagna 👋
 
@@ -53,6 +53,8 @@
 | **Docs-as-Code Portal** | DaC methodology documentation | [View →](https://sulagnasasmal.github.io/docs-as-code-portal/) |
 | **DocCraft AI** | Next.js + GPT-4o docs generator | [View →](https://doccraft-ten.vercel.app/) |
 | **PPT → MP4 Automation** | Python narrated video pipeline | [GitHub →](https://github.com/SulagnaSasmal/ppt-to-mp4-doc-automation) |
+| **SunBridge Asset Atrium Manager — Platform Docs** | Investment platform architecture · NAV batch · HA · multi-TZ · release governance | [View →](https://sulagnasasmal.github.io/enterprise-investment-management-platform-docs/) |
+| **Asset Atrium Compliance Framework** | Investment compliance · pre-trade · post-trade · mandates · UCITS · AIFMD · MiFID II | [View →](https://sulagnasasmal.github.io/compliance-regulatory-hub/) |
 
 ---
 
@@ -257,6 +259,60 @@ False Positive Handling · Model Retraining Cycle · API Integration · Audit & 
 
 ---
 
+### 📐 SunBridge Asset Atrium Manager — Platform Documentation
+
+> *Technical documentation for an enterprise investment management platform — J2EE architecture, NAV batch processing, high availability, multi-time zone fund operations, and release governance. Follows Microsoft Style Guide (MSTP) throughout.*
+
+[![Live Site](https://img.shields.io/badge/Live%20Site-sulagnasasmal.github.io-3b82f6?style=flat-square&logo=githubpages&logoColor=white)](https://sulagnasasmal.github.io/enterprise-investment-management-platform-docs/)
+[![GitHub Repo](https://img.shields.io/badge/GitHub-enterprise--investment--management--platform--docs-181717?style=flat-square&logo=github)](https://github.com/SulagnaSasmal/enterprise-investment-management-platform-docs)
+
+Platform architecture and operations reference for **SunBridge Asset Atrium Manager** — a realistic J2EE institutional investment management platform modelled on the SunGard Asset Arena class of buy-side systems. Fully MSTP-compliant writing throughout: active voice, second person, sentence-case headings, no Latin abbreviations.
+
+| Audience | What they find here |
+|---|---|
+| Platform engineers | WebLogic cluster design, Oracle RAC, IBM MQ Series, SWIFT Alliance, Bloomberg B-PIPE/BVAL |
+| Operations / SRE | NAV batch orchestration, processing zones, HA design, rolling restarts, DR failover |
+| Release managers | CAB governance, operational impact, backward compatibility, risk framing |
+| Solution architects | J2EE component design, JTA transactions, Oracle Coherence cache, FIX 4.2/4.4 gateway |
+
+```
+Platform Overview · System Architecture · Batch Processing Framework
+High Availability · Multi-Time Zone Processing · Failover & Audit Design
+Database & Configuration · Release Impact Summary · Diagram Library
+```
+
+`J2EE / WebLogic 14c` · `Oracle 19c RAC` · `IBM MQ Series` · `SWIFT Alliance Lite2` · `Bloomberg B-PIPE`
+`NAV batch processing` · `Oracle Coherence` · `FIX 4.2/4.4` · `Mermaid diagrams` · `MSTP`
+
+---
+
+### 🏛️ Asset Atrium Compliance Framework
+
+> *Investment compliance documentation for an enterprise buy-side platform — pre-trade checking, post-trade monitoring, investment mandate management, exposure limits, regulatory reporting, breach governance, and audit trails. Follows Microsoft Style Guide (MSTP) throughout.*
+
+[![Live Site](https://img.shields.io/badge/Live%20Site-sulagnasasmal.github.io-059669?style=flat-square&logo=githubpages&logoColor=white)](https://sulagnasasmal.github.io/compliance-regulatory-hub/)
+[![GitHub Repo](https://img.shields.io/badge/GitHub-compliance--regulatory--hub-181717?style=flat-square&logo=github)](https://github.com/SulagnaSasmal/compliance-regulatory-hub)
+
+A structured compliance documentation set for **Asset Atrium Manager** — covering the full investment compliance lifecycle. Demonstrates buy-side domain expertise across investment mandate modeling, UCITS/AIFMD/MiFID II regulatory frameworks, breach management workflows, and compliance audit architecture. Fully MSTP-compliant writing throughout.
+
+| Audience | What they find here |
+|---|---|
+| Portfolio managers | Pre-trade compliance (hard/soft breaches, override workflow), block order compliance |
+| Compliance officers | Post-trade monitoring, breach lifecycle, escalation matrix, regulatory notification rules |
+| Fund administrators | UCITS 5/10/40, AIFMD Annex IV, Form PF, MiFID II RTS 25, exposure & concentration limits |
+| Operations / Audit | Oracle compliance audit schema, retention policy, Splunk integration, examination readiness |
+
+```
+Overview & Framework · Pre-Trade Compliance · Post-Trade Monitoring
+Investment Mandates · Exposure & Concentration · Regulatory Reporting
+Breach Management · Audit Trail & Logging
+```
+
+`UCITS (5/10/40)` · `AIFMD Annex IV` · `MiFID II / RTS 25` · `Form PF` · `Solvency II` · `EMIR` · `CPO-PQR`
+`Pre-trade / Post-trade compliance` · `Breach lifecycle` · `Oracle audit schema` · `MSTP`
+
+---
+
 ## Tools I've Built
 
 Beyond documentation, I build automation tools that solve real workflow problems.
@@ -345,3 +401,4 @@ If you're looking for a Technical Writer who thinks like an engineer and writes 
 <div align="center">
   <sub>Built with Docs-as-Code principles · Maintained in Git · © 2026 Sulagna Sasmal</sub>
 </div>
+
