@@ -1,0 +1,65 @@
+name: Update GitHub Profile
+
+on:
+  schedule:
+    - cron: '0 0 * * *'  # Daily at midnight UTC
+  workflow_dispatch:     # Manual trigger
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/**'
+      - '.github/workflows/update-profile.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  update-profile:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+
+      - name: Generate profile
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_USERNAME: ${{ github.repository_owner }}
+        run: |
+          echo "📝 Generating GitHub profile..."
+          node scripts/generate-profile.js
+
+      - name: Collect metrics
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_USERNAME: ${{ github.repository_owner }}
+        run: |
+          echo "📊 Collecting metrics..."
+          node scripts/metrics-collector.js
+        continue-on-error: true
+
+      - name: Verify changes
+        run: |
+          echo "✅ Profile generation completed"
+          git diff --no-color README.md | head -50
+
+      - name: Commit and push changes
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "🔄 Update GitHub profile and metrics [skip ci]"
+          commit_options: '--no-verify'
+          file_pattern: |
+            README.md
+            metrics/
+
+      - name: Notify on failure
+        if: failure()
+        run: echo "⚠️ Profile update failed - check logs for details"

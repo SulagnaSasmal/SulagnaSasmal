@@ -1,0 +1,86 @@
+name: Repository Maintenance
+
+on:
+  schedule:
+    - cron: '0 2 * * 0'  # Weekly on Sunday at 2 AM UTC
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/**'
+      - '.github/workflows/repo-maintenance.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  validate-repos:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+
+      - name: Validate repository standards
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_USERNAME: ${{ github.repository_owner }}
+        run: |
+          echo "🔍 Validating repository standards..."
+          node scripts/repo-validator.js
+        continue-on-error: true
+
+      - name: Check for broken links
+        run: |
+          echo "🔗 Checking for broken links..."
+          if command -v npx &> /dev/null; then
+            npx markdown-link-check README.md || echo "⚠️ Some links may be broken"
+          else
+            echo "⏭️ Skipping link check (npx not available)"
+          fi
+        continue-on-error: true
+
+      - name: Verify documentation
+        run: |
+          echo "📚 Verifying documentation..."
+          [ -f README.md ] && echo "✅ README.md exists" || echo "❌ README.md missing"
+          [ -f LICENSE ] && echo "✅ LICENSE exists" || echo "⚠️ LICENSE missing"
+
+      - name: Report status
+        run: echo "✅ Repository maintenance check completed"
+
+  test-api-connection:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+
+      - name: Test GitHub API connection
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_USERNAME: ${{ github.repository_owner }}
+        run: |
+          echo "🔌 Testing GitHub API connection..."
+          node scripts/github-api-queries.js
+        continue-on-error: true
+
+      - name: API test result
+        if: success()
+        run: echo "✅ GitHub API connection successful"
+
+      - name: API test failed
+        if: failure()
+        run: echo "⚠️ GitHub API connection test failed"

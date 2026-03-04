@@ -1,0 +1,21 @@
+{
+  "name": "github-profile-automation",
+  "version": "1.0.0",
+  "description": "Automated GitHub profile and repository management system",
+  "main": "scripts/generate-profile.js",
+  "scripts": {
+    "generate-profile": "node scripts/generate-profile.js",
+    "collect-metrics": "node scripts/metrics-collector.js",
+    "validate-repos": "node scripts/repo-validator.js",
+    "test-api": "node scripts/github-api-queries.js"
+  },
+  "keywords": [
+    "github",
+    "automation",
+    "profile",
+    "portfolio"
+  ],
+  "author": "SulagnaSasmal",
+  "license": "MIT",
+  "dependencies": {}
+}

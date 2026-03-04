@@ -60,6 +60,8 @@
 
 ## GitHub stats
 
+<!-- GITHUB_STATS_START -->
+
 <p>
   <img height="200" src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=SulagnaSasmal&theme=vue" />
 </p>
@@ -68,6 +70,20 @@
   <img height="200" src="https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=SulagnaSasmal&theme=vue" />
   <img height="200" src="https://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=SulagnaSasmal&theme=vue" />
 </p>
+
+<!-- GITHUB_STATS_END -->
+
+<!-- TOP_REPOS_START -->
+<!-- Auto-generated top repositories section -->
+<!-- TOP_REPOS_END -->
+
+<!-- LANGUAGES_START -->
+<!-- Auto-generated language breakdown -->
+<!-- LANGUAGES_END -->
+
+<!-- ACTIVITY_START -->
+<!-- Auto-generated recent activity -->
+<!-- ACTIVITY_END -->
 
 ---
 
