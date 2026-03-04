@@ -1,0 +1,75 @@
+name: Metrics Collection & Analytics
+
+on:
+  schedule:
+    - cron: '0 5 * * 0'  # Weekly on Sunday at 5 AM UTC
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  collect-metrics:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+
+      - name: Collect GitHub metrics
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_USERNAME: ${{ github.repository_owner }}
+        run: |
+          echo "📊 Collecting GitHub metrics..."
+          node scripts/metrics-collector.js
+        continue-on-error: false
+
+  generate-analytics:
+    if: always()
+    needs: collect-metrics
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+
+      - name: Generate analytics report
+        run: |
+          echo "📈 Generating analytics report..."
+          node scripts/analytics-report.js
+        continue-on-error: true
+
+  commit-metrics:
+    if: always()
+    needs: [collect-metrics, generate-analytics]
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Commit metrics updates
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "📊 Update GitHub metrics and analytics [skip ci]"
+          file_pattern: |
+            metrics/
+          skip_dirty_check: true
+        continue-on-error: true
+
+      - name: Report complete
+        run: |
+          echo "✅ Metrics collection and analytics generation complete"
