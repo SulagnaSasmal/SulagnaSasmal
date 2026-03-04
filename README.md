@@ -4,11 +4,16 @@
 
 **Senior Technical Writer · Documentation Architect · FinTech Specialist**
 
-19 years writing documentation for payments, fraud prevention, and compliance platforms — at Fundtech, SunGard, Avaya, and NICE Actimize. I build documentation systems that behave like software.
+19 years architecting enterprise documentation systems for high-stakes domains: **payments, fraud prevention, financial compliance, and investment management**. I build documentation infrastructure that scales with complexity—turning complicated systems into clear, maintainable knowledge.
+
+**Expertise:** API References (Stripe/Plaid quality) · FinTech Domain Depth · Docs-as-Code Automation · Compliance Frameworks · System Architecture
+
+**Current Focus:** Open to senior-level opportunities in tech companies looking to scale documentation systems and establish documentation excellence.
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-sulagnasasmal-0A66C2?style=flat-square&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/sulagnasasmal)
 [![Portfolio](https://img.shields.io/badge/Portfolio-sulagnasasmal.github.io-E8A84C?style=flat-square&logo=githubpages&logoColor=black)](https://sulagnasasmal.github.io/sulagnasasmal-site/)
 [![GitHub followers](https://img.shields.io/github/followers/SulagnaSasmal?style=flat-square&logo=github&label=Follow)](https://github.com/SulagnaSasmal)
+[![Recruit](https://img.shields.io/badge/For_Recruiters-RECRUITER_README-brightgreen?style=flat-square)](/.github/RECRUITER_README.md)
 
 <br clear="right" />
 
