@@ -24,7 +24,8 @@
 - 📝 **Developer API references** — REST endpoints, webhooks, OAuth, error codes (Stripe / Plaid quality bar)
 - 🏛️ **Enterprise admin docs** — MadCap Flare HTML, regulated platforms, step-by-step procedures
 - ⚙️ **Docs-as-Code pipelines** — Vale linting, GitHub Actions, MkDocs, GitHub Pages
-- 🤖 **AI-assisted documentation tools** — Next.js + GPT-4o
+- 🤖 **AI-assisted documentation tools** — Next.js + GPT-4o, RAG chatbots, analytics dashboards
+- 🔌 **Developer portal tooling** — OpenAPI spec rendering, interactive API consoles
 - 💳 **FinTech domain depth** — ACH, Fedwire, SWIFT, RTP/FedNow, OFAC, BSA/AML, ISO 20022
 
 ---
@@ -39,6 +40,8 @@
 ![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white)
 ![Azure TTS](https://img.shields.io/badge/Azure_TTS-0078D4?style=flat-square&logo=microsoftazure&logoColor=white)
 ![OpenAI](https://img.shields.io/badge/OpenAI_GPT--4o-412991?style=flat-square&logo=openai&logoColor=white)
+![ChromaDB](https://img.shields.io/badge/ChromaDB-FF6F61?style=flat-square&logoColor=white)
+![FastAPI](https://img.shields.io/badge/FastAPI-009688?style=flat-square&logo=fastapi&logoColor=white)
 ![Vale](https://img.shields.io/badge/Vale_linting-333333?style=flat-square&logoColor=white)
 ![Git](https://img.shields.io/badge/Git-F05032?style=flat-square&logo=git&logoColor=white)
 
@@ -57,6 +60,9 @@
 | **DocForge Platform** | Docs-as-Code platform dashboard | [View →](https://sulagnasasmal.github.io/Documentation-Center-Platform/docforge-platform.html) |
 | **Docs-as-Code Portal** | DaC methodology documentation | [View →](https://sulagnasasmal.github.io/docs-as-code-portal/) |
 | **DocCraft AI** | Next.js + GPT-4o docs generator | [View →](https://doccraft-ten.vercel.app/) |
+| **SpecFlow** | OpenAPI spec → interactive developer portal | [GitHub →](https://github.com/SulagnaSasmal/specflow) |
+| **DocQuery** | RAG-powered documentation chatbot | [GitHub →](https://github.com/SulagnaSasmal/docquery) |
+| **DocPulse** | Documentation analytics dashboard | [GitHub →](https://github.com/SulagnaSasmal/docpulse) |
 | **PPT → MP4 Automation** | Python narrated video pipeline | [GitHub →](https://github.com/SulagnaSasmal/ppt-to-mp4-doc-automation) |
 | **SunBridge Asset Atrium Manager — Platform Docs** | Investment platform architecture · NAV batch · HA · multi-TZ · release governance | [View →](https://sulagnasasmal.github.io/enterprise-investment-management-platform-docs/) |
 | **Asset Atrium Compliance Framework** | Investment compliance · pre-trade · post-trade · mandates · UCITS · AIFMD · MiFID II | [View →](https://sulagnasasmal.github.io/compliance-regulatory-hub/) |
@@ -89,6 +95,80 @@
 <!-- ACTIVITY_START -->
 <!-- Auto-generated recent activity -->
 <!-- ACTIVITY_END -->
+
+---
+
+## 📊 Visitor Analytics System
+
+This profile includes a comprehensive **visitor analytics system** that tracks how people interact with this GitHub presence. It provides insights into:
+
+- **👁️ Page Views** — Profile visit count, referrer sources, device types, geographic data
+- **🖱️ Click Tracking** — Every link and button clicked, with coordinates and scroll depth
+- **📜 Behavior Patterns** — Time on page, scroll depth, session duration, interaction count
+- **📱 Device Distribution** — Desktop vs. mobile vs. tablet breakdown
+- **🔗 Top Content** — Most-clicked links and most-engaged projects
+
+### Analytics Features
+
+The analytics infrastructure includes:
+
+| Component | Purpose |
+|---|---|
+| **Tracking Script** | Client-side JavaScript that collects visitor data in real-time |
+| **Analytics Server** | Node.js backend storing events in JSONL format by date |
+| **Dashboard Generator** | Auto-generates HTML dashboards and Markdown reports |
+| **Metrics Collection** | Weekly aggregation of GitHub stats, followers, stars |
+| **Historical Tracking** | 90-day rolling analytics history with growth trends |
+
+### How It Works
+
+```
+Visit Profile
+  └─► Tracking script loads
+        └─► Records: page view, device, referrer, timestamp
+              └─► Events sent to analytics backend
+                    └─► Stored in analytics-data/{projectId}/{date}/*.jsonl
+                          └─► Dashboard generated from aggregated data
+                                └─► Markdown report & HTML dashboard available
+```
+
+### Data Collected
+
+The system collects only **non-personal analytics data**:
+- Session ID (anonymous token, not connected to identity)
+- Device type & screen resolution
+- Browser & OS information
+- Referrer source
+- Links clicked and interaction coordinates
+- Scroll depth and time on page
+- Page visit timestamps
+
+### Privacy & GDPR Compliance
+
+✅ **No personal data collected** (no names, emails, or IP addresses logged)
+✅ **Fully anonymized sessions** — Session IDs are random, not linked to identity
+✅ **Optional tracking** — Can be disabled via configuration
+✅ **Local storage first** — Events stored locally before sending
+✅ **User data control** — Data can be cleared from browser localStorage
+
+### Accessing Analytics
+
+For local testing:
+```bash
+# Start the analytics server
+node scripts/analytics-server.js
+# Server runs on http://localhost:3001
+
+# Generate dashboard
+node scripts/dashboard-generator.js
+# Output: analytics-dashboards/index.html & ANALYTICS_REPORT.md
+
+# Collect metrics
+npm run collect-metrics
+# Output: metrics/analytics.json with 90-day history
+```
+
+📖 **Full guide:** See [docs/ANALYTICS_GUIDE.md](docs/ANALYTICS_GUIDE.md) for implementation details, deployment options, and troubleshooting.
 
 ---
 
@@ -395,6 +475,84 @@ PowerPoint file
 ```
 
 `Python` · `FastAPI` · `Azure Text-to-Speech` · `PowerPoint COM` · `FFmpeg` · `pywin32`
+
+---
+
+### 🔌 SpecFlow — OpenAPI Developer Portal Generator
+
+> *A Next.js application that transforms any OpenAPI 3.x specification into a fully interactive, Stripe-quality developer portal — with a live Try-It Console, authentication panel, and webhooks explorer.*
+
+[![GitHub Repo](https://img.shields.io/badge/GitHub-specflow-181717?style=flat-square&logo=github)](https://github.com/SulagnaSasmal/specflow)
+[![Next.js](https://img.shields.io/badge/Next.js_14-App_Router-000000?style=flat-square&logo=next.js&logoColor=white)](https://github.com/SulagnaSasmal/specflow)
+[![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white)](https://github.com/SulagnaSasmal/specflow)
+
+Upload or paste any OpenAPI 3.x spec (YAML/JSON) and instantly get a fully rendered developer portal. Features grouped endpoint navigation, request/response schema trees with expand/collapse, an interactive Try-It Console for live API calls, authentication panel (API Key, Bearer, OAuth2, HTTP Basic), server selector, webhook payload explorer, and a search bar.
+
+```
+OpenAPI spec (YAML/JSON)
+  └─► Parse & validate (swagger-parser)
+        └─► Render grouped endpoints with schema trees
+              └─► Try-It Console with live API execution
+                    └─► Auth panel + Server selector + Webhooks
+```
+
+`Next.js 14` · `TypeScript` · `Tailwind CSS` · `swagger-parser` · `Monaco Editor` · `Interactive API Console`
+
+---
+
+### 💬 DocQuery — RAG Documentation Chatbot
+
+> *A RAG-powered chatbot that lets users ask natural-language questions against documentation — with source citations, confidence scoring, and automatic content gap detection.*
+
+[![GitHub Repo](https://img.shields.io/badge/GitHub-docquery-181717?style=flat-square&logo=github)](https://github.com/SulagnaSasmal/docquery)
+[![Python](https://img.shields.io/badge/Python-FastAPI-3776AB?style=flat-square&logo=python&logoColor=white)](https://github.com/SulagnaSasmal/docquery)
+[![OpenAI](https://img.shields.io/badge/OpenAI-Embeddings-412991?style=flat-square&logo=openai&logoColor=white)](https://github.com/SulagnaSasmal/docquery)
+
+A complete RAG pipeline: crawl documentation sites, split content using section-aware chunking (respects heading hierarchy, never splits code blocks), embed with OpenAI text-embedding-3-small, store in ChromaDB, and answer questions with GPT-4o-mini citing exact sources. The Next.js chat frontend features message bubbles, source citation cards, confidence badges (green/amber/red), collection selector, and dark/light mode. Low-confidence answers are automatically logged as content gaps.
+
+```
+Doc sites → Crawl → Section-aware chunking → Embed (OpenAI)
+  └─► ChromaDB vector store
+        └─► Query → Retrieve → GPT-4o-mini → Answer + Citations
+              └─► Low confidence? → Auto-log content gap
+```
+
+| Component | What it does |
+|---|---|
+| **Ingestion** | Async web crawler + section-aware chunker + OpenAI embeddings → ChromaDB |
+| **Query Pipeline** | Vector retrieval + confidence scoring (HIGH/MEDIUM/LOW) + conversation memory |
+| **Chat Frontend** | Next.js UI with source cards, confidence badges, collection selector, dark mode |
+| **Gap Tracker** | Auto-detects low-confidence answers and surfaces documentation gaps |
+
+`Python` · `FastAPI` · `LangChain` · `ChromaDB` · `OpenAI` · `Next.js 14` · `TypeScript` · `Tailwind CSS`
+
+---
+
+### 📊 DocPulse — Documentation Analytics Dashboard
+
+> *A lightweight analytics platform for documentation sites — tracks page views, reading time, search queries, content freshness, and feature coverage with a full Next.js dashboard.*
+
+[![GitHub Repo](https://img.shields.io/badge/GitHub-docpulse-181717?style=flat-square&logo=github)](https://github.com/SulagnaSasmal/docpulse)
+[![Python](https://img.shields.io/badge/Python-FastAPI-3776AB?style=flat-square&logo=python&logoColor=white)](https://github.com/SulagnaSasmal/docpulse)
+[![Next.js](https://img.shields.io/badge/Next.js_14-Dashboard-000000?style=flat-square&logo=next.js&logoColor=white)](https://github.com/SulagnaSasmal/docpulse)
+
+A complete documentation analytics platform with two parts: a lightweight JavaScript tracker (<5KB, no cookies, anonymous sessions, batched events) that embeds in any doc site, and a FastAPI + SQLite backend with a Next.js dashboard. Dashboard includes an overview with metric cards and time-series charts, search analytics (top queries, failed searches), GitHub-based content freshness scoring, feature-to-documentation coverage matrix, feedback collection, and weekly report generation.
+
+```
+Doc site → tracker.js (pageview, scroll, search, feedback)
+  └─► Batch events → FastAPI → SQLite
+        └─► Next.js dashboard: Overview · Search · Freshness · Coverage · Reports
+```
+
+| Dashboard Page | What it shows |
+|---|---|
+| **Overview** | Page views, unique visitors, reading time, top pages, time-series charts |
+| **Search Analytics** | Top queries, failed searches, content gaps from search |
+| **Freshness** | GitHub-based staleness scoring (fresh/aging/stale/abandoned) |
+| **Coverage Matrix** | Feature × endpoint × doc page mapping with status badges |
+| **Reports** | One-click weekly performance report (Markdown) |
+
+`JavaScript` · `Python` · `FastAPI` · `SQLite` · `Next.js 14` · `Recharts` · `Tailwind CSS`
 
 ---
 
