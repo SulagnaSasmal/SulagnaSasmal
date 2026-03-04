@@ -60,9 +60,9 @@
 | **DocForge Platform** | Docs-as-Code platform dashboard | [View →](https://sulagnasasmal.github.io/Documentation-Center-Platform/docforge-platform.html) |
 | **Docs-as-Code Portal** | DaC methodology documentation | [View →](https://sulagnasasmal.github.io/docs-as-code-portal/) |
 | **DocCraft AI** | Next.js + GPT-4o docs generator | [View →](https://doccraft-ten.vercel.app/) |
-| **SpecFlow** | OpenAPI spec → interactive developer portal | [GitHub →](https://github.com/SulagnaSasmal/specflow) |
-| **DocQuery** | RAG-powered documentation chatbot | [GitHub →](https://github.com/SulagnaSasmal/docquery) |
-| **DocPulse** | Documentation analytics dashboard | [GitHub →](https://github.com/SulagnaSasmal/docpulse) |
+| **SpecFlow** | OpenAPI spec → interactive developer portal | [View →](https://sulagnasasmal.github.io/specflow/) |
+| **DocQuery** | RAG-powered documentation chatbot | [View →](https://sulagnasasmal.github.io/docquery/) |
+| **DocPulse** | Documentation analytics dashboard | [View →](https://sulagnasasmal.github.io/docpulse/) |
 | **PPT → MP4 Automation** | Python narrated video pipeline | [GitHub →](https://github.com/SulagnaSasmal/ppt-to-mp4-doc-automation) |
 | **SunBridge Asset Atrium Manager — Platform Docs** | Investment platform architecture · NAV batch · HA · multi-TZ · release governance | [View →](https://sulagnasasmal.github.io/enterprise-investment-management-platform-docs/) |
 | **Asset Atrium Compliance Framework** | Investment compliance · pre-trade · post-trade · mandates · UCITS · AIFMD · MiFID II | [View →](https://sulagnasasmal.github.io/compliance-regulatory-hub/) |
@@ -482,6 +482,7 @@ PowerPoint file
 
 > *A Next.js application that transforms any OpenAPI 3.x specification into a fully interactive, Stripe-quality developer portal — with a live Try-It Console, authentication panel, and webhooks explorer.*
 
+[![Live Site](https://img.shields.io/badge/Live%20Site-sulagnasasmal.github.io-6366f1?style=flat-square&logo=githubpages&logoColor=white)](https://sulagnasasmal.github.io/specflow/)
 [![GitHub Repo](https://img.shields.io/badge/GitHub-specflow-181717?style=flat-square&logo=github)](https://github.com/SulagnaSasmal/specflow)
 [![Next.js](https://img.shields.io/badge/Next.js_14-App_Router-000000?style=flat-square&logo=next.js&logoColor=white)](https://github.com/SulagnaSasmal/specflow)
 [![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white)](https://github.com/SulagnaSasmal/specflow)
@@ -504,6 +505,7 @@ OpenAPI spec (YAML/JSON)
 
 > *A RAG-powered chatbot that lets users ask natural-language questions against documentation — with source citations, confidence scoring, and automatic content gap detection.*
 
+[![Live Site](https://img.shields.io/badge/Live%20Site-sulagnasasmal.github.io-10b981?style=flat-square&logo=githubpages&logoColor=white)](https://sulagnasasmal.github.io/docquery/)
 [![GitHub Repo](https://img.shields.io/badge/GitHub-docquery-181717?style=flat-square&logo=github)](https://github.com/SulagnaSasmal/docquery)
 [![Python](https://img.shields.io/badge/Python-FastAPI-3776AB?style=flat-square&logo=python&logoColor=white)](https://github.com/SulagnaSasmal/docquery)
 [![OpenAI](https://img.shields.io/badge/OpenAI-Embeddings-412991?style=flat-square&logo=openai&logoColor=white)](https://github.com/SulagnaSasmal/docquery)
@@ -532,6 +534,7 @@ Doc sites → Crawl → Section-aware chunking → Embed (OpenAI)
 
 > *A lightweight analytics platform for documentation sites — tracks page views, reading time, search queries, content freshness, and feature coverage with a full Next.js dashboard.*
 
+[![Live Site](https://img.shields.io/badge/Live%20Site-sulagnasasmal.github.io-f59e0b?style=flat-square&logo=githubpages&logoColor=white)](https://sulagnasasmal.github.io/docpulse/)
 [![GitHub Repo](https://img.shields.io/badge/GitHub-docpulse-181717?style=flat-square&logo=github)](https://github.com/SulagnaSasmal/docpulse)
 [![Python](https://img.shields.io/badge/Python-FastAPI-3776AB?style=flat-square&logo=python&logoColor=white)](https://github.com/SulagnaSasmal/docpulse)
 [![Next.js](https://img.shields.io/badge/Next.js_14-Dashboard-000000?style=flat-square&logo=next.js&logoColor=white)](https://github.com/SulagnaSasmal/docpulse)
