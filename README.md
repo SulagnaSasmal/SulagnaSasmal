@@ -11,7 +11,7 @@
 **Current Focus:** Open to senior-level opportunities in tech companies looking to scale documentation systems and establish documentation excellence.
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-sulagnasasmal-0A66C2?style=flat-square&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/sulagnasasmal)
-[![Portfolio](https://img.shields.io/badge/Portfolio-sulagnasasmal.github.io-E8A84C?style=flat-square&logo=githubpages&logoColor=black)](https://sulagnasasmal.github.io/sulagnasasmal-site/)
+[![Portfolio](https://img.shields.io/badge/Portfolio-sulagnasasmal.com-E8A84C?style=flat-square&logo=githubpages&logoColor=black)](https://sulagnasasmal.com)
 [![GitHub followers](https://img.shields.io/github/followers/SulagnaSasmal?style=flat-square&logo=github&label=Follow)](https://github.com/SulagnaSasmal)
 [![Recruit](https://img.shields.io/badge/For_Recruiters-RECRUITER_README-brightgreen?style=flat-square)](/.github/RECRUITER_README.md)
 
@@ -267,7 +267,7 @@ Each project below is a fully authored, end-to-end documentation site — built 
 
 > *A light-theme personal portfolio showcasing my work, background, and expertise.*
 
-[![Live Site](https://img.shields.io/badge/Live%20Site-sulagnasasmal.github.io-E8A84C?style=flat-square&logo=githubpages&logoColor=black)](https://sulagnasasmal.github.io/sulagnasasmal-site/)
+[![Live Site](https://img.shields.io/badge/Live%20Site-sulagnasasmal.com-E8A84C?style=flat-square&logo=githubpages&logoColor=black)](https://sulagnasasmal.com)
 [![GitHub Repo](https://img.shields.io/badge/GitHub-sulagnasasmal--site-181717?style=flat-square&logo=github)](https://github.com/SulagnaSasmal/sulagnasasmal-site)
 
 A hand-coded personal portfolio site — single HTML file, no frameworks. Covers my professional background, featured documentation projects, compliance expertise, experience timeline, and a personal section on travel and food.
