@@ -57,7 +57,7 @@ async function getUserStats(username) {
         following {
           totalCount
         }
-        repositories(first: 100, orderBy: {field: STARS, direction: DESC}) {
+        repositories(first: 100, orderBy: {field: STARGAZERS, direction: DESC}) {
           totalCount
           nodes {
             name
@@ -76,9 +76,6 @@ async function getUserStats(username) {
           contributionCalendar {
             totalContributions
           }
-          contributionsByRepository(from: 100) {
-            totalCount
-          }
         }
       }
     }
@@ -94,7 +91,7 @@ async function getTopRepositories(username, first = 10) {
   const query = `
     query($userName:String!, $first:Int!) {
       user(login: $userName) {
-        repositories(first: $first, orderBy: {field: STARS, direction: DESC}) {
+        repositories(first: $first, orderBy: {field: STARGAZERS, direction: DESC}) {
           nodes {
             name
             description
