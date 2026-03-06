@@ -71,30 +71,115 @@
 
 ## GitHub stats
 
+
 <!-- GITHUB_STATS_START -->
 
-<p>
-  <img height="200" src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=SulagnaSasmal&theme=vue" />
-</p>
+## GitHub Statistics
 
-<p>
-  <img height="200" src="https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=SulagnaSasmal&theme=vue" />
-  <img height="200" src="https://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=SulagnaSasmal&theme=vue" />
-</p>
+<table>
+<tr>
+<td width="50%">
+
+### Profile Stats
+- **Total Contributions**: 127 (this year)
+- **Followers**: 0
+- **Following**: 1
+- **Public Repositories**: 15
+
+</td>
+<td width="50%">
+
+### Repository Stats
+- **Total Stars**: 3
+- **Total Forks**: 0
+- **Top Language**: HTML
+- **Active Projects**: 15
+
+</td>
+</tr>
+</table>
 
 <!-- GITHUB_STATS_END -->
 
+
+
 <!-- TOP_REPOS_START -->
-<!-- Auto-generated top repositories section -->
+
+## Featured Projects
+
+
+### 1. [sulagnasasmal-site](https://github.com/SulagnaSasmal/sulagnasasmal-site)
+> No description provided
+
+**Language**: HTML | **Stars**: ⭐ 1 | **Forks**: 🍴 0
+
+
+### 2. [ppt-to-mp4-doc-automation](https://github.com/SulagnaSasmal/ppt-to-mp4-doc-automation)
+> No description provided
+
+**Language**: Python | **Stars**: ⭐ 1 | **Forks**: 🍴 0
+
+
+### 3. [Doccraft](https://github.com/SulagnaSasmal/Doccraft)
+> No description provided
+
+**Language**: TypeScript | **Stars**: ⭐ 1 | **Forks**: 🍴 0
+
+
+### 4. [docpulse](https://github.com/SulagnaSasmal/docpulse)
+> Documentation analytics dashboard - page views, search analytics, content freshness, coverage matrix, and ticket deflection tracking
+
+**Language**: TypeScript | **Stars**: ⭐ 0 | **Forks**: 🍴 0
+
+
+### 5. [docquery](https://github.com/SulagnaSasmal/docquery)
+> RAG-powered documentation chatbot with section-aware chunking, source citations, and content gap detection
+
+**Language**: Python | **Stars**: ⭐ 0 | **Forks**: 🍴 0
+
+
+### 6. [specflow](https://github.com/SulagnaSasmal/specflow)
+> Drop an OpenAPI spec. Get a Stripe-quality developer portal.
+
+**Language**: TypeScript | **Stars**: ⭐ 0 | **Forks**: 🍴 0
+
+
 <!-- TOP_REPOS_END -->
 
+
+
 <!-- LANGUAGES_START -->
-<!-- Auto-generated language breakdown -->
+
+## Most Used Languages
+
+**HTML**: ███████████░░░░░░░░░ 57%
+**TypeScript**: ████░░░░░░░░░░░░░░░░ 21%
+**Python**: ███░░░░░░░░░░░░░░░░░ 14%
+**JavaScript**: █░░░░░░░░░░░░░░░░░░░ 7%
+
 <!-- LANGUAGES_END -->
 
+
+
 <!-- ACTIVITY_START -->
-<!-- Auto-generated recent activity -->
+
+## Recent Activity
+
+| Repository | Last Update | Recent Commits |
+|-----------|-------------|----------------|
+| [`SulagnaSasmal`](https://github.com/SulagnaSasmal/SulagnaSasmal) | 3/6/2026 | 3 commits |
+| [`docquery`](https://github.com/SulagnaSasmal/docquery) | 3/5/2026 | 3 commits |
+| [`ppt-to-mp4-doc-automation`](https://github.com/SulagnaSasmal/ppt-to-mp4-doc-automation) | 3/5/2026 | 3 commits |
+| [`sulagnasasmal-site`](https://github.com/SulagnaSasmal/sulagnasasmal-site) | 3/5/2026 | 3 commits |
+| [`docpulse`](https://github.com/SulagnaSasmal/docpulse) | 3/5/2026 | 3 commits |
+| [`specflow`](https://github.com/SulagnaSasmal/specflow) | 3/4/2026 | 3 commits |
+| [`compliance-regulatory-hub`](https://github.com/SulagnaSasmal/compliance-regulatory-hub) | 3/2/2026 | 3 commits |
+| [`enterprise-investment-management-platform-docs`](https://github.com/SulagnaSasmal/enterprise-investment-management-platform-docs) | 3/2/2026 | 3 commits |
+| [`fraudshield-docs`](https://github.com/SulagnaSasmal/fraudshield-docs) | 3/1/2026 | 2 commits |
+| [`payments-api-guide`](https://github.com/SulagnaSasmal/payments-api-guide) | 3/1/2026 | 3 commits |
+
 <!-- ACTIVITY_END -->
+
 
 ---
 
