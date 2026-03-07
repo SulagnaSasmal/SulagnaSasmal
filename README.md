@@ -72,6 +72,7 @@
 ## GitHub stats
 
 
+
 <!-- GITHUB_STATS_START -->
 
 ## GitHub Statistics
@@ -81,10 +82,10 @@
 <td width="50%">
 
 ### Profile Stats
-- **Total Contributions**: 127 (this year)
+- **Total Contributions**: 146 (this year)
 - **Followers**: 0
 - **Following**: 1
-- **Public Repositories**: 15
+- **Public Repositories**: 16
 
 </td>
 <td width="50%">
@@ -93,13 +94,15 @@
 - **Total Stars**: 3
 - **Total Forks**: 0
 - **Top Language**: HTML
-- **Active Projects**: 15
+- **Active Projects**: 16
 
 </td>
 </tr>
 </table>
 
 <!-- GITHUB_STATS_END -->
+
+
 
 
 
@@ -126,25 +129,27 @@
 **Language**: TypeScript | **Stars**: ⭐ 1 | **Forks**: 🍴 0
 
 
-### 4. [docpulse](https://github.com/SulagnaSasmal/docpulse)
+### 4. [doc-portal](https://github.com/SulagnaSasmal/doc-portal)
+> Central documentation portfolio hub — API references, admin guides, knowledge bases, and AI tools by Sulagna Sasmal
+
+**Language**: HTML | **Stars**: ⭐ 0 | **Forks**: 🍴 0
+
+
+### 5. [docpulse](https://github.com/SulagnaSasmal/docpulse)
 > Documentation analytics dashboard - page views, search analytics, content freshness, coverage matrix, and ticket deflection tracking
 
 **Language**: TypeScript | **Stars**: ⭐ 0 | **Forks**: 🍴 0
 
 
-### 5. [docquery](https://github.com/SulagnaSasmal/docquery)
+### 6. [docquery](https://github.com/SulagnaSasmal/docquery)
 > RAG-powered documentation chatbot with section-aware chunking, source citations, and content gap detection
 
 **Language**: Python | **Stars**: ⭐ 0 | **Forks**: 🍴 0
 
 
-### 6. [specflow](https://github.com/SulagnaSasmal/specflow)
-> Drop an OpenAPI spec. Get a Stripe-quality developer portal.
-
-**Language**: TypeScript | **Stars**: ⭐ 0 | **Forks**: 🍴 0
-
-
 <!-- TOP_REPOS_END -->
+
+
 
 
 
@@ -152,12 +157,14 @@
 
 ## Most Used Languages
 
-**HTML**: ███████████░░░░░░░░░ 57%
-**TypeScript**: ████░░░░░░░░░░░░░░░░ 21%
-**Python**: ███░░░░░░░░░░░░░░░░░ 14%
+**HTML**: ████████████░░░░░░░░ 60%
+**TypeScript**: ████░░░░░░░░░░░░░░░░ 20%
+**Python**: ███░░░░░░░░░░░░░░░░░ 13%
 **JavaScript**: █░░░░░░░░░░░░░░░░░░░ 7%
 
 <!-- LANGUAGES_END -->
+
+
 
 
 
@@ -167,18 +174,19 @@
 
 | Repository | Last Update | Recent Commits |
 |-----------|-------------|----------------|
+| [`doc-portal`](https://github.com/SulagnaSasmal/doc-portal) | 3/6/2026 | 1 commits |
+| [`docquery`](https://github.com/SulagnaSasmal/docquery) | 3/6/2026 | 3 commits |
+| [`sulagnasasmal-site`](https://github.com/SulagnaSasmal/sulagnasasmal-site) | 3/6/2026 | 3 commits |
 | [`SulagnaSasmal`](https://github.com/SulagnaSasmal/SulagnaSasmal) | 3/6/2026 | 3 commits |
-| [`docquery`](https://github.com/SulagnaSasmal/docquery) | 3/5/2026 | 3 commits |
+| [`Doccraft`](https://github.com/SulagnaSasmal/Doccraft) | 3/6/2026 | 3 commits |
+| [`specflow`](https://github.com/SulagnaSasmal/specflow) | 3/6/2026 | 3 commits |
 | [`ppt-to-mp4-doc-automation`](https://github.com/SulagnaSasmal/ppt-to-mp4-doc-automation) | 3/5/2026 | 3 commits |
-| [`sulagnasasmal-site`](https://github.com/SulagnaSasmal/sulagnasasmal-site) | 3/5/2026 | 3 commits |
 | [`docpulse`](https://github.com/SulagnaSasmal/docpulse) | 3/5/2026 | 3 commits |
-| [`specflow`](https://github.com/SulagnaSasmal/specflow) | 3/4/2026 | 3 commits |
 | [`compliance-regulatory-hub`](https://github.com/SulagnaSasmal/compliance-regulatory-hub) | 3/2/2026 | 3 commits |
 | [`enterprise-investment-management-platform-docs`](https://github.com/SulagnaSasmal/enterprise-investment-management-platform-docs) | 3/2/2026 | 3 commits |
-| [`fraudshield-docs`](https://github.com/SulagnaSasmal/fraudshield-docs) | 3/1/2026 | 2 commits |
-| [`payments-api-guide`](https://github.com/SulagnaSasmal/payments-api-guide) | 3/1/2026 | 3 commits |
 
 <!-- ACTIVITY_END -->
+
 
 
 ---
