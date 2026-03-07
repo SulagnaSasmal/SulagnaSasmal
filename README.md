@@ -64,6 +64,7 @@
 | **DocQuery** | RAG-powered documentation chatbot | [View →](https://sulagnasasmal.github.io/docquery/) |
 | **DocPulse** | Documentation analytics dashboard | [View →](https://sulagnasasmal.github.io/docpulse/) |
 | **PPT → MP4 Automation** | Python narrated video pipeline | [GitHub →](https://github.com/SulagnaSasmal/ppt-to-mp4-doc-automation) |
+| **AI & Automation Tools Portal** | All AI tools portal — DocCraft, SpecFlow, DocQuery, DocPulse, PPT→MP4 | [View →](https://sulagnasasmal.github.io/ai-doc-tools/) |
 | **SunBridge Asset Atrium Manager — Platform Docs** | Investment platform architecture · NAV batch · HA · multi-TZ · release governance | [View →](https://sulagnasasmal.github.io/enterprise-investment-management-platform-docs/) |
 | **Asset Atrium Compliance Framework** | Investment compliance · pre-trade · post-trade · mandates · UCITS · AIFMD · MiFID II | [View →](https://sulagnasasmal.github.io/compliance-regulatory-hub/) |
 
@@ -110,42 +111,86 @@
 
 ## Featured Projects
 
+---
 
-### 1. [sulagnasasmal-site](https://github.com/SulagnaSasmal/sulagnasasmal-site)
-> No description provided
+### 🤖 [DocCraft AI — Intelligent Documentation Generator](https://github.com/SulagnaSasmal/Doccraft)
+> Full-stack AI application that converts raw content (notes, specs, screenshots) into polished, MSTP-compliant documentation with auto-compliance checking and one-click fixes.
 
-**Language**: HTML | **Stars**: ⭐ 1 | **Forks**: 🍴 0
+**Language**: TypeScript · Next.js 14 · OpenAI GPT-4o | **Live**: [doccraft-ten.vercel.app](https://doccraft-ten.vercel.app/)
 
+`Next.js 14` · `TypeScript` · `OpenAI GPT-4o` · `Tailwind CSS` · `MSTP Compliance` · `Vercel`
 
-### 2. [ppt-to-mp4-doc-automation](https://github.com/SulagnaSasmal/ppt-to-mp4-doc-automation)
-> No description provided
+---
 
-**Language**: Python | **Stars**: ⭐ 1 | **Forks**: 🍴 0
+### 🛡️ [FraudShield AI Engine Documentation](https://github.com/SulagnaSasmal/fraudshield-docs)
+> Enterprise 9-section HTML documentation for an AI-powered fraud detection platform — risk scoring models, REST API reference, model explainability, SR 11-7 & GDPR Art. 22 compliance. Grounded in real NICE Actimize IFM/AMP architecture.
 
+**Language**: HTML | **Live**: [sulagnasasmal.github.io/fraudshield-docs](https://sulagnasasmal.github.io/fraudshield-docs/)
 
-### 3. [Doccraft](https://github.com/SulagnaSasmal/Doccraft)
-> No description provided
+`NICE Actimize IFM` · `AI/ML Model Docs` · `REST API Reference` · `SR 11-7` · `GDPR Art. 22` · `BSA/AML`
 
-**Language**: TypeScript | **Stars**: ⭐ 1 | **Forks**: 🍴 0
+---
 
+### ⚡ [PayPlus REST API Developer Reference](https://github.com/SulagnaSasmal/payments-api-guide)
+> Six-section developer API reference for a fintech payment hub — OAuth 2.0, ACH, RTP/FedNow, Fedwire/SWIFT, webhooks, and error codes. Stripe/Plaid quality bar throughout.
 
-### 4. [doc-portal](https://github.com/SulagnaSasmal/doc-portal)
-> Central documentation portfolio hub — API references, admin guides, knowledge bases, and AI tools by Sulagna Sasmal
+**Language**: HTML | **Live**: [sulagnasasmal.github.io/payments-api-guide](https://sulagnasasmal.github.io/payments-api-guide/)
 
-**Language**: HTML | **Stars**: ⭐ 0 | **Forks**: 🍴 0
+`OAuth 2.0` · `Webhook HMAC-SHA256` · `ISO 20022` · `ACH return codes R01–R85` · `SWIFT gpi / UETR`
 
+---
 
-### 5. [docpulse](https://github.com/SulagnaSasmal/docpulse)
-> Documentation analytics dashboard - page views, search analytics, content freshness, coverage matrix, and ticket deflection tracking
+### 📐 [SunBridge Asset Atrium Manager — Platform Docs](https://github.com/SulagnaSasmal/enterprise-investment-management-platform-docs)
+> Technical documentation for an enterprise J2EE investment management platform — NAV batch processing, high availability, multi-time zone fund operations, and release governance. Fully MSTP-compliant.
 
-**Language**: TypeScript | **Stars**: ⭐ 0 | **Forks**: 🍴 0
+**Language**: HTML | **Live**: [sulagnasasmal.github.io/enterprise-investment-management-platform-docs](https://sulagnasasmal.github.io/enterprise-investment-management-platform-docs/)
 
+`J2EE / WebLogic 14c` · `Oracle 19c RAC` · `IBM MQ Series` · `SWIFT Alliance Lite2` · `NAV batch` · `MSTP`
 
-### 6. [docquery](https://github.com/SulagnaSasmal/docquery)
-> RAG-powered documentation chatbot with section-aware chunking, source citations, and content gap detection
+---
 
-**Language**: Python | **Stars**: ⭐ 0 | **Forks**: 🍴 0
+### 🔌 [SpecFlow — OpenAPI Developer Portal Generator](https://github.com/SulagnaSasmal/specflow)
+> Next.js app that transforms any OpenAPI 3.x spec into a fully interactive Stripe-quality developer portal — live Try-It Console, auth panel, webhooks explorer, search.
 
+**Language**: TypeScript | **Live**: [sulagnasasmal.github.io/specflow](https://sulagnasasmal.github.io/specflow/)
+
+`Next.js 14` · `TypeScript` · `swagger-parser` · `Monaco Editor` · `Interactive API Console`
+
+---
+
+### 💬 [DocQuery — RAG Documentation Chatbot](https://github.com/SulagnaSasmal/docquery)
+> RAG-powered chatbot with section-aware chunking, source citations, confidence scoring (HIGH/MEDIUM/LOW), and automatic content gap detection. ChromaDB + GPT-4o-mini + Next.js chat UI.
+
+**Language**: Python · TypeScript | **Live**: [sulagnasasmal.github.io/docquery](https://sulagnasasmal.github.io/docquery/)
+
+`Python` · `FastAPI` · `LangChain` · `ChromaDB` · `OpenAI` · `Next.js 14`
+
+---
+
+### 📊 [DocPulse — Documentation Analytics Dashboard](https://github.com/SulagnaSasmal/docpulse)
+> Lightweight analytics platform for documentation sites — page views, reading time, search queries, content freshness scoring, feature coverage matrix, and weekly report generation.
+
+**Language**: TypeScript · Python | **Live**: [sulagnasasmal.github.io/docpulse](https://sulagnasasmal.github.io/docpulse/)
+
+`FastAPI` · `SQLite` · `Next.js 14` · `Recharts` · `Tailwind CSS` · `<5KB tracker`
+
+---
+
+### 🎬 [PPT → MP4 Documentation Automation](https://github.com/SulagnaSasmal/ppt-to-mp4-doc-automation)
+> End-to-end Python pipeline that converts PowerPoint slides into narrated MP4 videos — no screen recording, no manual voiceover. Azure TTS Neural voice + FFmpeg muxing.
+
+**Language**: Python | **Live**: [GitHub Repo](https://github.com/SulagnaSasmal/ppt-to-mp4-doc-automation)
+
+`Python` · `FastAPI` · `Azure TTS (Jenny Neural)` · `PowerPoint COM` · `FFmpeg` · `pywin32`
+
+---
+
+### 🌐 [AI & Automation Tools Portal](https://github.com/SulagnaSasmal/ai-doc-tools)
+> Central landing page showcasing all AI-powered and automation tools built for documentation workflows — DocCraft AI, SpecFlow, DocQuery, DocPulse, PPT→MP4.
+
+**Language**: HTML | **Live**: [sulagnasasmal.github.io/ai-doc-tools](https://sulagnasasmal.github.io/ai-doc-tools/)
+
+`HTML` · `GitHub Pages` · `Documentation Tooling` · `AI Tools Portal`
 
 <!-- TOP_REPOS_END -->
 
@@ -193,7 +238,9 @@
 
 ## 📊 Visitor Analytics System
 
-[![Live Dashboard](https://img.shields.io/badge/Live_Dashboard-View_Analytics-4F46E5?style=for-the-badge&logo=vercel&logoColor=white)](https://github-profile-analytics-flax.vercel.app/)
+> A visitor analytics system deployed on Vercel tracks page interactions across this GitHub profile in real time.
+
+[![View Live Dashboard →](https://img.shields.io/badge/View_Live_Dashboard-github--profile--analytics-4F46E5?style=for-the-badge&logo=vercel&logoColor=white)](https://github-profile-analytics-flax.vercel.app/)
 
 This profile includes a comprehensive **visitor analytics system** that tracks how people interact with this GitHub presence. It provides insights into:
 
@@ -550,7 +597,20 @@ Upload raw content + context docs (style guide, glossary, OpenAPI spec)
 
 ---
 
-### 🎬 PPT → MP4 Documentation Automation
+### � AI & Automation Tools Portal
+
+> *Central landing page for all AI-powered and automation tools — browse, explore, and link to DocCraft AI, SpecFlow, DocQuery, DocPulse, and the PPT→MP4 pipeline.*
+
+[![Live Site](https://img.shields.io/badge/Live%20Site-sulagnasasmal.github.io-4F46E5?style=flat-square&logo=githubpages&logoColor=white)](https://sulagnasasmal.github.io/ai-doc-tools/)
+[![GitHub Repo](https://img.shields.io/badge/GitHub-ai--doc--tools-181717?style=flat-square&logo=github)](https://github.com/SulagnaSasmal/ai-doc-tools)
+
+A single-page portal that surfaces all five AI and automation tools in one place — each with a live link, tech stack, and description. Clean navigation, consistent branding with the main portfolio site, and direct links to every tool's GitHub repo and live deployment.
+
+`HTML` · `GitHub Pages` · `Amber + Indigo + Teal theme` · `Responsive design` · `No frameworks`
+
+---
+
+### �🎬 PPT → MP4 Documentation Automation
 
 > *An end-to-end pipeline that converts PowerPoint presentations into narrated MP4 videos — no screen recording, no manual voiceover.*
 
