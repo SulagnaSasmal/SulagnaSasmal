@@ -14,6 +14,7 @@
 [![Portfolio](https://img.shields.io/badge/Portfolio-sulagnasasmal.com-E8A84C?style=flat-square&logo=githubpages&logoColor=black)](https://sulagnasasmal.com)
 [![GitHub followers](https://img.shields.io/github/followers/SulagnaSasmal?style=flat-square&logo=github&label=Follow)](https://github.com/SulagnaSasmal)
 [![Recruit](https://img.shields.io/badge/For_Recruiters-RECRUITER_README-brightgreen?style=flat-square)](/.github/RECRUITER_README.md)
+![Profile Views](https://komarev.com/ghpvc/?username=SulagnaSasmal&color=0A66C2&style=flat-square&label=Profile+Views)
 
 <br clear="right" />
 
