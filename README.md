@@ -193,6 +193,8 @@
 
 ## 📊 Visitor Analytics System
 
+[![Live Dashboard](https://img.shields.io/badge/Live_Dashboard-View_Analytics-4F46E5?style=for-the-badge&logo=vercel&logoColor=white)](https://github-profile-analytics-flax.vercel.app/)
+
 This profile includes a comprehensive **visitor analytics system** that tracks how people interact with this GitHub presence. It provides insights into:
 
 - **👁️ Page Views** — Profile visit count, referrer sources, device types, geographic data
