@@ -75,6 +75,7 @@
 
 
 
+
 <!-- GITHUB_STATS_START -->
 
 ## GitHub Statistics
@@ -84,10 +85,10 @@
 <td width="50%">
 
 ### Profile Stats
-- **Total Contributions**: 146 (this year)
+- **Total Contributions**: 175 (this year)
 - **Followers**: 0
 - **Following**: 1
-- **Public Repositories**: 16
+- **Public Repositories**: 25
 
 </td>
 <td width="50%">
@@ -96,7 +97,7 @@
 - **Total Stars**: 3
 - **Total Forks**: 0
 - **Top Language**: HTML
-- **Active Projects**: 16
+- **Active Projects**: 25
 
 </td>
 </tr>
@@ -108,92 +109,52 @@
 
 
 
+
+
 <!-- TOP_REPOS_START -->
 
 ## Featured Projects
 
----
 
-### 🤖 [DocCraft AI — Intelligent Documentation Generator](https://github.com/SulagnaSasmal/Doccraft)
-> Full-stack AI application that converts raw content (notes, specs, screenshots) into polished, MSTP-compliant documentation with auto-compliance checking and one-click fixes.
+### 1. [sulagnasasmal-site](https://github.com/SulagnaSasmal/sulagnasasmal-site)
+> No description provided
 
-**Language**: TypeScript · Next.js 14 · OpenAI GPT-4o | **Live**: [doccraft-ten.vercel.app](https://doccraft-ten.vercel.app/)
+**Language**: HTML | **Stars**: ⭐ 1 | **Forks**: 🍴 0
 
-`Next.js 14` · `TypeScript` · `OpenAI GPT-4o` · `Tailwind CSS` · `MSTP Compliance` · `Vercel`
 
----
+### 2. [ppt-to-mp4-doc-automation](https://github.com/SulagnaSasmal/ppt-to-mp4-doc-automation)
+> No description provided
 
-### 🛡️ [FraudShield AI Engine Documentation](https://github.com/SulagnaSasmal/fraudshield-docs)
-> Enterprise 9-section HTML documentation for an AI-powered fraud detection platform — risk scoring models, REST API reference, model explainability, SR 11-7 & GDPR Art. 22 compliance. Grounded in real NICE Actimize IFM/AMP architecture.
+**Language**: Python | **Stars**: ⭐ 1 | **Forks**: 🍴 0
 
-**Language**: HTML | **Live**: [sulagnasasmal.github.io/fraudshield-docs](https://sulagnasasmal.github.io/fraudshield-docs/)
 
-`NICE Actimize IFM` · `AI/ML Model Docs` · `REST API Reference` · `SR 11-7` · `GDPR Art. 22` · `BSA/AML`
+### 3. [Doccraft](https://github.com/SulagnaSasmal/Doccraft)
+> No description provided
 
----
+**Language**: TypeScript | **Stars**: ⭐ 1 | **Forks**: 🍴 0
 
-### ⚡ [PayPlus REST API Developer Reference](https://github.com/SulagnaSasmal/payments-api-guide)
-> Six-section developer API reference for a fintech payment hub — OAuth 2.0, ACH, RTP/FedNow, Fedwire/SWIFT, webhooks, and error codes. Stripe/Plaid quality bar throughout.
 
-**Language**: HTML | **Live**: [sulagnasasmal.github.io/payments-api-guide](https://sulagnasasmal.github.io/payments-api-guide/)
+### 4. [ai-doc-tools](https://github.com/SulagnaSasmal/ai-doc-tools)
+> AI-powered and automation documentation tools by Sulagna Sasmal — DocCraft AI, SpecFlow, DocQuery, DocPulse, PPT-to-MP4
 
-`OAuth 2.0` · `Webhook HMAC-SHA256` · `ISO 20022` · `ACH return codes R01–R85` · `SWIFT gpi / UETR`
+**Language**: HTML | **Stars**: ⭐ 0 | **Forks**: 🍴 0
 
----
 
-### 📐 [SunBridge Asset Atrium Manager — Platform Docs](https://github.com/SulagnaSasmal/enterprise-investment-management-platform-docs)
-> Technical documentation for an enterprise J2EE investment management platform — NAV batch processing, high availability, multi-time zone fund operations, and release governance. Fully MSTP-compliant.
+### 5. [developer-onboarding](https://github.com/SulagnaSasmal/developer-onboarding)
+> Developer Onboarding Experience — 5-step interactive Payments API onboarding with checklist-gated navigation
 
-**Language**: HTML | **Live**: [sulagnasasmal.github.io/enterprise-investment-management-platform-docs](https://sulagnasasmal.github.io/enterprise-investment-management-platform-docs/)
+**Language**: HTML | **Stars**: ⭐ 0 | **Forks**: 🍴 0
 
-`J2EE / WebLogic 14c` · `Oracle 19c RAC` · `IBM MQ Series` · `SWIFT Alliance Lite2` · `NAV batch` · `MSTP`
 
----
+### 6. [aml-compliance-training](https://github.com/SulagnaSasmal/aml-compliance-training)
+> Compliance & AML Training Program — BSA/AML regulatory scenario-based training with quiz engine
 
-### 🔌 [SpecFlow — OpenAPI Developer Portal Generator](https://github.com/SulagnaSasmal/specflow)
-> Next.js app that transforms any OpenAPI 3.x spec into a fully interactive Stripe-quality developer portal — live Try-It Console, auth panel, webhooks explorer, search.
+**Language**: HTML | **Stars**: ⭐ 0 | **Forks**: 🍴 0
 
-**Language**: TypeScript | **Live**: [sulagnasasmal.github.io/specflow](https://sulagnasasmal.github.io/specflow/)
-
-`Next.js 14` · `TypeScript` · `swagger-parser` · `Monaco Editor` · `Interactive API Console`
-
----
-
-### 💬 [DocQuery — RAG Documentation Chatbot](https://github.com/SulagnaSasmal/docquery)
-> RAG-powered chatbot with section-aware chunking, source citations, confidence scoring (HIGH/MEDIUM/LOW), and automatic content gap detection. ChromaDB + GPT-4o-mini + Next.js chat UI.
-
-**Language**: Python · TypeScript | **Live**: [sulagnasasmal.github.io/docquery](https://sulagnasasmal.github.io/docquery/)
-
-`Python` · `FastAPI` · `LangChain` · `ChromaDB` · `OpenAI` · `Next.js 14`
-
----
-
-### 📊 [DocPulse — Documentation Analytics Dashboard](https://github.com/SulagnaSasmal/docpulse)
-> Lightweight analytics platform for documentation sites — page views, reading time, search queries, content freshness scoring, feature coverage matrix, and weekly report generation.
-
-**Language**: TypeScript · Python | **Live**: [sulagnasasmal.github.io/docpulse](https://sulagnasasmal.github.io/docpulse/)
-
-`FastAPI` · `SQLite` · `Next.js 14` · `Recharts` · `Tailwind CSS` · `<5KB tracker`
-
----
-
-### 🎬 [PPT → MP4 Documentation Automation](https://github.com/SulagnaSasmal/ppt-to-mp4-doc-automation)
-> End-to-end Python pipeline that converts PowerPoint slides into narrated MP4 videos — no screen recording, no manual voiceover. Azure TTS Neural voice + FFmpeg muxing.
-
-**Language**: Python | **Live**: [GitHub Repo](https://github.com/SulagnaSasmal/ppt-to-mp4-doc-automation)
-
-`Python` · `FastAPI` · `Azure TTS (Jenny Neural)` · `PowerPoint COM` · `FFmpeg` · `pywin32`
-
----
-
-### 🌐 [AI & Automation Tools Portal](https://github.com/SulagnaSasmal/ai-doc-tools)
-> Central landing page showcasing all AI-powered and automation tools built for documentation workflows — DocCraft AI, SpecFlow, DocQuery, DocPulse, PPT→MP4.
-
-**Language**: HTML | **Live**: [sulagnasasmal.github.io/ai-doc-tools](https://sulagnasasmal.github.io/ai-doc-tools/)
-
-`HTML` · `GitHub Pages` · `Documentation Tooling` · `AI Tools Portal`
 
 <!-- TOP_REPOS_END -->
+
+
 
 
 
@@ -203,12 +164,14 @@
 
 ## Most Used Languages
 
-**HTML**: ████████████░░░░░░░░ 60%
-**TypeScript**: ████░░░░░░░░░░░░░░░░ 20%
-**Python**: ███░░░░░░░░░░░░░░░░░ 13%
-**JavaScript**: █░░░░░░░░░░░░░░░░░░░ 7%
+**HTML**: ███████████████░░░░░ 75%
+**TypeScript**: ███░░░░░░░░░░░░░░░░░ 13%
+**Python**: ██░░░░░░░░░░░░░░░░░░ 8%
+**JavaScript**: █░░░░░░░░░░░░░░░░░░░ 4%
 
 <!-- LANGUAGES_END -->
+
+
 
 
 
@@ -220,18 +183,19 @@
 
 | Repository | Last Update | Recent Commits |
 |-----------|-------------|----------------|
-| [`doc-portal`](https://github.com/SulagnaSasmal/doc-portal) | 3/6/2026 | 1 commits |
-| [`docquery`](https://github.com/SulagnaSasmal/docquery) | 3/6/2026 | 3 commits |
-| [`sulagnasasmal-site`](https://github.com/SulagnaSasmal/sulagnasasmal-site) | 3/6/2026 | 3 commits |
-| [`SulagnaSasmal`](https://github.com/SulagnaSasmal/SulagnaSasmal) | 3/6/2026 | 3 commits |
-| [`Doccraft`](https://github.com/SulagnaSasmal/Doccraft) | 3/6/2026 | 3 commits |
-| [`specflow`](https://github.com/SulagnaSasmal/specflow) | 3/6/2026 | 3 commits |
-| [`ppt-to-mp4-doc-automation`](https://github.com/SulagnaSasmal/ppt-to-mp4-doc-automation) | 3/5/2026 | 3 commits |
-| [`docpulse`](https://github.com/SulagnaSasmal/docpulse) | 3/5/2026 | 3 commits |
-| [`compliance-regulatory-hub`](https://github.com/SulagnaSasmal/compliance-regulatory-hub) | 3/2/2026 | 3 commits |
-| [`enterprise-investment-management-platform-docs`](https://github.com/SulagnaSasmal/enterprise-investment-management-platform-docs) | 3/2/2026 | 3 commits |
+| [`caseforge-api-docs`](https://github.com/SulagnaSasmal/caseforge-api-docs) | 3/7/2026 | 3 commits |
+| [`SulagnaSasmal`](https://github.com/SulagnaSasmal/SulagnaSasmal) | 3/7/2026 | 3 commits |
+| [`ppt-to-mp4-doc-automation`](https://github.com/SulagnaSasmal/ppt-to-mp4-doc-automation) | 3/7/2026 | 3 commits |
+| [`sulagnasasmal-site`](https://github.com/SulagnaSasmal/sulagnasasmal-site) | 3/7/2026 | 3 commits |
+| [`doc-portal`](https://github.com/SulagnaSasmal/doc-portal) | 3/7/2026 | 3 commits |
+| [`ai-doc-tools`](https://github.com/SulagnaSasmal/ai-doc-tools) | 3/7/2026 | 1 commits |
+| [`developer-onboarding`](https://github.com/SulagnaSasmal/developer-onboarding) | 3/7/2026 | 1 commits |
+| [`payments-tutorial-series`](https://github.com/SulagnaSasmal/payments-tutorial-series) | 3/7/2026 | 1 commits |
+| [`aml-compliance-training`](https://github.com/SulagnaSasmal/aml-compliance-training) | 3/7/2026 | 1 commits |
+| [`doccraft-help-center`](https://github.com/SulagnaSasmal/doccraft-help-center) | 3/7/2026 | 1 commits |
 
 <!-- ACTIVITY_END -->
+
 
 
 
