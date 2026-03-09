@@ -68,6 +68,8 @@
 | **AI & Automation Tools Portal** | All AI tools portal — DocCraft, SpecFlow, DocQuery, DocPulse, PPT→MP4 | [View →](https://sulagnasasmal.github.io/ai-doc-tools/) |
 | **SunBridge Asset Atrium Manager — Platform Docs** | Investment platform architecture · NAV batch · HA · multi-TZ · release governance | [View →](https://sulagnasasmal.github.io/enterprise-investment-management-platform-docs/) |
 | **Asset Atrium Compliance Framework** | Investment compliance · pre-trade · post-trade · mandates · UCITS · AIFMD · MiFID II | [View →](https://sulagnasasmal.github.io/compliance-regulatory-hub/) |
+| **NexaFlow SDK Documentation** | SDK & code library docs · API reference · quickstart · error handling · migration guide · changelog | [GitHub →](https://github.com/SulagnaSasmal/nexaflow-sdk-docs) |
+| **Docs Content Strategy & Style Guide** | IA framework · voice & tone · doc types · audience analysis · metrics · templates · audit tools | [GitHub →](https://github.com/SulagnaSasmal/docs-content-strategy) |
 
 ---
 
@@ -154,6 +156,24 @@
 
 **Language**: HTML | **Stars**: ⭐ 0 | **Forks**: 🍴 0
 
+
+---
+
+### 📦 [NexaFlow SDK Documentation](https://github.com/SulagnaSasmal/nexaflow-sdk-docs)
+> Full developer reference for a workflow automation SDK — installation, core concepts, authentication, error handling with retry policies, full API reference (client, workflows, triggers, actions), v1-to-v2 migration guide, and versioned changelog. Written to the same quality bar as Stripe and Twilio SDK docs.
+
+**Language**: Markdown | **Repo**: [github.com/SulagnaSasmal/nexaflow-sdk-docs](https://github.com/SulagnaSasmal/nexaflow-sdk-docs)
+
+`SDK Documentation` · `API Reference` · `Migration Guide` · `Error Handling` · `Node.js` · `Python`
+
+---
+
+### 🗂️ [Technical Documentation Content Strategy & Style Guide](https://github.com/SulagnaSasmal/docs-content-strategy)
+> A complete documentation program framework: editorial style guide (voice & tone, formatting, naming, code examples), information architecture methodology, doc type taxonomy, audience analysis framework, metrics program, four ready-to-use templates, a doc audit checklist, and a content health scorecard. Built for teams managing documentation at scale.
+
+**Language**: Markdown | **Repo**: [github.com/SulagnaSasmal/docs-content-strategy](https://github.com/SulagnaSasmal/docs-content-strategy)
+
+`Content Strategy` · `Style Guide` · `Information Architecture` · `Docs Metrics` · `Templates` · `Content Audit`
 
 <!-- TOP_REPOS_END -->
 
