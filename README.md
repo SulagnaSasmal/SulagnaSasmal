@@ -129,43 +129,6 @@
 
 ## Featured Projects
 
-
-### 1. [sulagnasasmal-site](https://github.com/SulagnaSasmal/sulagnasasmal-site)
-> Personal portfolio and technical writing showcase — Sulagna Sasmal, Senior Technical Writer · sulagnasasmal.com
-
-**Language**: HTML | **Stars**: ⭐ 1 | **Forks**: 🍴 0
-
-
-### 2. [SulagnaSasmal](https://github.com/SulagnaSasmal/SulagnaSasmal)
-> GitHub profile repository — readme-driven portfolio for Sulagna Sasmal, Senior Technical Writer
-
-**Language**: JavaScript | **Stars**: ⭐ 1 | **Forks**: 🍴 0
-
-
-### 3. [ppt-to-mp4-doc-automation](https://github.com/SulagnaSasmal/ppt-to-mp4-doc-automation)
-> PPT-to-MP4 doc automation pipeline — converts PowerPoint slides to narrated video using Python and Azure AI
-
-**Language**: Python | **Stars**: ⭐ 1 | **Forks**: 🍴 0
-
-
-### 4. [Doccraft](https://github.com/SulagnaSasmal/Doccraft)
-> DocCraft AI — intelligent documentation generation assistant for technical writers, built with TypeScript and Next.js
-
-**Language**: TypeScript | **Stars**: ⭐ 1 | **Forks**: 🍴 0
-
-
-### 5. [caseforge-sdk-docs](https://github.com/SulagnaSasmal/caseforge-sdk-docs)
-> CaseForge SDK documentation — quickstart, authentication, error handling, code samples, changelog, and migration guide
-
-**Language**: HTML | **Stars**: ⭐ 0 | **Forks**: 🍴 0
-
-
-### 6. [docs-content-strategy](https://github.com/SulagnaSasmal/docs-content-strategy)
-> Phase 7: Technical documentation content strategy and style guide - IA framework, voice & tone, doc types, audience analysis, metrics, templates, and audit tools
-
-**Language**: Unknown | **Stars**: ⭐ 0 | **Forks**: 🍴 0
-
-
 ---
 
 ### 🚀 [CaseForge Onboarding Kit](https://sulagnasasmal.github.io/caseforge-onboarding/)

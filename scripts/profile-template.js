@@ -73,33 +73,17 @@ const CURATED_REPO_DESCRIPTIONS = {
 };
 
 /**
- * Generate top repositories section
+ * Generate top repositories section.
+ * The Featured Projects block is fully curated — the auto-generated repo list is
+ * intentionally omitted so CI runs never overwrite hand-crafted project entries.
  */
 function generateTopReposSection(repositories) {
-  const topRepos = repositories.slice(0, 6);
-
+  // repositories parameter kept for API compatibility but not used for the listing.
   let content = `
 <!-- TOP_REPOS_START -->
 
 ## Featured Projects
 
-`;
-
-  topRepos.forEach((repo, index) => {
-    const lang = repo.primaryLanguage?.name || 'Unknown';
-    const stars = repo.stargazerCount;
-    const desc = CURATED_REPO_DESCRIPTIONS[repo.name] || repo.description || 'No description provided';
-
-    content += `
-### ${index + 1}. [${repo.name}](${repo.url})
-> ${desc}
-
-**Language**: ${lang} | **Stars**: ⭐ ${stars} | **Forks**: 🍴 ${repo.forkCount}
-
-`;
-  });
-
-  content += `
 ---
 
 ### 🚀 [CaseForge Onboarding Kit](https://sulagnasasmal.github.io/caseforge-onboarding/)
@@ -113,6 +97,43 @@ function generateTopReposSection(repositories) {
 
 ### 🐍 [CaseForge SDK Documentation](https://sulagnasasmal.github.io/caseforge-sdk-docs/)
 > Python and Node.js SDK guide for the CaseForge AML REST API. Covers quickstart, authentication (API keys + OAuth 2.0), a structured exception hierarchy, full code-sample library, versioned changelog, and a v1.x → v2.0 migration guide with side-by-side breaking-change comparisons.
+
+**Language**: HTML | **Live Site**: [sulagnasasmal.github.io/caseforge-sdk-docs](https://sulagnasasmal.github.io/caseforge-sdk-docs/) | **Repo**: [github.com/SulagnaSasmal/caseforge-sdk-docs](https://github.com/SulagnaSasmal/caseforge-sdk-docs)
+
+\`SDK Documentation\` · \`Python\` · \`Node.js\` · \`OAuth 2.0\` · \`Migration Guide\` · \`Versioned Changelog\`
+
+---
+
+### 🏛️ [Documentation Center Platform](https://sulagnasasmal.github.io/Documentation-Center-Platform/)
+> Capstone portfolio hub bringing all 7 documentation phases together. Includes meta-documentation on writing philosophy (MSTP compliance, before/after examples), information architecture decisions per phase, and a full doc-as-code workflow with branch strategy, Vale linting, GitHub Actions CI, and deployment pipeline.
+
+**Language**: HTML | **Live Site**: [sulagnasasmal.github.io/Documentation-Center-Platform](https://sulagnasasmal.github.io/Documentation-Center-Platform/) | **Repo**: [github.com/SulagnaSasmal/Documentation-Center-Platform](https://github.com/SulagnaSasmal/Documentation-Center-Platform)
+
+\`Portfolio Hub\` · \`MSTP\` · \`Information Architecture\` · \`Doc-as-Code\` · \`Vale Linting\` · \`GitHub Actions\`
+
+---
+
+### 📦 [NexaFlow SDK Documentation](https://github.com/SulagnaSasmal/nexaflow-sdk-docs)
+> Full developer reference for a workflow automation SDK — installation, core concepts, authentication, error handling with retry policies, full API reference (client, workflows, triggers, actions), v1-to-v2 migration guide, and versioned changelog. Written to the same quality bar as Stripe and Twilio SDK docs.
+
+**Language**: Markdown | **Repo**: [github.com/SulagnaSasmal/nexaflow-sdk-docs](https://github.com/SulagnaSasmal/nexaflow-sdk-docs)
+
+\`SDK Documentation\` · \`API Reference\` · \`Migration Guide\` · \`Error Handling\` · \`Node.js\` · \`Python\`
+
+---
+
+### 🗂️ [Technical Documentation Content Strategy & Style Guide](https://github.com/SulagnaSasmal/docs-content-strategy)
+> A complete documentation program framework: editorial style guide (voice & tone, formatting, naming, code examples), information architecture methodology, doc type taxonomy, audience analysis framework, metrics program, four ready-to-use templates, a doc audit checklist, and a content health scorecard. Built for teams managing documentation at scale.
+
+**Language**: Markdown | **Repo**: [github.com/SulagnaSasmal/docs-content-strategy](https://github.com/SulagnaSasmal/docs-content-strategy)
+
+\`Content Strategy\` · \`Style Guide\` · \`Information Architecture\` · \`Docs Metrics\` · \`Templates\` · \`Content Audit\`
+
+<!-- TOP_REPOS_END -->
+`;
+
+  return content;
+}
 
 **Language**: HTML | **Live Site**: [sulagnasasmal.github.io/caseforge-sdk-docs](https://sulagnasasmal.github.io/caseforge-sdk-docs/) | **Repo**: [github.com/SulagnaSasmal/caseforge-sdk-docs](https://github.com/SulagnaSasmal/caseforge-sdk-docs)
 
