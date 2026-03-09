@@ -58,6 +58,9 @@
 | **US Payments Hub** | Operations & compliance reference | [View →](https://sulagnasasmal.github.io/us-payments-hub/) |
 | **VaultPay API Docs** | Fintech payment API reference | [View →](https://sulagnasasmal.github.io/vaultpay-api-docs/) |
 | **CaseForge API Docs** | Enterprise AML & SAR filing API | [View →](https://sulagnasasmal.github.io/caseforge-api-docs/) |
+| **CaseForge Onboarding Kit** | Post-sale customer onboarding · 30-day program · role-based checklists · go-live validation | [View →](https://sulagnasasmal.github.io/caseforge-onboarding/) |
+| **CaseForge SDK Documentation** | Python · Node.js SDK · authentication · error handling · migration guide · versioned changelog | [View →](https://sulagnasasmal.github.io/caseforge-sdk-docs/) |
+| **Documentation Center Platform** | Portfolio hub · writing philosophy · information architecture · doc-as-code workflow | [View →](https://sulagnasasmal.github.io/portfolio.html) |
 | **DocForge Platform** | Docs-as-Code platform dashboard | [View →](https://sulagnasasmal.github.io/Documentation-Center-Platform/docforge-platform.html) |
 | **Docs-as-Code Portal** | DaC methodology documentation | [View →](https://sulagnasasmal.github.io/docs-as-code-portal/) |
 | **DocCraft AI** | Next.js + GPT-4o docs generator | [View →](https://doccraft-ten.vercel.app/) |
@@ -88,10 +91,10 @@
 <td width="50%">
 
 ### Profile Stats
-- **Total Contributions**: 176 (this year)
+- **Total Contributions**: 184 (this year)
 - **Followers**: 0
 - **Following**: 1
-- **Public Repositories**: 25
+- **Public Repositories**: 28
 
 </td>
 <td width="50%">
@@ -210,7 +213,9 @@
 
 | Repository | Last Update | Recent Commits |
 |-----------|-------------|----------------|
-| [`SulagnaSasmal`](https://github.com/SulagnaSasmal/SulagnaSasmal) | 3/8/2026 | 3 commits |
+| [`SulagnaSasmal`](https://github.com/SulagnaSasmal/SulagnaSasmal) | 3/9/2026 | 6 commits |
+| [`caseforge-sdk-docs`](https://github.com/SulagnaSasmal/caseforge-sdk-docs) | 3/9/2026 | 2 commits |
+| [`caseforge-onboarding`](https://github.com/SulagnaSasmal/caseforge-onboarding) | 3/9/2026 | 1 commits |
 | [`caseforge-api-docs`](https://github.com/SulagnaSasmal/caseforge-api-docs) | 3/7/2026 | 3 commits |
 | [`ppt-to-mp4-doc-automation`](https://github.com/SulagnaSasmal/ppt-to-mp4-doc-automation) | 3/7/2026 | 3 commits |
 | [`sulagnasasmal-site`](https://github.com/SulagnaSasmal/sulagnasasmal-site) | 3/7/2026 | 3 commits |
