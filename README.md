@@ -83,6 +83,7 @@
 
 
 
+
 <!-- GITHUB_STATS_START -->
 
 ## GitHub Statistics
@@ -92,7 +93,7 @@
 <td width="50%">
 
 ### Profile Stats
-- **Total Contributions**: 196 (this year)
+- **Total Contributions**: 198 (this year)
 - **Followers**: 0
 - **Following**: 1
 - **Public Repositories**: 29
@@ -122,6 +123,8 @@
 
 
 
+
+
 <!-- TOP_REPOS_START -->
 
 ## Featured Projects
@@ -134,7 +137,7 @@
 
 
 ### 2. [SulagnaSasmal](https://github.com/SulagnaSasmal/SulagnaSasmal)
-> SulagnaSasmal is a ✨special ✨ repository that I use to add a README.md to my GitHub profile. 
+> GitHub profile repository — readme-driven portfolio for Sulagna Sasmal, Senior Technical Writer
 
 **Language**: JavaScript | **Stars**: ⭐ 1 | **Forks**: 🍴 0
 
@@ -220,6 +223,8 @@
 
 
 
+
+
 <!-- LANGUAGES_START -->
 
 ## Most Used Languages
@@ -230,6 +235,8 @@
 **JavaScript**: █░░░░░░░░░░░░░░░░░░░ 4%
 
 <!-- LANGUAGES_END -->
+
+
 
 
 
@@ -259,6 +266,7 @@
 | [`developer-onboarding`](https://github.com/SulagnaSasmal/developer-onboarding) | 3/9/2026 | 2 commits |
 
 <!-- ACTIVITY_END -->
+
 
 
 
