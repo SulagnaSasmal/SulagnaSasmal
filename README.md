@@ -82,6 +82,7 @@
 
 
 
+
 <!-- GITHUB_STATS_START -->
 
 ## GitHub Statistics
@@ -91,25 +92,27 @@
 <td width="50%">
 
 ### Profile Stats
-- **Total Contributions**: 184 (this year)
+- **Total Contributions**: 196 (this year)
 - **Followers**: 0
 - **Following**: 1
-- **Public Repositories**: 28
+- **Public Repositories**: 29
 
 </td>
 <td width="50%">
 
 ### Repository Stats
-- **Total Stars**: 3
+- **Total Stars**: 4
 - **Total Forks**: 0
 - **Top Language**: HTML
-- **Active Projects**: 25
+- **Active Projects**: 29
 
 </td>
 </tr>
 </table>
 
 <!-- GITHUB_STATS_END -->
+
+
 
 
 
@@ -130,53 +133,35 @@
 **Language**: HTML | **Stars**: ⭐ 1 | **Forks**: 🍴 0
 
 
-### 2. [ppt-to-mp4-doc-automation](https://github.com/SulagnaSasmal/ppt-to-mp4-doc-automation)
+### 2. [SulagnaSasmal](https://github.com/SulagnaSasmal/SulagnaSasmal)
+> SulagnaSasmal is a ✨special ✨ repository that I use to add a README.md to my GitHub profile. 
+
+**Language**: JavaScript | **Stars**: ⭐ 1 | **Forks**: 🍴 0
+
+
+### 3. [ppt-to-mp4-doc-automation](https://github.com/SulagnaSasmal/ppt-to-mp4-doc-automation)
 > No description provided
 
 **Language**: Python | **Stars**: ⭐ 1 | **Forks**: 🍴 0
 
 
-### 3. [Doccraft](https://github.com/SulagnaSasmal/Doccraft)
+### 4. [Doccraft](https://github.com/SulagnaSasmal/Doccraft)
 > No description provided
 
 **Language**: TypeScript | **Stars**: ⭐ 1 | **Forks**: 🍴 0
 
 
-### 4. [ai-doc-tools](https://github.com/SulagnaSasmal/ai-doc-tools)
-> AI-powered and automation documentation tools by Sulagna Sasmal — DocCraft AI, SpecFlow, DocQuery, DocPulse, PPT-to-MP4
+### 5. [caseforge-sdk-docs](https://github.com/SulagnaSasmal/caseforge-sdk-docs)
+> CaseForge SDK documentation — quickstart, authentication, error handling, code samples, changelog, and migration guide
 
 **Language**: HTML | **Stars**: ⭐ 0 | **Forks**: 🍴 0
 
 
-### 5. [developer-onboarding](https://github.com/SulagnaSasmal/developer-onboarding)
-> Developer Onboarding Experience — 5-step interactive Payments API onboarding with checklist-gated navigation
+### 6. [docs-content-strategy](https://github.com/SulagnaSasmal/docs-content-strategy)
+> Phase 7: Technical documentation content strategy and style guide - IA framework, voice & tone, doc types, audience analysis, metrics, templates, and audit tools
 
-**Language**: HTML | **Stars**: ⭐ 0 | **Forks**: 🍴 0
+**Language**: Unknown | **Stars**: ⭐ 0 | **Forks**: 🍴 0
 
-
-### 6. [aml-compliance-training](https://github.com/SulagnaSasmal/aml-compliance-training)
-> Compliance & AML Training Program — BSA/AML regulatory scenario-based training with quiz engine
-
-**Language**: HTML | **Stars**: ⭐ 0 | **Forks**: 🍴 0
-
-
----
-
-### 📦 [NexaFlow SDK Documentation](https://github.com/SulagnaSasmal/nexaflow-sdk-docs)
-> Full developer reference for a workflow automation SDK — installation, core concepts, authentication, error handling with retry policies, full API reference (client, workflows, triggers, actions), v1-to-v2 migration guide, and versioned changelog. Written to the same quality bar as Stripe and Twilio SDK docs.
-
-**Language**: Markdown | **Repo**: [github.com/SulagnaSasmal/nexaflow-sdk-docs](https://github.com/SulagnaSasmal/nexaflow-sdk-docs)
-
-`SDK Documentation` · `API Reference` · `Migration Guide` · `Error Handling` · `Node.js` · `Python`
-
----
-
-### 🗂️ [Technical Documentation Content Strategy & Style Guide](https://github.com/SulagnaSasmal/docs-content-strategy)
-> A complete documentation program framework: editorial style guide (voice & tone, formatting, naming, code examples), information architecture methodology, doc type taxonomy, audience analysis framework, metrics program, four ready-to-use templates, a doc audit checklist, and a content health scorecard. Built for teams managing documentation at scale.
-
-**Language**: Markdown | **Repo**: [github.com/SulagnaSasmal/docs-content-strategy](https://github.com/SulagnaSasmal/docs-content-strategy)
-
-`Content Strategy` · `Style Guide` · `Information Architecture` · `Docs Metrics` · `Templates` · `Content Audit`
 
 ---
 
@@ -205,7 +190,27 @@
 
 `Portfolio Hub` · `MSTP` · `Information Architecture` · `Doc-as-Code` · `Vale Linting` · `GitHub Actions`
 
+---
+
+### 📦 [NexaFlow SDK Documentation](https://github.com/SulagnaSasmal/nexaflow-sdk-docs)
+> Full developer reference for a workflow automation SDK — installation, core concepts, authentication, error handling with retry policies, full API reference (client, workflows, triggers, actions), v1-to-v2 migration guide, and versioned changelog. Written to the same quality bar as Stripe and Twilio SDK docs.
+
+**Language**: Markdown | **Repo**: [github.com/SulagnaSasmal/nexaflow-sdk-docs](https://github.com/SulagnaSasmal/nexaflow-sdk-docs)
+
+`SDK Documentation` · `API Reference` · `Migration Guide` · `Error Handling` · `Node.js` · `Python`
+
+---
+
+### 🗂️ [Technical Documentation Content Strategy & Style Guide](https://github.com/SulagnaSasmal/docs-content-strategy)
+> A complete documentation program framework: editorial style guide (voice & tone, formatting, naming, code examples), information architecture methodology, doc type taxonomy, audience analysis framework, metrics program, four ready-to-use templates, a doc audit checklist, and a content health scorecard. Built for teams managing documentation at scale.
+
+**Language**: Markdown | **Repo**: [github.com/SulagnaSasmal/docs-content-strategy](https://github.com/SulagnaSasmal/docs-content-strategy)
+
+`Content Strategy` · `Style Guide` · `Information Architecture` · `Docs Metrics` · `Templates` · `Content Audit`
+
 <!-- TOP_REPOS_END -->
+
+
 
 
 
@@ -219,12 +224,14 @@
 
 ## Most Used Languages
 
-**HTML**: ███████████████░░░░░ 75%
-**TypeScript**: ███░░░░░░░░░░░░░░░░░ 13%
+**HTML**: ███████████████░░░░░ 76%
+**TypeScript**: ██░░░░░░░░░░░░░░░░░░ 12%
 **Python**: ██░░░░░░░░░░░░░░░░░░ 8%
 **JavaScript**: █░░░░░░░░░░░░░░░░░░░ 4%
 
 <!-- LANGUAGES_END -->
+
+
 
 
 
@@ -240,20 +247,19 @@
 
 | Repository | Last Update | Recent Commits |
 |-----------|-------------|----------------|
-| [`SulagnaSasmal`](https://github.com/SulagnaSasmal/SulagnaSasmal) | 3/9/2026 | 6 commits |
-| [`caseforge-sdk-docs`](https://github.com/SulagnaSasmal/caseforge-sdk-docs) | 3/9/2026 | 2 commits |
+| [`SulagnaSasmal`](https://github.com/SulagnaSasmal/SulagnaSasmal) | 3/9/2026 | 3 commits |
+| [`sulagnasasmal-site`](https://github.com/SulagnaSasmal/sulagnasasmal-site) | 3/9/2026 | 3 commits |
+| [`caseforge-sdk-docs`](https://github.com/SulagnaSasmal/caseforge-sdk-docs) | 3/9/2026 | 1 commits |
+| [`docs-content-strategy`](https://github.com/SulagnaSasmal/docs-content-strategy) | 3/9/2026 | 1 commits |
+| [`nexaflow-sdk-docs`](https://github.com/SulagnaSasmal/nexaflow-sdk-docs) | 3/9/2026 | 1 commits |
 | [`caseforge-onboarding`](https://github.com/SulagnaSasmal/caseforge-onboarding) | 3/9/2026 | 1 commits |
-| [`caseforge-api-docs`](https://github.com/SulagnaSasmal/caseforge-api-docs) | 3/7/2026 | 3 commits |
-| [`ppt-to-mp4-doc-automation`](https://github.com/SulagnaSasmal/ppt-to-mp4-doc-automation) | 3/7/2026 | 3 commits |
-| [`sulagnasasmal-site`](https://github.com/SulagnaSasmal/sulagnasasmal-site) | 3/7/2026 | 3 commits |
-| [`doc-portal`](https://github.com/SulagnaSasmal/doc-portal) | 3/7/2026 | 3 commits |
-| [`ai-doc-tools`](https://github.com/SulagnaSasmal/ai-doc-tools) | 3/7/2026 | 1 commits |
-| [`developer-onboarding`](https://github.com/SulagnaSasmal/developer-onboarding) | 3/7/2026 | 1 commits |
-| [`payments-tutorial-series`](https://github.com/SulagnaSasmal/payments-tutorial-series) | 3/7/2026 | 1 commits |
-| [`aml-compliance-training`](https://github.com/SulagnaSasmal/aml-compliance-training) | 3/7/2026 | 1 commits |
-| [`doccraft-help-center`](https://github.com/SulagnaSasmal/doccraft-help-center) | 3/7/2026 | 1 commits |
+| [`doccraft-help-center`](https://github.com/SulagnaSasmal/doccraft-help-center) | 3/9/2026 | 2 commits |
+| [`specflow`](https://github.com/SulagnaSasmal/specflow) | 3/9/2026 | 3 commits |
+| [`payplus-admin-guide`](https://github.com/SulagnaSasmal/payplus-admin-guide) | 3/9/2026 | 3 commits |
+| [`developer-onboarding`](https://github.com/SulagnaSasmal/developer-onboarding) | 3/9/2026 | 2 commits |
 
 <!-- ACTIVITY_END -->
+
 
 
 
