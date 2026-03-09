@@ -128,7 +128,7 @@
 
 
 ### 1. [sulagnasasmal-site](https://github.com/SulagnaSasmal/sulagnasasmal-site)
-> No description provided
+> Personal portfolio and technical writing showcase — Sulagna Sasmal, Senior Technical Writer · sulagnasasmal.com
 
 **Language**: HTML | **Stars**: ⭐ 1 | **Forks**: 🍴 0
 
@@ -140,13 +140,13 @@
 
 
 ### 3. [ppt-to-mp4-doc-automation](https://github.com/SulagnaSasmal/ppt-to-mp4-doc-automation)
-> No description provided
+> PPT-to-MP4 doc automation pipeline — converts PowerPoint slides to narrated video using Python and Azure AI
 
 **Language**: Python | **Stars**: ⭐ 1 | **Forks**: 🍴 0
 
 
 ### 4. [Doccraft](https://github.com/SulagnaSasmal/Doccraft)
-> No description provided
+> DocCraft AI — intelligent documentation generation assistant for technical writers, built with TypeScript and Next.js
 
 **Language**: TypeScript | **Stars**: ⭐ 1 | **Forks**: 🍴 0
 

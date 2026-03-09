@@ -60,6 +60,19 @@ function getUserTopLanguage(repositories) {
 }
 
 /**
+ * Curated fallback descriptions for repos that may not have GitHub descriptions set.
+ * These take priority over the GitHub API description when the repo description is blank.
+ */
+const CURATED_REPO_DESCRIPTIONS = {
+  'sulagnasasmal-site': 'Personal portfolio and technical writing showcase — Sulagna Sasmal, Senior Technical Writer · sulagnasasmal.com',
+  'ppt-to-mp4-doc-automation': 'PPT-to-MP4 doc automation pipeline — converts PowerPoint slides to narrated video using Python and Azure AI',
+  'Doccraft': 'DocCraft AI — intelligent documentation generation assistant for technical writers, built with TypeScript and Next.js',
+  'payplus-admin-guide': 'PayPlus Admin Guide — installation, user management, payment rails configuration, compliance monitoring, and troubleshooting',
+  'caseforge-api-docs': 'CaseForge AML REST API reference — authentication, entity endpoints, case management, webhooks, and error catalog',
+  'SulagnaSasmal': 'GitHub profile repository — readme-driven portfolio for Sulagna Sasmal, Senior Technical Writer',
+};
+
+/**
  * Generate top repositories section
  */
 function generateTopReposSection(repositories) {
@@ -75,7 +88,7 @@ function generateTopReposSection(repositories) {
   topRepos.forEach((repo, index) => {
     const lang = repo.primaryLanguage?.name || 'Unknown';
     const stars = repo.stargazerCount;
-    const desc = repo.description || 'No description provided';
+    const desc = CURATED_REPO_DESCRIPTIONS[repo.name] || repo.description || 'No description provided';
 
     content += `
 ### ${index + 1}. [${repo.name}](${repo.url})
