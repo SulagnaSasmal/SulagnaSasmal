@@ -178,6 +178,33 @@
 
 `Content Strategy` · `Style Guide` · `Information Architecture` · `Docs Metrics` · `Templates` · `Content Audit`
 
+---
+
+### 🚀 [CaseForge Onboarding Kit](https://sulagnasasmal.github.io/caseforge-onboarding/)
+> Post-sale onboarding package for enterprise CaseForge AML customers. 30-day time-boxed program with role-based checklists, environment provisioning guides, data migration procedures, user training tracks, and a go-live validation checklist.
+
+**Language**: HTML | **Live Site**: [sulagnasasmal.github.io/caseforge-onboarding](https://sulagnasasmal.github.io/caseforge-onboarding/) | **Repo**: [github.com/SulagnaSasmal/caseforge-onboarding](https://github.com/SulagnaSasmal/caseforge-onboarding)
+
+`Onboarding` · `Enterprise AML` · `Checklists` · `Go-live Validation` · `Role-based Tracks`
+
+---
+
+### 🐍 [CaseForge SDK Documentation](https://sulagnasasmal.github.io/caseforge-sdk-docs/)
+> Python and Node.js SDK guide for the CaseForge AML REST API. Covers quickstart, authentication (API keys + OAuth 2.0), a structured exception hierarchy, full code-sample library, versioned changelog, and a v1.x → v2.0 migration guide with side-by-side breaking-change comparisons.
+
+**Language**: HTML | **Live Site**: [sulagnasasmal.github.io/caseforge-sdk-docs](https://sulagnasasmal.github.io/caseforge-sdk-docs/) | **Repo**: [github.com/SulagnaSasmal/caseforge-sdk-docs](https://github.com/SulagnaSasmal/caseforge-sdk-docs)
+
+`SDK Documentation` · `Python` · `Node.js` · `OAuth 2.0` · `Migration Guide` · `Versioned Changelog`
+
+---
+
+### 🏛️ [Documentation Center Platform](https://sulagnasasmal.github.io/Documentation-Center-Platform/)
+> Capstone portfolio hub bringing all 7 documentation phases together. Includes meta-documentation on writing philosophy (MSTP compliance, before/after examples), information architecture decisions per phase, and a full doc-as-code workflow with branch strategy, Vale linting, GitHub Actions CI, and deployment pipeline.
+
+**Language**: HTML | **Live Site**: [sulagnasasmal.github.io/Documentation-Center-Platform](https://sulagnasasmal.github.io/Documentation-Center-Platform/) | **Repo**: [github.com/SulagnaSasmal/Documentation-Center-Platform](https://github.com/SulagnaSasmal/Documentation-Center-Platform)
+
+`Portfolio Hub` · `MSTP` · `Information Architecture` · `Doc-as-Code` · `Vale Linting` · `GitHub Actions`
+
 <!-- TOP_REPOS_END -->
 
 
