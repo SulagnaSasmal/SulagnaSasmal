@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Writing Philosophy · Sulagna Sasmal</title>
+  <meta name="description" content="The practitioner principles behind a 19-year career in technical writing: MSTP compliance, active voice discipline, documenting failure states, and plain language in high-stakes FinTech domains." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../assets/hub-style.css" />
+  <script>
+    (function(){
+      var s=localStorage.getItem('hub-theme');
+      var d=window.matchMedia('(prefers-color-scheme: dark)').matches;
+      document.documentElement.setAttribute('data-theme', s||(d?'dark':'light'));
+    })();
+  </script>
+</head>
+<body>
+
+<!-- ===== HEADER ===== -->
+<header class="site-header" role="banner">
+  <button class="btn-icon hamburger" id="hamburger" aria-label="Toggle navigation" aria-expanded="false" aria-controls="site-nav">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+  </button>
+  <a href="../portfolio.html" class="header-logo" aria-label="Documentation Center Platform home">
+    <span class="header-logo-icon" aria-hidden="true">SS</span>
+    <span class="header-logo-text">
+      Sulagna Sasmal
+      <span class="header-logo-sub">Senior Technical Writer</span>
+    </span>
+  </a>
+  <span class="header-spacer"></span>
+  <div class="header-actions">
+    <a href="https://github.com/SulagnaSasmal" class="btn-icon" target="_blank" rel="noopener noreferrer" aria-label="GitHub profile">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0 1 12 6.844a9.59 9.59 0 0 1 2.504.337c1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0 0 22 12.017C22 6.484 17.522 2 12 2z"/></svg>
+    </a>
+    <button class="btn-icon" id="theme-toggle" aria-label="Toggle dark mode">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+    </button>
+  </div>
+</header>
+
+<!-- ===== SIDEBAR NAV ===== -->
+<nav class="site-nav" id="site-nav" aria-label="Portfolio navigation">
+
+  <div class="nav-section">
+    <span class="nav-section-label">Portfolio</span>
+    <a href="../portfolio.html" class="nav-link">
+      <span class="nav-icon" aria-hidden="true">🏠</span> Overview
+    </a>
+  </div>
+
+  <div class="nav-section">
+    <span class="nav-section-label">Documentation Projects</span>
+    <a href="https://sulagnasasmal.github.io/caseforge-api-docs/" class="nav-link" target="_blank" rel="noopener">
+      <span class="nav-icon" aria-hidden="true">🔌</span> CaseForge API Docs
+    </a>
+    <a href="https://sulagnasasmal.github.io/vaultpay-api-docs/" class="nav-link" target="_blank" rel="noopener">
+      <span class="nav-icon" aria-hidden="true">💳</span> VaultPay API Docs
+    </a>
+    <a href="https://sulagnasasmal.github.io/payplus-admin-guide/" class="nav-link" target="_blank" rel="noopener">
+      <span class="nav-icon" aria-hidden="true">⚙️</span> PayPlus Admin Guide
+    </a>
+    <a href="https://sulagnasasmal.github.io/payments-api-guide/" class="nav-link" target="_blank" rel="noopener">
+      <span class="nav-icon" aria-hidden="true">📡</span> Payments API Guide
+    </a>
+    <a href="https://sulagnasasmal.github.io/caseforge-onboarding/" class="nav-link" target="_blank" rel="noopener">
+      <span class="nav-icon" aria-hidden="true">🚀</span> CaseForge Onboarding
+    </a>
+    <a href="https://sulagnasasmal.github.io/caseforge-sdk-docs/" class="nav-link" target="_blank" rel="noopener">
+      <span class="nav-icon" aria-hidden="true">📦</span> CaseForge SDK Docs
+    </a>
+  </div>
+
+  <div class="nav-section">
+    <span class="nav-section-label">Craft &amp; Process</span>
+    <a href="writing-philosophy.html" class="nav-link active" aria-current="page">
+      <span class="nav-icon" aria-hidden="true">✍️</span> Writing Philosophy
+    </a>
+    <a href="information-architecture.html" class="nav-link">
+      <span class="nav-icon" aria-hidden="true">🏛️</span> Information Architecture
+    </a>
+    <a href="doc-as-code-workflow.html" class="nav-link">
+      <span class="nav-icon" aria-hidden="true">⚡</span> Doc-as-Code Workflow
+    </a>
+  </div>
+
+</nav>
+
+<!-- ===== MAIN ===== -->
+<div class="site-body">
+<main class="main-content" id="main">
+<div class="content-wrap">
+
+  <div class="article-hero">
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <a href="../portfolio.html">Portfolio</a>
+      <span class="breadcrumb-sep" aria-hidden="true">›</span>
+      <a href="../portfolio.html#craft-heading">Craft &amp; Process</a>
+      <span class="breadcrumb-sep" aria-hidden="true">›</span>
+      <span aria-current="page">Writing Philosophy</span>
+    </nav>
+    <h1>Writing philosophy</h1>
+    <p class="lead">
+      Good technical writing is not about following rules — it's about removing obstacles
+      between a reader and the information they need. These are the principles that shaped
+      every page in this portfolio.
+    </p>
+  </div>
+
+  <!-- SECTION 1: MSTP IN PRACTICE -->
+  <section aria-labelledby="mstp-heading">
+    <h2 id="mstp-heading">MSTP compliance — what it actually means</h2>
+    <p>
+      The Microsoft Writing Style Guide is the de facto standard for developer-facing documentation
+      across the technology industry. But "MSTP compliant" is often used as a checkbox.
+      In practice, it means making dozens of micro-decisions on every page that collectively
+      reduce the cognitive load on the reader.
+    </p>
+
+    <h3>Active voice</h3>
+    <p>
+      Active voice identifies who does what. Passive voice obscures agency — which is especially
+      damaging in compliance, error, and troubleshooting documentation where readers need
+      to know exactly who or what is responsible for an action.
+    </p>
+
+    <div class="compare-grid" aria-label="Active vs passive voice comparison">
+      <div class="compare-pane compare-before">
+        <div class="compare-label" aria-hidden="true">Passive — avoid</div>
+        <pre><code>The request is authenticated by supplying
+an API key in the Authorization header.
+
+A 401 error is returned when the key
+is missing or has been revoked.
+
+Cases can be created by calling the
+/cases endpoint.</code></pre>
+      </div>
+      <div class="compare-pane compare-after">
+        <div class="compare-label" aria-hidden="true">Active — preferred</div>
+        <pre><code>Authenticate requests by including your
+API key in the Authorization header.
+
+The API returns a 401 error when your
+key is missing or revoked.
+
+To create a case, call the /cases
+endpoint.</code></pre>
+      </div>
+    </div>
+
+    <h3>Second person ("you")</h3>
+    <p>
+      Second person makes developer documentation feel like a direct conversation rather than a
+      technical report. It also forces specificity: "you must supply an API key" leaves no
+      ambiguity about who is responsible. "One must supply an API key" or "the developer must
+      supply an API key" introduces unnecessary formality that slows reading.
+    </p>
+
+    <h3>Sentence-case headings</h3>
+    <p>
+      Title case is a legacy convention from print publishing. In digital developer documentation,
+      sentence case (capitalise only the first word and proper nouns) is easier to scan,
+      easier to translate, and reduces the visual noise that makes documentation feel bureaucratic.
+      Every heading in this portfolio uses sentence case.
+    </p>
+
+    <h3>No minimizers</h3>
+    <p>
+      Words like "simply," "just," "easy," "straightforward," and "obviously" are dangerous in
+      technical documentation. They are condescending when the reader is struggling, and they
+      set an expectation of ease that makes readers feel incompetent when things go wrong.
+      Remove them without replacement.
+    </p>
+
+    <div class="compare-grid" aria-label="Minimizer removal comparison">
+      <div class="compare-pane compare-before">
+        <div class="compare-label" aria-hidden="true">With minimizers — avoid</div>
+        <pre><code>Simply call the /cases endpoint. 
+It's easy to set up authentication —
+just pass your API key in the header.
+Obviously you'll need to create an
+account first.</code></pre>
+      </div>
+      <div class="compare-pane compare-after">
+        <div class="compare-label" aria-hidden="true">Without minimizers — preferred</div>
+        <pre><code>Call the /cases endpoint.
+To authenticate, pass your API key
+in the Authorization header.
+Before you begin, create a CaseForge
+account at app.caseforge.io/signup.</code></pre>
+      </div>
+    </div>
+
+    <h3>Present tense</h3>
+    <p>
+      Documentation describes a system's current behaviour, not a future prediction. Present tense
+      ("the API returns") is more accurate and less wordy than future tense ("the API will return").
+      The exception is migration guides, where future tense is appropriate to describe what
+      a version will change.
+    </p>
+  </section>
+
+  <!-- SECTION 2: DOCUMENTING FAILURE STATES -->
+  <section aria-labelledby="failure-heading">
+    <h2 id="failure-heading">Documenting failure states</h2>
+    <p>
+      The most read sections of any API or SDK reference are error handling and troubleshooting.
+      Developers consult them when something has gone wrong — which means they are already under
+      pressure. This is where documentation quality has the highest real-world impact.
+    </p>
+
+    <h3>Error tables that actually help</h3>
+    <p>
+      A generic HTTP status table ("400 — Bad Request. 401 — Unauthorized.") tells a developer
+      nothing they don't already know. Useful error documentation:
+    </p>
+    <ul>
+      <li>Maps the platform's specific error codes (not just HTTP status codes) to root causes</li>
+      <li>Tells the reader what action to take, not just what went wrong</li>
+      <li>Distinguishes errors the developer caused from errors the system caused</li>
+      <li>Identifies which errors are retryable and which require human intervention</li>
+    </ul>
+
+    <div class="callout callout-note" role="note">
+      <span class="callout-icon" aria-hidden="true">📋</span>
+      <div class="callout-body">
+        <h4>Example from CaseForge SDK error-handling page</h4>
+        <p>See how the <a href="https://sulagnasasmal.github.io/caseforge-sdk-docs/error-handling.html" target="_blank" rel="noopener">error-handling guide</a> maps Python exception classes to HTTP status codes, groups errors by root cause, and provides explicit retry guidance with configurable backoff parameters.</p>
+      </div>
+    </div>
+
+    <h3>Exception hierarchies</h3>
+    <p>
+      SDK documentation should explain the exception class hierarchy, not just list error codes.
+      When a developer catches <code>CaseForgeAPIError</code>, they need to know whether
+      <code>AuthenticationError</code> and <code>RateLimitError</code> are subclasses of it —
+      otherwise they can't write correct exception handling. This is rarely documented,
+      and its absence forces developers to read source code.
+    </p>
+
+    <h3>Idempotency and retry semantics</h3>
+    <p>
+      Financial and compliance APIs carry real-world consequences for duplicate operations.
+      Documenting when to retry (network errors, 503s), when not to retry (401, 400),
+      and how idempotency keys prevent duplicate effects is not optional — it's the
+      difference between a developer building a safe integration and one that occasionally
+      duplicates transactions or case submissions.
+    </p>
+  </section>
+
+  <!-- SECTION 3: PLAIN LANGUAGE IN HIGH-STAKES DOMAINS -->
+  <section aria-labelledby="plain-language-heading">
+    <h2 id="plain-language-heading">Plain language in high-stakes domains</h2>
+    <p>
+      FinTech, AML, and compliance documentation carries a temptation toward defensive complexity:
+      long sentences full of qualifications, passive constructions that obscure accountability,
+      jargon that signals domain expertise. These patterns make documentation harder to use
+      and more likely to produce errors in implementation.
+    </p>
+
+    <h3>Domain terms vs. jargon</h3>
+    <p>
+      There is an important distinction between domain terms (which are precise and necessary)
+      and jargon (which is imprecise and exclusionary). AML, SAR, NACHA, OFAC, and ISO 20022
+      are domain terms — they name specific regulatory frameworks and organisations,
+      and substituting plain-English descriptions would be both longer and less accurate.
+      "Flags the transaction for review" instead of "triggers a suspicious activity alert" is jargon.
+    </p>
+
+    <h3>Defining terms once, explicitly</h3>
+    <p>
+      Every domain-specific term should be defined at first use with a glossary entry or inline
+      definition, and then used consistently thereafter. In AML documentation, "case" has a
+      specific legal meaning distinct from its casual usage. "Entity" can mean a legal entity,
+      a data entity, or a system resource depending on context. Ambiguity in compliance documentation
+      is not a minor quality issue — it is a risk.
+    </p>
+
+    <div class="callout callout-warning" role="note">
+      <span class="callout-icon" aria-hidden="true">⚠️</span>
+      <div class="callout-body">
+        <h4>The false precision trap</h4>
+        <p>
+          Complex regulatory language can create the illusion of precision while actually
+          obscuring meaning. If a sentence requires re-reading, it needs rewriting —
+          regardless of how technically accurate it is. Accuracy and clarity are not in opposition.
+        </p>
+      </div>
+    </div>
+
+    <h3>Task orientation over reference orientation</h3>
+    <p>
+      Regulatory and compliance documentation is often structured as reference material:
+      exhaustive lists of rules, conditions, and exceptions. Developer documentation works better
+      when restructured around tasks: "File a SAR," "Screen an entity," "Configure OFAC watchlist
+      integration." The same information is there, but organised around what the reader needs to do,
+      not around what the system can do.
+    </p>
+  </section>
+
+  <!-- SECTION 4: WHAT GOOD LOOKS LIKE -->
+  <section aria-labelledby="good-heading">
+    <h2 id="good-heading">What good documentation looks like</h2>
+    <p>Measurable criteria for developer documentation quality, not aesthetic opinions.</p>
+
+    <div class="table-wrap" role="region" aria-label="Documentation quality criteria">
+      <table>
+        <thead>
+          <tr>
+            <th scope="col">Criterion</th>
+            <th scope="col">What to measure</th>
+            <th scope="col">Failure signal</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Time to first working call</strong></td>
+            <td>How long it takes a developer unfamiliar with the API to make a successful authenticated request</td>
+            <td>Quickstart page requires more than 5 minutes to complete</td>
+          </tr>
+          <tr>
+            <td><strong>Error recoverability</strong></td>
+            <td>Whether the error docs tell the developer what to do, not just what went wrong</td>
+            <td>Error table contains only HTTP status codes without actionable guidance</td>
+          </tr>
+          <tr>
+            <td><strong>Completeness of failure paths</strong></td>
+            <td>Whether the documentation covers what happens when things go wrong, not just the happy path</td>
+            <td>No documentation for 4xx errors, network failures, or partial-success states</td>
+          </tr>
+          <tr>
+            <td><strong>Consistent terminology</strong></td>
+            <td>Whether the same concept is named the same way throughout the documentation set</td>
+            <td>"API key," "access key," "auth token," and "API token" used interchangeably</td>
+          </tr>
+          <tr>
+            <td><strong>Scannability</strong></td>
+            <td>Whether a developer can locate the information they need without reading every word</td>
+            <td>Long prose paragraphs with no headings, tables, or code blocks for 300+ words</td>
+          </tr>
+          <tr>
+            <td><strong>Example currency</strong></td>
+            <td>Whether code examples work against the current API version</td>
+            <td>Examples that fail because they reference deprecated parameters or endpoints</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- SECTION 5: SELF-IMPOSED CONSTRAINTS -->
+  <section aria-labelledby="constraints-heading">
+    <h2 id="constraints-heading">Self-imposed constraints for this portfolio</h2>
+    <p>
+      Every project in this portfolio was written under the following constraints.
+      These are not aspirational guidelines — they are verifiable by reading the output.
+    </p>
+
+    <ul>
+      <li><strong>No minimizers.</strong> "Simply," "just," "easy," "straightforward,"
+          "obvious," "clearly" — none appear in any page in this portfolio.</li>
+      <li><strong>Active voice throughout.</strong> Every procedural step uses active voice.
+          Passive constructions appear only where the agent is genuinely unknown or irrelevant.</li>
+      <li><strong>Sentence-case headings.</strong> No title case except for proper nouns
+          and product names.</li>
+      <li><strong>Second person.</strong> "You" is used consistently. "The user," "the developer,"
+          and "one" do not appear in procedural sections.</li>
+      <li><strong>Present tense.</strong> Documentation describes current behaviour.
+          Future tense appears only in migration and changelog content.</li>
+      <li><strong>Every error is actionable.</strong> No error page in this portfolio
+          describes an error without also describing what the reader should do about it.</li>
+      <li><strong>No assumption of prior knowledge beyond what is stated.</strong>
+          Prerequisites are always listed explicitly at the start of procedural pages.</li>
+    </ul>
+  </section>
+
+  <!-- NAV FOOTER -->
+  <hr />
+  <nav aria-label="Article navigation" style="display:flex; justify-content:space-between; flex-wrap:wrap; gap:.75rem;">
+    <a href="../portfolio.html" style="font-size:.875rem; color:var(--tx-link);">← Portfolio overview</a>
+    <a href="information-architecture.html" style="font-size:.875rem; color:var(--tx-link);">Information architecture →</a>
+  </nav>
+
+</div><!-- /.content-wrap -->
+</main>
+</div><!-- /.site-body -->
+
+<footer class="site-footer" role="contentinfo">
+  <span class="footer-text">© 2025 Sulagna Sasmal · Senior Technical Writer</span>
+  <nav class="footer-links" aria-label="Footer navigation">
+    <a href="https://github.com/SulagnaSasmal" target="_blank" rel="noopener">GitHub</a>
+    <a href="https://www.linkedin.com/in/sulagnasasmal" target="_blank" rel="noopener">LinkedIn</a>
+    <a href="../portfolio.html">Portfolio</a>
+  </nav>
+</footer>
+
+<script src="../assets/hub-scripts.js"></script>
+</body>
+</html>

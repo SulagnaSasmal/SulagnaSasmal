@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio Hub — Sulagna Sasmal · Senior Technical Writer</title>
+  <meta name="description" content="Senior Technical Writer portfolio — 7 documentation projects spanning API references, SDK guides, admin platforms, developer portals, and onboarding kits for FinTech and AML domains." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/hub-style.css" />
+  <!-- Inline theme init: prevents flash of wrong theme -->
+  <script>
+    (function(){
+      var s=localStorage.getItem('hub-theme');
+      var d=window.matchMedia('(prefers-color-scheme: dark)').matches;
+      document.documentElement.setAttribute('data-theme', s||(d?'dark':'light'));
+    })();
+  </script>
+</head>
+<body>
+
+<!-- ===== HEADER ===== -->
+<header class="site-header" role="banner">
+  <button class="btn-icon hamburger" id="hamburger" aria-label="Toggle navigation" aria-expanded="false" aria-controls="site-nav">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+  </button>
+  <a href="portfolio.html" class="header-logo" aria-label="Documentation Center Platform home">
+    <span class="header-logo-icon" aria-hidden="true">SS</span>
+    <span class="header-logo-text">
+      Sulagna Sasmal
+      <span class="header-logo-sub">Senior Technical Writer</span>
+    </span>
+  </a>
+  <span class="header-spacer"></span>
+  <div class="header-actions">
+    <a href="https://github.com/SulagnaSasmal" class="btn-icon" target="_blank" rel="noopener noreferrer" aria-label="GitHub profile">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0 1 12 6.844a9.59 9.59 0 0 1 2.504.337c1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0 0 22 12.017C22 6.484 17.522 2 12 2z"/></svg>
+    </a>
+    <button class="btn-icon" id="theme-toggle" aria-label="Toggle dark mode">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+    </button>
+  </div>
+</header>
+
+<!-- ===== SIDEBAR NAV ===== -->
+<nav class="site-nav" id="site-nav" aria-label="Portfolio navigation">
+
+  <div class="nav-section">
+    <span class="nav-section-label">Portfolio</span>
+    <a href="portfolio.html" class="nav-link">
+      <span class="nav-icon" aria-hidden="true">🏠</span> Overview
+    </a>
+  </div>
+
+  <div class="nav-section">
+    <span class="nav-section-label">Documentation Projects</span>
+    <a href="https://sulagnasasmal.github.io/caseforge-api-docs/" class="nav-link" target="_blank" rel="noopener">
+      <span class="nav-icon" aria-hidden="true">🔌</span> CaseForge API Docs
+    </a>
+    <a href="https://sulagnasasmal.github.io/vaultpay-api-docs/" class="nav-link" target="_blank" rel="noopener">
+      <span class="nav-icon" aria-hidden="true">💳</span> VaultPay API Docs
+    </a>
+    <a href="https://sulagnasasmal.github.io/payplus-admin-guide/" class="nav-link" target="_blank" rel="noopener">
+      <span class="nav-icon" aria-hidden="true">⚙️</span> PayPlus Admin Guide
+    </a>
+    <a href="https://sulagnasasmal.github.io/payments-api-guide/" class="nav-link" target="_blank" rel="noopener">
+      <span class="nav-icon" aria-hidden="true">📡</span> Payments API Guide
+    </a>
+    <a href="https://sulagnasasmal.github.io/caseforge-onboarding/" class="nav-link" target="_blank" rel="noopener">
+      <span class="nav-icon" aria-hidden="true">🚀</span> CaseForge Onboarding
+    </a>
+    <a href="https://sulagnasasmal.github.io/caseforge-sdk-docs/" class="nav-link" target="_blank" rel="noopener">
+      <span class="nav-icon" aria-hidden="true">📦</span> CaseForge SDK Docs
+    </a>
+  </div>
+
+  <div class="nav-section">
+    <span class="nav-section-label">Craft &amp; Process</span>
+    <a href="docs/writing-philosophy.html" class="nav-link">
+      <span class="nav-icon" aria-hidden="true">✍️</span> Writing Philosophy
+    </a>
+    <a href="docs/information-architecture.html" class="nav-link">
+      <span class="nav-icon" aria-hidden="true">🏛️</span> Information Architecture
+    </a>
+    <a href="docs/doc-as-code-workflow.html" class="nav-link">
+      <span class="nav-icon" aria-hidden="true">⚡</span> Doc-as-Code Workflow
+    </a>
+  </div>
+
+  <div class="nav-section">
+    <span class="nav-section-label">Connect</span>
+    <a href="https://www.linkedin.com/in/sulagnasasmal" class="nav-link" target="_blank" rel="noopener">
+      <span class="nav-icon" aria-hidden="true">💼</span> LinkedIn
+    </a>
+    <a href="https://github.com/SulagnaSasmal" class="nav-link" target="_blank" rel="noopener">
+      <span class="nav-icon" aria-hidden="true">🐙</span> GitHub
+    </a>
+  </div>
+
+</nav>
+
+<!-- ===== MAIN ===== -->
+<div class="site-body">
+<main class="main-content" id="main">
+<div class="content-wrap">
+
+  <!-- HERO -->
+  <section class="hero" aria-labelledby="hero-heading">
+    <p class="hero-eyebrow">Documentation Center Platform</p>
+    <h1 class="hero-title" id="hero-heading">
+      <span>Senior Technical Writer</span><br />
+      Portfolio — Sulagna Sasmal
+    </h1>
+    <p class="hero-subtitle">
+      19 years building documentation systems for high-stakes FinTech and enterprise platforms.
+      This portfolio demonstrates work across the full documentation spectrum: REST API references,
+      SDK guides, admin deployment docs, developer onboarding kits, and operator-facing portals.
+    </p>
+    <div class="hero-meta" role="list" aria-label="Portfolio statistics">
+      <span class="hero-stat" role="listitem"><strong>7</strong> documentation projects</span>
+      <span class="hero-stat" role="listitem"><strong>MSTP</strong> compliant throughout</span>
+      <span class="hero-stat" role="listitem"><strong>HTML + Docs-as-Code</strong> delivery</span>
+      <span class="hero-stat" role="listitem"><strong>FinTech · AML · Payments</strong> domain depth</span>
+    </div>
+  </section>
+
+  <!-- PORTFOLIO PROJECTS -->
+  <section aria-labelledby="projects-heading">
+    <h2 id="projects-heading">Documentation projects</h2>
+    <p>Each project targets a distinct documentation type, audience, and delivery format. The table below maps what was produced. Every linked site includes full dark and light mode support.</p>
+
+    <div class="phase-grid" role="list">
+
+      <!-- Phase 1 -->
+      <article class="phase-card" role="listitem">
+        <div class="phase-card-header">
+          <span class="phase-num">Phase 1</span>
+        </div>
+        <h3 class="phase-title">CaseForge API Reference</h3>
+        <p class="phase-desc">
+          Complete REST API reference for an enterprise AML and SAR-filing platform.
+          Covers authentication, case management, entity screening, SAR submission, and webhooks.
+          Written to Stripe-quality bar: every endpoint has request/response examples, error codes, and field-level descriptions.
+        </p>
+        <div class="phase-tags">
+          <span class="tag tag-api">REST API</span>
+          <span class="tag tag-default">AML</span>
+          <span class="tag tag-default">Webhooks</span>
+          <span class="tag tag-default">OpenAPI</span>
+        </div>
+        <a href="https://sulagnasasmal.github.io/caseforge-api-docs/" class="phase-link" target="_blank" rel="noopener">
+          View live site ↗
+        </a>
+      </article>
+
+      <!-- Phase 2 -->
+      <article class="phase-card" role="listitem">
+        <div class="phase-card-header">
+          <span class="phase-num">Phase 2</span>
+        </div>
+        <h3 class="phase-title">VaultPay API Docs — Developer Onboarding</h3>
+        <p class="phase-desc">
+          Developer-first documentation for a FinTech payment API. Guides engineers
+          from sandbox setup through production cut-over. Includes OAuth 2.0 flows,
+          idempotency key strategy, webhook signature verification, and error recovery patterns.
+        </p>
+        <div class="phase-tags">
+          <span class="tag tag-api">REST API</span>
+          <span class="tag tag-default">Payments</span>
+          <span class="tag tag-default">OAuth 2.0</span>
+          <span class="tag tag-default">Onboarding</span>
+        </div>
+        <a href="https://sulagnasasmal.github.io/vaultpay-api-docs/" class="phase-link" target="_blank" rel="noopener">
+          View live site ↗
+        </a>
+      </article>
+
+      <!-- Phase 3 -->
+      <article class="phase-card" role="listitem">
+        <div class="phase-card-header">
+          <span class="phase-num">Phase 3</span>
+        </div>
+        <h3 class="phase-title">PayPlus Enterprise Administration Guide</h3>
+        <p class="phase-desc">
+          System administration and deployment guide for an enterprise payment platform.
+          Covers installation, compliance configuration, user access controls, payment rail setup,
+          monitoring dashboards, and production troubleshooting. Structured for operators and IT admins.
+        </p>
+        <div class="phase-tags">
+          <span class="tag tag-admin">Admin Guide</span>
+          <span class="tag tag-default">Deployment</span>
+          <span class="tag tag-default">Compliance</span>
+          <span class="tag tag-default">Enterprise</span>
+        </div>
+        <a href="https://sulagnasasmal.github.io/payplus-admin-guide/" class="phase-link" target="_blank" rel="noopener">
+          View live site ↗
+        </a>
+      </article>
+
+      <!-- Phase 4 -->
+      <article class="phase-card" role="listitem">
+        <div class="phase-card-header">
+          <span class="phase-num">Phase 4</span>
+        </div>
+        <h3 class="phase-title">US Payments Hub — Operations &amp; Compliance Reference</h3>
+        <p class="phase-desc">
+          Operator-facing reference hub for US payment rails: ACH, Fedwire, RTP/FedNow, and SWIFT.
+          Covers processing flows, NACHA rule compliance, OFAC screening obligations,
+          exception handling, and ISO 20022 migration context. Written for payment operations teams.
+        </p>
+        <div class="phase-tags">
+          <span class="tag tag-admin">Operations</span>
+          <span class="tag tag-default">ACH · Fedwire</span>
+          <span class="tag tag-default">OFAC · BSA</span>
+          <span class="tag tag-default">ISO 20022</span>
+        </div>
+        <a href="https://sulagnasasmal.github.io/payments-api-guide/" class="phase-link" target="_blank" rel="noopener">
+          View live site ↗
+        </a>
+      </article>
+
+      <!-- Phase 5 -->
+      <article class="phase-card" role="listitem">
+        <div class="phase-card-header">
+          <span class="phase-num">Phase 5</span>
+        </div>
+        <h3 class="phase-title">CaseForge Onboarding Kit</h3>
+        <p class="phase-desc">
+          Post-sale onboarding package for enterprise customers adopting CaseForge AML.
+          Covers kickoff checklists, environment provisioning, data migration, user training tracks,
+          and go-live validation. Structured as a time-boxed 30-day program with clear owner assignments.
+        </p>
+        <div class="phase-tags">
+          <span class="tag tag-onboard">Onboarding</span>
+          <span class="tag tag-default">Enterprise</span>
+          <span class="tag tag-default">Checklists</span>
+          <span class="tag tag-default">Go-live</span>
+        </div>
+        <a href="https://sulagnasasmal.github.io/caseforge-onboarding/" class="phase-link" target="_blank" rel="noopener">
+          View live site ↗
+        </a>
+      </article>
+
+      <!-- Phase 6 -->
+      <article class="phase-card" role="listitem">
+        <div class="phase-card-header">
+          <span class="phase-num">Phase 6</span>
+        </div>
+        <h3 class="phase-title">CaseForge SDK Documentation</h3>
+        <p class="phase-desc">
+          SDK guide for Python and Node.js wrappers around the CaseForge REST API.
+          Covers quickstart, authentication (API keys and OAuth 2.0), error handling with exception
+          hierarchies, a full code-sample library, release changelog, and v1.x → v2.0 migration guide
+          with side-by-side breaking-change comparisons.
+        </p>
+        <div class="phase-tags">
+          <span class="tag tag-sdk">SDK Docs</span>
+          <span class="tag tag-default">Python</span>
+          <span class="tag tag-default">Node.js</span>
+          <span class="tag tag-default">Migration</span>
+        </div>
+        <a href="https://sulagnasasmal.github.io/caseforge-sdk-docs/" class="phase-link" target="_blank" rel="noopener">
+          View live site ↗
+        </a>
+      </article>
+
+      <!-- Phase 7 -->
+      <article class="phase-card" role="listitem" style="border-color: var(--clr-brand);">
+        <div class="phase-card-header">
+          <span class="phase-num">Phase 7</span>
+        </div>
+        <h3 class="phase-title">Documentation Center Platform</h3>
+        <p class="phase-desc">
+          This hub — the capstone project. Brings all phases together with navigation,
+          explanatory meta-documentation on writing craft, information architecture decisions,
+          and the docs-as-code workflow that underpins the entire portfolio.
+          You are reading it now.
+        </p>
+        <div class="phase-tags">
+          <span class="tag tag-portal">Portfolio Hub</span>
+          <span class="tag tag-default">Meta-docs</span>
+          <span class="tag tag-default">IA</span>
+          <span class="tag tag-default">Docs-as-Code</span>
+        </div>
+        <span class="phase-link" aria-current="page">Current page</span>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- META DOCS: Craft & Process -->
+  <section aria-labelledby="craft-heading">
+    <h2 id="craft-heading">Craft &amp; process</h2>
+    <p>The three documents below explain the practitioner decisions behind this portfolio — not what was produced, but how and why.</p>
+
+    <div class="meta-docs" role="list">
+      <a href="docs/writing-philosophy.html" class="meta-doc-link" role="listitem">
+        <span class="meta-doc-icon" aria-hidden="true">✍️</span>
+        <span class="meta-doc-title">Writing Philosophy</span>
+        <span class="meta-doc-desc">MSTP in practice, active voice discipline, how to document failure states, and plain language in high-stakes domains.</span>
+      </a>
+      <a href="docs/information-architecture.html" class="meta-doc-link" role="listitem">
+        <span class="meta-doc-icon" aria-hidden="true">🏛️</span>
+        <span class="meta-doc-title">Information Architecture</span>
+        <span class="meta-doc-desc">Audience analysis, content modeling, progressive disclosure decisions, and per-phase IA rationale.</span>
+      </a>
+      <a href="docs/doc-as-code-workflow.html" class="meta-doc-link" role="listitem">
+        <span class="meta-doc-icon" aria-hidden="true">⚡</span>
+        <span class="meta-doc-title">Doc-as-Code Workflow</span>
+        <span class="meta-doc-desc">Git-based authoring, branch strategy for documentation, review processes, and toolchain decisions.</span>
+      </a>
+    </div>
+  </section>
+
+  <!-- SKILLS INVENTORY -->
+  <section aria-labelledby="skills-heading">
+    <h2 id="skills-heading">Skills inventory</h2>
+    <p>This portfolio demonstrates the following skills in deployed, publicly accessible documentation.</p>
+
+    <div class="skills-grid" role="list">
+
+      <div class="skill-card" role="listitem">
+        <div class="skill-icon" aria-hidden="true">🔌</div>
+        <div class="skill-name">API Documentation</div>
+        <ul class="skill-items">
+          <li>REST endpoint references</li>
+          <li>Request/response examples</li>
+          <li>Error code catalogues</li>
+          <li>Webhook guides</li>
+          <li>OpenAPI alignment</li>
+        </ul>
+      </div>
+
+      <div class="skill-card" role="listitem">
+        <div class="skill-icon" aria-hidden="true">📦</div>
+        <div class="skill-name">SDK &amp; Library Docs</div>
+        <ul class="skill-items">
+          <li>Python + Node.js coverage</li>
+          <li>Exception hierarchy docs</li>
+          <li>Migration guides</li>
+          <li>Changelog authoring</li>
+          <li>Code sample libraries</li>
+        </ul>
+      </div>
+
+      <div class="skill-card" role="listitem">
+        <div class="skill-icon" aria-hidden="true">⚙️</div>
+        <div class="skill-name">Admin &amp; Ops Docs</div>
+        <ul class="skill-items">
+          <li>Deployment procedures</li>
+          <li>Compliance configuration</li>
+          <li>Troubleshooting guides</li>
+          <li>Monitoring setup</li>
+          <li>User access controls</li>
+        </ul>
+      </div>
+
+      <div class="skill-card" role="listitem">
+        <div class="skill-icon" aria-hidden="true">🚀</div>
+        <div class="skill-name">Onboarding &amp; Enablement</div>
+        <ul class="skill-items">
+          <li>Post-sale onboarding kits</li>
+          <li>30-day program docs</li>
+          <li>Training track design</li>
+          <li>Go-live checklists</li>
+          <li>Success criteria framing</li>
+        </ul>
+      </div>
+
+      <div class="skill-card" role="listitem">
+        <div class="skill-icon" aria-hidden="true">💳</div>
+        <div class="skill-name">FinTech Domain Depth</div>
+        <ul class="skill-items">
+          <li>ACH · Fedwire · SWIFT</li>
+          <li>RTP / FedNow</li>
+          <li>AML · SAR filing</li>
+          <li>OFAC · BSA compliance</li>
+          <li>ISO 20022</li>
+        </ul>
+      </div>
+
+      <div class="skill-card" role="listitem">
+        <div class="skill-icon" aria-hidden="true">🛠️</div>
+        <div class="skill-name">Toolchain &amp; Delivery</div>
+        <ul class="skill-items">
+          <li>Git + GitHub Pages</li>
+          <li>HTML/CSS (no-CMS)</li>
+          <li>MadCap Flare</li>
+          <li>Vale linting</li>
+          <li>GitHub Actions CI</li>
+        </ul>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- WHAT DISTINGUISHES THIS WORK -->
+  <section aria-labelledby="standards-heading">
+    <h2 id="standards-heading">What distinguishes this work</h2>
+
+    <div class="info-row">
+      <div class="info-card">
+        <h3>MSTP compliance throughout</h3>
+        <p>
+          Every page in this portfolio follows the Microsoft Writing Style Guide: active voice,
+          second person ("you"), sentence-case headings, present tense, no minimizers,
+          task-oriented structure. These are not aesthetic preferences — they are precision tools
+          that reduce reading friction and support translation and localization.
+        </p>
+      </div>
+      <div class="info-card">
+        <h3>Audience-specific information architecture</h3>
+        <p>
+          Each project starts with an audience definition and works backward to content structure.
+          A developer integrating an SDK needs different navigation landmarks than an
+          IT admin deploying a platform. The IA decisions are documented explicitly in the
+          <a href="docs/information-architecture.html">Information Architecture</a> page.
+        </p>
+      </div>
+    </div>
+
+    <div class="info-row">
+      <div class="info-card">
+        <h3>Portability over convenience</h3>
+        <p>
+          Every project is delivered as static HTML with shared CSS and JS — no static site
+          generator dependency, no build step required to view or edit. This makes the
+          documentation portable, offline-capable, and embeddable in any environment.
+          The tradeoff is deliberate: simplicity and longevity over toolchain convenience.
+        </p>
+      </div>
+      <div class="info-card">
+        <h3>Documenting failure states</h3>
+        <p>
+          The most valuable pages in any API or SDK reference are the error handling and
+          troubleshooting sections. This portfolio documents failure modes with the same
+          depth as success paths: exception hierarchies, retry semantics, idempotency key
+          strategy, and per-status-code guidance rather than generic HTTP tables.
+        </p>
+      </div>
+    </div>
+
+    <div class="callout callout-tip" role="note">
+      <span class="callout-icon" aria-hidden="true">💡</span>
+      <div class="callout-body">
+        <h4>Recruiter note</h4>
+        <p>
+          Each project in this portfolio was built to demonstrate a specific documentation skill.
+          The <a href="docs/writing-philosophy.html">Writing Philosophy</a> page explains the
+          practitioner decisions behind the work — what makes good developer documentation,
+          and how to measure it.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT STRIP -->
+  <section aria-labelledby="contact-heading">
+    <h2 id="contact-heading">Let's connect</h2>
+    <p>
+      I'm open to senior-level technical writing and documentation engineering roles — particularly
+      in FinTech, developer tooling, and regulated enterprise software. The best way to reach me
+      is via <a href="https://www.linkedin.com/in/sulagnasasmal" target="_blank" rel="noopener">LinkedIn</a>
+      or through the contact information on my GitHub profile.
+    </p>
+  </section>
+
+</div><!-- /.content-wrap -->
+</main>
+</div><!-- /.site-body -->
+
+<footer class="site-footer" role="contentinfo">
+  <span class="footer-text">© 2025 Sulagna Sasmal · Senior Technical Writer</span>
+  <nav class="footer-links" aria-label="Footer navigation">
+    <a href="https://github.com/SulagnaSasmal" target="_blank" rel="noopener">GitHub</a>
+    <a href="https://www.linkedin.com/in/sulagnasasmal" target="_blank" rel="noopener">LinkedIn</a>
+    <a href="docs/writing-philosophy.html">Writing Philosophy</a>
+    <a href="docs/information-architecture.html">IA Rationale</a>
+  </nav>
+</footer>
+
+<script src="assets/hub-scripts.js"></script>
+</body>
+</html>
