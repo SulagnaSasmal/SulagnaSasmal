@@ -4,7 +4,7 @@
 
 **Senior Technical Writer · Documentation Architect · FinTech Specialist**
 
-19 years architecting enterprise documentation systems for high-stakes domains: **payments, fraud prevention, financial compliance, and investment management**. I build documentation infrastructure that scales with complexity—turning complicated systems into clear, maintainable knowledge.
+20 years architecting enterprise documentation systems for high-stakes domains: **payments, fraud prevention, financial compliance, and investment management**. I build documentation infrastructure that scales with complexity—turning complicated systems into clear, maintainable knowledge.
 
 **Expertise:** API References (Stripe/Plaid quality) · FinTech Domain Depth · Docs-as-Code Automation · Compliance Frameworks · System Architecture
 
