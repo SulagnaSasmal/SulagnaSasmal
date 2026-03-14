@@ -135,43 +135,6 @@ function generateTopReposSection(repositories) {
   return content;
 }
 
-**Language**: HTML | **Live Site**: [sulagnasasmal.github.io/caseforge-sdk-docs](https://sulagnasasmal.github.io/caseforge-sdk-docs/) | **Repo**: [github.com/SulagnaSasmal/caseforge-sdk-docs](https://github.com/SulagnaSasmal/caseforge-sdk-docs)
-
-\`SDK Documentation\` · \`Python\` · \`Node.js\` · \`OAuth 2.0\` · \`Migration Guide\` · \`Versioned Changelog\`
-
----
-
-### 🏛️ [Documentation Center Platform](https://sulagnasasmal.github.io/Documentation-Center-Platform/)
-> Capstone portfolio hub bringing all 7 documentation phases together. Includes meta-documentation on writing philosophy (MSTP compliance, before/after examples), information architecture decisions per phase, and a full doc-as-code workflow with branch strategy, Vale linting, GitHub Actions CI, and deployment pipeline.
-
-**Language**: HTML | **Live Site**: [sulagnasasmal.github.io/Documentation-Center-Platform](https://sulagnasasmal.github.io/Documentation-Center-Platform/) | **Repo**: [github.com/SulagnaSasmal/Documentation-Center-Platform](https://github.com/SulagnaSasmal/Documentation-Center-Platform)
-
-\`Portfolio Hub\` · \`MSTP\` · \`Information Architecture\` · \`Doc-as-Code\` · \`Vale Linting\` · \`GitHub Actions\`
-
----
-
-### 📦 [NexaFlow SDK Documentation](https://github.com/SulagnaSasmal/nexaflow-sdk-docs)
-> Full developer reference for a workflow automation SDK — installation, core concepts, authentication, error handling with retry policies, full API reference (client, workflows, triggers, actions), v1-to-v2 migration guide, and versioned changelog. Written to the same quality bar as Stripe and Twilio SDK docs.
-
-**Language**: Markdown | **Repo**: [github.com/SulagnaSasmal/nexaflow-sdk-docs](https://github.com/SulagnaSasmal/nexaflow-sdk-docs)
-
-\`SDK Documentation\` · \`API Reference\` · \`Migration Guide\` · \`Error Handling\` · \`Node.js\` · \`Python\`
-
----
-
-### 🗂️ [Technical Documentation Content Strategy & Style Guide](https://github.com/SulagnaSasmal/docs-content-strategy)
-> A complete documentation program framework: editorial style guide (voice & tone, formatting, naming, code examples), information architecture methodology, doc type taxonomy, audience analysis framework, metrics program, four ready-to-use templates, a doc audit checklist, and a content health scorecard. Built for teams managing documentation at scale.
-
-**Language**: Markdown | **Repo**: [github.com/SulagnaSasmal/docs-content-strategy](https://github.com/SulagnaSasmal/docs-content-strategy)
-
-\`Content Strategy\` · \`Style Guide\` · \`Information Architecture\` · \`Docs Metrics\` · \`Templates\` · \`Content Audit\`
-
-<!-- TOP_REPOS_END -->
-`;
-
-  return content;
-}
-
 /**
  * Generate language breakdown
  */
