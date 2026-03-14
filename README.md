@@ -84,6 +84,7 @@
 
 
 
+
 <!-- GITHUB_STATS_START -->
 
 ## GitHub Statistics
@@ -93,25 +94,27 @@
 <td width="50%">
 
 ### Profile Stats
-- **Total Contributions**: 198 (this year)
+- **Total Contributions**: 279 (this year)
 - **Followers**: 0
-- **Following**: 1
-- **Public Repositories**: 29
+- **Following**: 2
+- **Public Repositories**: 30
 
 </td>
 <td width="50%">
 
 ### Repository Stats
-- **Total Stars**: 4
+- **Total Stars**: 5
 - **Total Forks**: 0
 - **Top Language**: HTML
-- **Active Projects**: 29
+- **Active Projects**: 30
 
 </td>
 </tr>
 </table>
 
 <!-- GITHUB_STATS_END -->
+
+
 
 
 
@@ -188,16 +191,20 @@
 
 
 
+
+
 <!-- LANGUAGES_START -->
 
 ## Most Used Languages
 
-**HTML**: ███████████████░░░░░ 76%
-**TypeScript**: ██░░░░░░░░░░░░░░░░░░ 12%
-**Python**: ██░░░░░░░░░░░░░░░░░░ 8%
-**JavaScript**: █░░░░░░░░░░░░░░░░░░░ 4%
+**HTML**: ███████████████░░░░░ 74%
+**TypeScript**: ██░░░░░░░░░░░░░░░░░░ 11%
+**JavaScript**: █░░░░░░░░░░░░░░░░░░░ 7%
+**Python**: █░░░░░░░░░░░░░░░░░░░ 7%
 
 <!-- LANGUAGES_END -->
+
+
 
 
 
@@ -217,18 +224,19 @@
 
 | Repository | Last Update | Recent Commits |
 |-----------|-------------|----------------|
-| [`SulagnaSasmal`](https://github.com/SulagnaSasmal/SulagnaSasmal) | 3/9/2026 | 3 commits |
-| [`sulagnasasmal-site`](https://github.com/SulagnaSasmal/sulagnasasmal-site) | 3/9/2026 | 3 commits |
-| [`caseforge-sdk-docs`](https://github.com/SulagnaSasmal/caseforge-sdk-docs) | 3/9/2026 | 1 commits |
-| [`docs-content-strategy`](https://github.com/SulagnaSasmal/docs-content-strategy) | 3/9/2026 | 1 commits |
-| [`nexaflow-sdk-docs`](https://github.com/SulagnaSasmal/nexaflow-sdk-docs) | 3/9/2026 | 1 commits |
-| [`caseforge-onboarding`](https://github.com/SulagnaSasmal/caseforge-onboarding) | 3/9/2026 | 1 commits |
-| [`doccraft-help-center`](https://github.com/SulagnaSasmal/doccraft-help-center) | 3/9/2026 | 2 commits |
-| [`specflow`](https://github.com/SulagnaSasmal/specflow) | 3/9/2026 | 3 commits |
-| [`payplus-admin-guide`](https://github.com/SulagnaSasmal/payplus-admin-guide) | 3/9/2026 | 3 commits |
-| [`developer-onboarding`](https://github.com/SulagnaSasmal/developer-onboarding) | 3/9/2026 | 2 commits |
+| [`SulagnaSasmal`](https://github.com/SulagnaSasmal/SulagnaSasmal) | 3/14/2026 | 3 commits |
+| [`repodocs-ai`](https://github.com/SulagnaSasmal/repodocs-ai) | 3/13/2026 | 3 commits |
+| [`doc-portal`](https://github.com/SulagnaSasmal/doc-portal) | 3/11/2026 | 3 commits |
+| [`Doccraft`](https://github.com/SulagnaSasmal/Doccraft) | 3/11/2026 | 3 commits |
+| [`docquery`](https://github.com/SulagnaSasmal/docquery) | 3/11/2026 | 3 commits |
+| [`enterprise-investment-management-platform-docs`](https://github.com/SulagnaSasmal/enterprise-investment-management-platform-docs) | 3/11/2026 | 3 commits |
+| [`specflow`](https://github.com/SulagnaSasmal/specflow) | 3/11/2026 | 3 commits |
+| [`ai-doc-tools`](https://github.com/SulagnaSasmal/ai-doc-tools) | 3/10/2026 | 2 commits |
+| [`docs-as-code-portal`](https://github.com/SulagnaSasmal/docs-as-code-portal) | 3/10/2026 | 3 commits |
+| [`Documentation-Center-Platform`](https://github.com/SulagnaSasmal/Documentation-Center-Platform) | 3/10/2026 | 3 commits |
 
 <!-- ACTIVITY_END -->
+
 
 
 
