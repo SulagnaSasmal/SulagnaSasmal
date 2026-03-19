@@ -73,6 +73,11 @@
 | **Asset Atrium Compliance Framework** | Investment compliance · pre-trade · post-trade · mandates · UCITS · AIFMD · MiFID II | [View →](https://sulagnasasmal.github.io/compliance-regulatory-hub/) |
 | **NexaFlow SDK Documentation** | SDK & code library docs · API reference · quickstart · error handling · migration guide · changelog | [GitHub →](https://github.com/SulagnaSasmal/nexaflow-sdk-docs) |
 | **Docs Content Strategy & Style Guide** | IA framework · voice & tone · doc types · audience analysis · metrics · templates · audit tools | [GitHub →](https://github.com/SulagnaSasmal/docs-content-strategy) |
+| **DOC Portal** | Curated portfolio of API references, admin guides, knowledge bases & AI-powered documentation tools | [View →](https://sulagnasasmal.github.io/doc-portal/) |
+| **Developer Onboarding — Payments API** | Zero-to-live-payment in 5 steps — account, SDK, test calls, webhooks, go-live checklist | [View →](https://sulagnasasmal.github.io/developer-onboarding/) |
+| **FinTech Learning Academy** | Structured courses on payments, fraud detection, ACH processing & compliance | [View →](https://sulagnasasmal.github.io/fintech-learning-academy/) |
+| **AML Compliance Training Program** | Annual BSA/KYC/CDD/OFAC screening & transaction-monitoring training for FinTech | [View →](https://sulagnasasmal.github.io/aml-compliance-training/) |
+| **Payments Integration Tutorials** | Hands-on developer tutorials — ACH transfers, webhooks, sandbox testing & API auth | [View →](https://sulagnasasmal.github.io/payments-tutorial-series/) |
 
 ---
 
