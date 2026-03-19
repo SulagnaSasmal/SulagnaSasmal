@@ -15,7 +15,7 @@ I architect documentation systems that scale with complexity. My expertise spans
 - **FinTech Domain Depth** - ACH, Fedwire, SWIFT, OFAC, BSA/AML, ISO 20022, UCITS, MiFID II
 - **Docs-as-Code Pipelines** - Automated, validated, version-controlled documentation
 - **Compliance & Risk** - Investment mandates, pre/post-trade workflows, regulatory frameworks
-- **AI-Assisted Tools** - Building next-generation documentation with GPT-4o integration
+- **AI-Assisted Tools** - Building AI-powered documentation with GPT-4o integration
 
 ### Companies
 Fundtech, SunGard, Avaya, NICE Actimize

@@ -46,7 +46,7 @@
 
 ## 📋 Pending Work Summary
 
-See [docs/TOOL_REVIEW.md](../docs/TOOL_REVIEW.md) for the full tool review, including maturity scores, pending items per project, and the prioritised improvement roadmap.
+See [docs/TOOL_REVIEW.md](../docs/TOOL_REVIEW.md) for the full tool review, including maturity scores, pending items per project, and the prioritized improvement roadmap.
 
 **Top 3 priorities:**
 1. Fix SpecFlow README (replace Next.js boilerplate with proper description)

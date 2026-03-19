@@ -6,7 +6,7 @@
 
 ## Overview
 
-This document audits the five tool repositories, assessing their current maturity, identifying what remains pending against each project's specification, and proposing a prioritised improvement roadmap for each.
+This document audits the five tool repositories, assessing their current maturity, identifying what remains pending against each project's specification, and proposing a prioritized improvement roadmap for each.
 
 | Tool | Stack | Maturity | Status | Live |
 |------|-------|----------|--------|------|
@@ -445,7 +445,7 @@ Based on PLAN.md phased specification:
 
 4. **Tracker/widget integration not demonstrated on a live site.** The strongest showcase value comes from embedding the DocPulse tracker on one of the documentation sites (e.g., fraudshield-docs) and showing real data in the dashboard.
 
-### Prioritised improvement order
+### Prioritized improvement order
 
 Ranked by portfolio impact and effort:
 
