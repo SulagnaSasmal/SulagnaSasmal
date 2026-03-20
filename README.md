@@ -71,8 +71,9 @@
 | **AI & Automation Tools Portal** | All AI tools portal — DocCraft, SpecFlow, DocQuery, DocPulse, PPT→MP4 | [View →](https://sulagnasasmal.github.io/ai-doc-tools/) |
 | **SunBridge Asset Atrium Manager — Platform Docs** | Investment platform architecture · NAV batch · HA · multi-TZ · release governance | [View →](https://sulagnasasmal.github.io/enterprise-investment-management-platform-docs/) |
 | **Asset Atrium Compliance Framework** | Investment compliance · pre-trade · post-trade · mandates · UCITS · AIFMD · MiFID II | [View →](https://sulagnasasmal.github.io/compliance-regulatory-hub/) |
-| **NexaFlow SDK Documentation** | SDK & code library docs · API reference · quickstart · error handling · migration guide · changelog | [GitHub →](https://github.com/SulagnaSasmal/nexaflow-sdk-docs) |
-| **Docs Content Strategy & Style Guide** | IA framework · voice & tone · doc types · audience analysis · metrics · templates · audit tools | [GitHub →](https://github.com/SulagnaSasmal/docs-content-strategy) |
+| **NexaFlow SDK Documentation** | SDK & code library docs · API reference · quickstart · error handling · migration guide · changelog | [View →](https://sulagnasasmal.github.io/nexaflow-sdk-docs/) |
+| **Docs Content Strategy & Style Guide** | IA framework · voice & tone · doc types · audience analysis · metrics · templates · audit tools | [View →](https://sulagnasasmal.github.io/docs-content-strategy/) |
+| **US ACH Payment Processing Documentation** | End-to-end ACH payment lifecycle · origination · returns · NOCs · compliance · developer integration | [View →](https://sulagnasasmal.github.io/us-ach-payment-processing-docs/) |
 | **DOC Portal** | Curated portfolio of API references, admin guides, knowledge bases & AI-powered documentation tools | [View →](https://sulagnasasmal.github.io/doc-portal/) |
 | **Developer Onboarding — Payments API** | Zero-to-live-payment in 5 steps — account, SDK, test calls, webhooks, go-live checklist | [View →](https://sulagnasasmal.github.io/developer-onboarding/) |
 | **FinTech Learning Academy** | Structured courses on payments, fraud detection, ACH processing & compliance | [View →](https://sulagnasasmal.github.io/fintech-learning-academy/) |
@@ -184,19 +185,19 @@
 
 ---
 
-### 📦 [NexaFlow SDK Documentation](https://github.com/SulagnaSasmal/nexaflow-sdk-docs)
+### 📦 [NexaFlow SDK Documentation](https://sulagnasasmal.github.io/nexaflow-sdk-docs/)
 > Full developer reference for a workflow automation SDK — installation, core concepts, authentication, error handling with retry policies, full API reference (client, workflows, triggers, actions), v1-to-v2 migration guide, and versioned changelog. Written to the same quality bar as Stripe and Twilio SDK docs.
 
-**Language**: Markdown | **Repo**: [github.com/SulagnaSasmal/nexaflow-sdk-docs](https://github.com/SulagnaSasmal/nexaflow-sdk-docs)
+**Language**: HTML | **Live Site**: [sulagnasasmal.github.io/nexaflow-sdk-docs](https://sulagnasasmal.github.io/nexaflow-sdk-docs/) | **Repo**: [github.com/SulagnaSasmal/nexaflow-sdk-docs](https://github.com/SulagnaSasmal/nexaflow-sdk-docs)
 
 `SDK Documentation` · `API Reference` · `Migration Guide` · `Error Handling` · `Node.js` · `Python`
 
 ---
 
-### 🗂️ [Technical Documentation Content Strategy & Style Guide](https://github.com/SulagnaSasmal/docs-content-strategy)
+### 🗂️ [Technical Documentation Content Strategy & Style Guide](https://sulagnasasmal.github.io/docs-content-strategy/)
 > A complete documentation program framework: editorial style guide (voice & tone, formatting, naming, code examples), information architecture methodology, doc type taxonomy, audience analysis framework, metrics program, four ready-to-use templates, a doc audit checklist, and a content health scorecard. Built for teams managing documentation at scale.
 
-**Language**: Markdown | **Repo**: [github.com/SulagnaSasmal/docs-content-strategy](https://github.com/SulagnaSasmal/docs-content-strategy)
+**Language**: HTML | **Live Site**: [sulagnasasmal.github.io/docs-content-strategy](https://sulagnasasmal.github.io/docs-content-strategy/) | **Repo**: [github.com/SulagnaSasmal/docs-content-strategy](https://github.com/SulagnaSasmal/docs-content-strategy)
 
 `Content Strategy` · `Style Guide` · `Information Architecture` · `Docs Metrics` · `Templates` · `Content Audit`
 
