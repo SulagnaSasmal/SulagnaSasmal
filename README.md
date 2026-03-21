@@ -97,6 +97,7 @@
 
 
 
+
 <!-- GITHUB_STATS_START -->
 
 ## GitHub Statistics
@@ -106,7 +107,7 @@
 <td width="50%">
 
 ### Profile Stats
-- **Total Contributions**: 413 (this year)
+- **Total Contributions**: 419 (this year)
 - **Followers**: 0
 - **Following**: 2
 - **Public Repositories**: 32
@@ -125,6 +126,8 @@
 </table>
 
 <!-- GITHUB_STATS_END -->
+
+
 
 
 
@@ -185,23 +188,25 @@
 
 ---
 
-### 📦 [NexaFlow SDK Documentation](https://sulagnasasmal.github.io/nexaflow-sdk-docs/)
+### 📦 [NexaFlow SDK Documentation](https://github.com/SulagnaSasmal/nexaflow-sdk-docs)
 > Full developer reference for a workflow automation SDK — installation, core concepts, authentication, error handling with retry policies, full API reference (client, workflows, triggers, actions), v1-to-v2 migration guide, and versioned changelog. Written to the same quality bar as Stripe and Twilio SDK docs.
 
-**Language**: HTML | **Live Site**: [sulagnasasmal.github.io/nexaflow-sdk-docs](https://sulagnasasmal.github.io/nexaflow-sdk-docs/) | **Repo**: [github.com/SulagnaSasmal/nexaflow-sdk-docs](https://github.com/SulagnaSasmal/nexaflow-sdk-docs)
+**Language**: Markdown | **Repo**: [github.com/SulagnaSasmal/nexaflow-sdk-docs](https://github.com/SulagnaSasmal/nexaflow-sdk-docs)
 
 `SDK Documentation` · `API Reference` · `Migration Guide` · `Error Handling` · `Node.js` · `Python`
 
 ---
 
-### 🗂️ [Technical Documentation Content Strategy & Style Guide](https://sulagnasasmal.github.io/docs-content-strategy/)
+### 🗂️ [Technical Documentation Content Strategy & Style Guide](https://github.com/SulagnaSasmal/docs-content-strategy)
 > A complete documentation program framework: editorial style guide (voice & tone, formatting, naming, code examples), information architecture methodology, doc type taxonomy, audience analysis framework, metrics program, four ready-to-use templates, a doc audit checklist, and a content health scorecard. Built for teams managing documentation at scale.
 
-**Language**: HTML | **Live Site**: [sulagnasasmal.github.io/docs-content-strategy](https://sulagnasasmal.github.io/docs-content-strategy/) | **Repo**: [github.com/SulagnaSasmal/docs-content-strategy](https://github.com/SulagnaSasmal/docs-content-strategy)
+**Language**: Markdown | **Repo**: [github.com/SulagnaSasmal/docs-content-strategy](https://github.com/SulagnaSasmal/docs-content-strategy)
 
 `Content Strategy` · `Style Guide` · `Information Architecture` · `Docs Metrics` · `Templates` · `Content Audit`
 
 <!-- TOP_REPOS_END -->
+
+
 
 
 
@@ -267,13 +272,17 @@
 
 
 
+
+
 <!-- ACTIVITY_START -->
 
 ## Recent Activity
 
 | Repository | Last Update | Recent Commits |
 |-----------|-------------|----------------|
-| [`doc-portal`](https://github.com/SulagnaSasmal/doc-portal) | 3/19/2026 | 3 commits |
+| [`ai-doc-tools`](https://github.com/SulagnaSasmal/ai-doc-tools) | 3/20/2026 | 3 commits |
+| [`doc-portal`](https://github.com/SulagnaSasmal/doc-portal) | 3/20/2026 | 3 commits |
+| [`SulagnaSasmal`](https://github.com/SulagnaSasmal/SulagnaSasmal) | 3/20/2026 | 3 commits |
 | [`docs-content-strategy`](https://github.com/SulagnaSasmal/docs-content-strategy) | 3/19/2026 | 3 commits |
 | [`us-ach-payment-processing-docs`](https://github.com/SulagnaSasmal/us-ach-payment-processing-docs) | 3/19/2026 | 1 commits |
 | [`developer-onboarding`](https://github.com/SulagnaSasmal/developer-onboarding) | 3/19/2026 | 3 commits |
@@ -281,10 +290,9 @@
 | [`nexaflow-sdk-docs`](https://github.com/SulagnaSasmal/nexaflow-sdk-docs) | 3/19/2026 | 3 commits |
 | [`payplus-admin-guide`](https://github.com/SulagnaSasmal/payplus-admin-guide) | 3/19/2026 | 3 commits |
 | [`payments-api-guide`](https://github.com/SulagnaSasmal/payments-api-guide) | 3/19/2026 | 3 commits |
-| [`ai-doc-tools`](https://github.com/SulagnaSasmal/ai-doc-tools) | 3/19/2026 | 3 commits |
-| [`SulagnaSasmal`](https://github.com/SulagnaSasmal/SulagnaSasmal) | 3/19/2026 | 3 commits |
 
 <!-- ACTIVITY_END -->
+
 
 
 
