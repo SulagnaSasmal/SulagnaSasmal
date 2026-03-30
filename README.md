@@ -25,7 +25,7 @@
 - 📝 **Developer API references** — REST endpoints, webhooks, OAuth, error codes (Stripe / Plaid quality bar)
 - 🏛️ **Enterprise admin docs** — MadCap Flare HTML, regulated platforms, step-by-step procedures
 - ⚙️ **Docs-as-Code pipelines** — Vale linting, GitHub Actions, MkDocs, GitHub Pages
-- 🤖 **AI-assisted documentation tools** — Next.js + GPT-4o, RAG chatbots, analytics dashboards
+- 🤖 **AI-assisted documentation tools** — Claude API, Next.js + GPT-4o, RAG chatbots, docs-as-code frameworks
 - 🔌 **Developer portal tooling** — OpenAPI spec rendering, interactive API consoles
 - 💳 **FinTech domain depth** — ACH, Fedwire, SWIFT, RTP/FedNow, OFAC, BSA/AML, ISO 20022
 
@@ -40,6 +40,7 @@
 ![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white)
 ![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white)
 ![Azure TTS](https://img.shields.io/badge/Azure_TTS-0078D4?style=flat-square&logo=microsoftazure&logoColor=white)
+![Claude API](https://img.shields.io/badge/Anthropic_Claude-D97706?style=flat-square&logo=anthropic&logoColor=white)
 ![OpenAI](https://img.shields.io/badge/OpenAI_GPT--4o-412991?style=flat-square&logo=openai&logoColor=white)
 ![ChromaDB](https://img.shields.io/badge/ChromaDB-FF6F61?style=flat-square&logoColor=white)
 ![FastAPI](https://img.shields.io/badge/FastAPI-009688?style=flat-square&logo=fastapi&logoColor=white)
@@ -63,12 +64,13 @@
 | **Documentation Center Platform** | Portfolio hub · writing philosophy · information architecture · doc-as-code workflow | [View →](https://sulagnasasmal.github.io/portfolio.html) |
 | **DocForge Platform** | Docs-as-Code platform dashboard | [View →](https://sulagnasasmal.github.io/Documentation-Center-Platform/docforge-platform.html) |
 | **Docs-as-Code Portal** | DaC methodology documentation | [View →](https://sulagnasasmal.github.io/docs-as-code-portal/) |
+| **RepoDocs AI** | Claude API · docs-as-code framework for SaaS API teams · reusable templates · AI prompt library · GitHub Actions validation · OpenAPI-to-Markdown generation | [View →](https://sulagnasasmal.github.io/repodocs-ai/) |
 | **DocCraft AI** | Next.js + GPT-4o docs generator | [View →](https://doccraft-ten.vercel.app/) |
 | **SpecFlow** | OpenAPI spec → interactive developer portal | [View →](https://sulagnasasmal.github.io/specflow/) |
 | **DocQuery** | RAG-powered documentation chatbot | [View →](https://sulagnasasmal.github.io/docquery/) |
 | **DocPulse** | Documentation analytics dashboard | [View →](https://sulagnasasmal.github.io/docpulse/) |
 | **PPT → MP4 Automation** | Python narrated video pipeline | [GitHub →](https://github.com/SulagnaSasmal/ppt-to-mp4-doc-automation) |
-| **AI & Automation Tools Portal** | All AI tools portal — DocCraft, SpecFlow, DocQuery, DocPulse, PPT→MP4 | [View →](https://sulagnasasmal.github.io/ai-doc-tools/) |
+| **AI & Automation Tools Portal** | All AI tools portal — RepoDocs AI, DocCraft, SpecFlow, DocQuery, DocPulse, PPT→MP4 | [View →](https://sulagnasasmal.github.io/ai-doc-tools/) |
 | **SunBridge Asset Atrium Manager — Platform Docs** | Investment platform architecture · NAV batch · HA · multi-TZ · release governance | [View →](https://sulagnasasmal.github.io/enterprise-investment-management-platform-docs/) |
 | **Asset Atrium Compliance Framework** | Investment compliance · pre-trade · post-trade · mandates · UCITS · AIFMD · MiFID II | [View →](https://sulagnasasmal.github.io/compliance-regulatory-hub/) |
 | **NexaFlow SDK Documentation** | SDK & code library docs · API reference · quickstart · error handling · migration guide · changelog | [View →](https://sulagnasasmal.github.io/nexaflow-sdk-docs/) |
@@ -119,7 +121,7 @@
 - **Total Contributions**: 487 (this year)
 - **Followers**: 1
 - **Following**: 2
-- **Public Repositories**: 32
+- **Public Repositories**: 33
 
 </td>
 <td width="50%">
@@ -128,7 +130,7 @@
 - **Total Stars**: 5
 - **Total Forks**: 0
 - **Top Language**: HTML
-- **Active Projects**: 32
+- **Active Projects**: 33
 
 </td>
 </tr>
