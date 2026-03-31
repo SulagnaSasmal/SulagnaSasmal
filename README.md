@@ -10,6 +10,8 @@
 
 **Current Focus:** Open to senior-level opportunities in tech companies looking to scale documentation systems and establish documentation excellence.
 
+🌐 **Portfolio & profile:** [sulagnasasmal.com](https://sulagnasasmal.com)
+
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-sulagnasasmal-0A66C2?style=flat-square&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/sulagnasasmal)
 [![Portfolio](https://img.shields.io/badge/Portfolio-sulagnasasmal.com-E8A84C?style=flat-square&logo=githubpages&logoColor=black)](https://sulagnasasmal.com)
 [![GitHub followers](https://img.shields.io/github/followers/SulagnaSasmal?style=flat-square&logo=github&label=Follow)](https://github.com/SulagnaSasmal)
