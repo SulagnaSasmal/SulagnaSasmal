@@ -1,0 +1,678 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Content Pipeline Health Checker</title>
+<meta name="description" content="Diagnose where your documentation pipeline breaks when content crosses from source to delivery surfaces. Based on Despopoulos's source-to-delivery model and Iantosca's two-gate quality model.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+  html{font-size:16px;-webkit-text-size-adjust:100%;text-size-adjust:100%}
+  body{font-family:'Inter',system-ui,-apple-system,sans-serif;color:#1a1a1a;background:#fff;line-height:1.6;min-height:100vh}
+
+  /* Layout */
+  .container{max-width:720px;margin:0 auto;padding:2rem 1.25rem 4rem}
+  header{text-align:center;margin-bottom:2.5rem}
+  header h1{font-size:1.5rem;font-weight:700;letter-spacing:-.02em;margin-bottom:.25rem}
+  header p{font-size:.875rem;color:#666}
+
+  /* Progress */
+  .progress{display:flex;align-items:center;justify-content:center;gap:0;margin-bottom:2.5rem}
+  .progress-step{display:flex;align-items:center;gap:0}
+  .progress-dot{width:32px;height:32px;border-radius:50%;border:2px solid #d1d5db;display:flex;align-items:center;justify-content:center;font-size:.75rem;font-weight:600;color:#9ca3af;transition:all .2s;flex-shrink:0}
+  .progress-dot.active{border-color:#1a1a1a;color:#1a1a1a;background:#f5f5f5}
+  .progress-dot.done{border-color:#639922;color:#fff;background:#639922}
+  .progress-line{width:48px;height:2px;background:#d1d5db;transition:background .2s}
+  .progress-line.done{background:#639922}
+
+  /* Steps */
+  .step{display:none}
+  .step.active{display:block}
+  .step h2{font-size:1.125rem;font-weight:600;margin-bottom:.25rem}
+  .step .step-desc{font-size:.875rem;color:#666;margin-bottom:1.5rem}
+
+  /* Options */
+  .option-group{display:flex;flex-direction:column;gap:.625rem}
+  .option-card{position:relative;border:1.5px solid #e5e7eb;border-radius:8px;padding:.875rem 1rem;cursor:pointer;transition:border-color .15s,background .15s;-webkit-user-select:none;user-select:none}
+  .option-card:hover{border-color:#b0b0b0}
+  .option-card.selected{border-color:#1a1a1a;background:#fafafa}
+  .option-card input{position:absolute;opacity:0;pointer-events:none}
+  .option-label{font-size:.9375rem;font-weight:500}
+  .option-sub{font-size:.8125rem;color:#888;margin-top:2px}
+
+  /* Buttons */
+  .btn-row{display:flex;gap:.75rem;margin-top:2rem}
+  .btn{display:inline-flex;align-items:center;justify-content:center;padding:.625rem 1.5rem;border-radius:6px;font-family:inherit;font-size:.875rem;font-weight:500;border:none;cursor:pointer;transition:background .15s,opacity .15s}
+  .btn:disabled{opacity:.4;cursor:not-allowed}
+  .btn-primary{background:#1a1a1a;color:#fff}
+  .btn-primary:hover:not(:disabled){background:#333}
+  .btn-secondary{background:#fff;color:#1a1a1a;border:1.5px solid #d1d5db}
+  .btn-secondary:hover{border-color:#999}
+
+  /* Results */
+  .results-section{margin-bottom:2rem}
+  .results-section h3{font-size:1rem;font-weight:600;margin-bottom:.75rem;padding-bottom:.5rem;border-bottom:1px solid #e5e7eb}
+  .risk-card{border:1.5px solid #e5e7eb;border-radius:8px;padding:1rem 1.125rem;margin-bottom:.75rem}
+  .risk-header{display:flex;align-items:center;gap:.625rem;margin-bottom:.5rem;flex-wrap:wrap}
+  .risk-badge{display:inline-block;padding:2px 10px;border-radius:4px;font-size:.75rem;font-weight:600;color:#fff;text-transform:uppercase;letter-spacing:.03em}
+  .risk-high{background:#E24B4A}
+  .risk-medium{background:#EF9F27}
+  .risk-low{background:#639922}
+  .risk-surface{font-weight:600;font-size:.9375rem}
+  .risk-detail{font-size:.8125rem;color:#555;line-height:1.55}
+  .risk-detail strong{color:#1a1a1a;font-weight:600}
+
+  /* Gate cards */
+  .gate-card{border:1.5px solid #e5e7eb;border-radius:8px;padding:1rem 1.125rem;margin-bottom:.75rem}
+  .gate-title{font-weight:600;font-size:.9375rem;margin-bottom:.375rem}
+  .gate-verdict{display:inline-block;padding:2px 10px;border-radius:4px;font-size:.75rem;font-weight:600;color:#fff;margin-bottom:.375rem}
+  .gate-pass{background:#639922}
+  .gate-partial{background:#EF9F27}
+  .gate-fail{background:#E24B4A}
+  .gate-explanation{font-size:.8125rem;color:#555;line-height:1.55}
+  .gate-failures{margin-top:.5rem;padding-left:1.125rem}
+  .gate-failures li{font-size:.8125rem;color:#555;margin-bottom:.25rem;line-height:1.5}
+
+  /* Fix cards */
+  .fix-card{border:1.5px solid #e5e7eb;border-radius:8px;padding:1rem 1.125rem;margin-bottom:.75rem;counter-increment:fix}
+  .fix-card::before{content:counter(fix);display:inline-flex;align-items:center;justify-content:center;width:22px;height:22px;border-radius:50%;background:#1a1a1a;color:#fff;font-size:.6875rem;font-weight:700;margin-right:.5rem;vertical-align:middle}
+  .fix-title{font-weight:600;font-size:.9375rem;display:inline;vertical-align:middle}
+  .fix-desc{font-size:.8125rem;color:#555;margin-top:.375rem;line-height:1.55}
+  .fixes-list{counter-reset:fix}
+
+  /* Share */
+  .share-section{margin-top:2.5rem;border:1.5px solid #e5e7eb;border-radius:8px;padding:1.25rem}
+  .share-section h3{font-size:1rem;font-weight:600;margin-bottom:.75rem}
+  .share-textarea{width:100%;border:1.5px solid #e5e7eb;border-radius:6px;padding:.75rem;font-family:inherit;font-size:.8125rem;line-height:1.55;color:#333;resize:vertical;min-height:140px;background:#fafafa}
+  .share-textarea:focus{outline:none;border-color:#999}
+  .copy-btn{margin-top:.625rem}
+  .copied-msg{font-size:.8125rem;color:#639922;margin-left:.75rem;opacity:0;transition:opacity .2s}
+  .copied-msg.show{opacity:1}
+
+  /* Summary bar */
+  .summary-bar{display:flex;gap:1rem;margin-bottom:1.5rem;flex-wrap:wrap}
+  .summary-chip{font-size:.8125rem;background:#f5f5f5;border-radius:6px;padding:.375rem .75rem;color:#555}
+  .summary-chip strong{color:#1a1a1a}
+
+  /* Footer */
+  footer{text-align:center;margin-top:3rem;padding-top:1.5rem;border-top:1px solid #e5e7eb;font-size:.75rem;color:#999}
+  footer a{color:#666;text-decoration:none}
+  footer a:hover{text-decoration:underline}
+  .btn-row-flush{margin-bottom:0}
+  .share-copy-row{display:flex;align-items:center}
+
+  /* Print */
+  @media print{
+    .btn-row,.share-section,.progress,header p{display:none}
+    .container{max-width:100%;padding:1rem}
+    .step{display:none!important}
+    .step.results-step{display:block!important}
+    body{font-size:12pt}
+  }
+
+  /* Mobile */
+  @media(max-width:600px){
+    .container{padding:1.25rem 1rem 3rem}
+    header h1{font-size:1.25rem}
+    .progress-line{width:28px}
+    .progress-dot{width:28px;height:28px;font-size:.6875rem}
+    .btn-row{flex-direction:column}
+    .btn{width:100%}
+    .summary-bar{flex-direction:column;gap:.5rem}
+  }
+</style>
+</head>
+<body>
+<div class="container">
+  <header>
+    <h1>Content Pipeline Health Checker</h1>
+    <p>Diagnose where your documentation pipeline breaks across delivery surfaces</p>
+  </header>
+
+  <!-- Progress -->
+  <div class="progress" id="progress">
+    <div class="progress-step">
+      <div class="progress-dot active" data-step="1">1</div>
+      <div class="progress-line" data-line="1"></div>
+    </div>
+    <div class="progress-step">
+      <div class="progress-dot" data-step="2">2</div>
+      <div class="progress-line" data-line="2"></div>
+    </div>
+    <div class="progress-step">
+      <div class="progress-dot" data-step="3">3</div>
+      <div class="progress-line" data-line="3"></div>
+    </div>
+    <div class="progress-step">
+      <div class="progress-dot" data-step="4">4</div>
+    </div>
+  </div>
+
+  <!-- Step 1: Source Format -->
+  <div class="step active" id="step1">
+    <h2>Step 1: Source Format</h2>
+    <p class="step-desc">What format is your documentation authored in?</p>
+    <div class="option-group" id="sourceGroup">
+      <label class="option-card">
+        <input type="radio" name="source" value="dita">
+        <div class="option-label">DITA XML</div>
+        <div class="option-sub">Structured, topic-based authoring with semantic tags</div>
+      </label>
+      <label class="option-card">
+        <input type="radio" name="source" value="markdown">
+        <div class="option-label">Markdown</div>
+        <div class="option-sub">Lightweight markup — GitHub, docs-as-code workflows</div>
+      </label>
+      <label class="option-card">
+        <input type="radio" name="source" value="html">
+        <div class="option-label">HTML</div>
+        <div class="option-sub">Direct HTML authoring or WYSIWYG CMS output</div>
+      </label>
+      <label class="option-card">
+        <input type="radio" name="source" value="unstructured">
+        <div class="option-label">Unstructured Word / PDF</div>
+        <div class="option-sub">Binary formats without semantic structure</div>
+      </label>
+    </div>
+    <div class="btn-row">
+      <button class="btn btn-primary" id="btn1next" disabled>Continue</button>
+    </div>
+  </div>
+
+  <!-- Step 2: Delivery Surfaces -->
+  <div class="step" id="step2">
+    <h2>Step 2: Delivery Surfaces</h2>
+    <p class="step-desc">Select all surfaces you deliver documentation to.</p>
+    <div class="option-group" id="surfaceGroup">
+      <label class="option-card">
+        <input type="checkbox" name="surface" value="docs-site">
+        <div class="option-label">Docs site (static)</div>
+        <div class="option-sub">Hugo, Docusaurus, MkDocs, GitBook, or custom static site</div>
+      </label>
+      <label class="option-card">
+        <input type="checkbox" name="surface" value="in-app">
+        <div class="option-label">In-app help / tooltips</div>
+        <div class="option-sub">Contextual help embedded inside the product UI</div>
+      </label>
+      <label class="option-card">
+        <input type="checkbox" name="surface" value="ai-chatbot">
+        <div class="option-label">AI chatbot / LLM assistant</div>
+        <div class="option-sub">RAG-powered support, docs-trained chatbots</div>
+      </label>
+      <label class="option-card">
+        <input type="checkbox" name="surface" value="api-ref">
+        <div class="option-label">API reference (OpenAPI / Swagger)</div>
+        <div class="option-sub">Auto-generated or hand-authored API documentation</div>
+      </label>
+      <label class="option-card">
+        <input type="checkbox" name="surface" value="pdf">
+        <div class="option-label">PDF / print</div>
+        <div class="option-sub">Printable manuals, regulatory filings, offline docs</div>
+      </label>
+    </div>
+    <div class="btn-row">
+      <button class="btn btn-secondary" id="btn2back">Back</button>
+      <button class="btn btn-primary" id="btn2next" disabled>Continue</button>
+    </div>
+  </div>
+
+  <!-- Step 3: Transformation Layer -->
+  <div class="step" id="step3">
+    <h2>Step 3: Transformation Layer</h2>
+    <p class="step-desc">What sits between your source content and delivery surfaces?</p>
+    <div class="option-group" id="transformGroup">
+      <label class="option-card">
+        <input type="radio" name="transform" value="direct">
+        <div class="option-label">Direct publish (no transformation)</div>
+        <div class="option-sub">Source files are deployed as-is to the delivery surface</div>
+      </label>
+      <label class="option-card">
+        <input type="radio" name="transform" value="ssg">
+        <div class="option-label">Static site generator</div>
+        <div class="option-sub">Hugo, Docusaurus, MkDocs, Eleventy, Jekyll</div>
+      </label>
+      <label class="option-card">
+        <input type="radio" name="transform" value="ccms">
+        <div class="option-label">CCMS / structured CMS</div>
+        <div class="option-sub">MadCap Flare, Ixiasoft, Paligo, Tridion Docs</div>
+      </label>
+      <label class="option-card">
+        <input type="radio" name="transform" value="custom">
+        <div class="option-label">Custom pipeline / scripts</div>
+        <div class="option-sub">CI/CD scripts, custom build tooling, bespoke transforms</div>
+      </label>
+      <label class="option-card">
+        <input type="radio" name="transform" value="none">
+        <div class="option-label">No defined process</div>
+        <div class="option-sub">Ad-hoc, manual, or undefined workflow</div>
+      </label>
+    </div>
+    <div class="btn-row">
+      <button class="btn btn-secondary" id="btn3back">Back</button>
+      <button class="btn btn-primary" id="btn3next" disabled>Run Diagnosis</button>
+    </div>
+  </div>
+
+  <!-- Step 4: Results -->
+  <div class="step results-step" id="step4">
+    <h2>Pipeline Health Report</h2>
+    <p class="step-desc">Based on Despopoulos's source-to-delivery transformation model and Iantosca's two-gate quality model.</p>
+
+    <div class="summary-bar" id="summaryBar"></div>
+
+    <!-- A. Break-point Analysis -->
+    <div class="results-section">
+      <h3>A. Break-point Analysis</h3>
+      <div id="breakpoints"></div>
+    </div>
+
+    <!-- B. Two-Gate Assessment -->
+    <div class="results-section">
+      <h3>B. Two-Gate Assessment</h3>
+      <div id="gates"></div>
+    </div>
+
+    <!-- C. Top 3 Fixes -->
+    <div class="results-section">
+      <h3>C. Top 3 Fixes</h3>
+      <div class="fixes-list" id="fixes"></div>
+    </div>
+
+    <div class="btn-row btn-row-flush">
+      <button class="btn btn-secondary" id="btn4back">Back</button>
+      <button class="btn btn-secondary" id="btn4restart">Start Over</button>
+      <button class="btn btn-primary" onclick="window.print()">Print Report</button>
+    </div>
+
+    <!-- Share -->
+    <div class="share-section" id="shareSection">
+      <h3>Share Your Results</h3>
+      <textarea class="share-textarea" id="shareText" readonly></textarea>
+      <div class="share-copy-row">
+        <button class="btn btn-secondary copy-btn" id="copyBtn">Copy to clipboard</button>
+        <span class="copied-msg" id="copiedMsg">Copied!</span>
+      </div>
+    </div>
+
+    <footer>
+      Built by <a href="https://www.sulagnasasmal.com" target="_blank" rel="noopener">Sulagna Sasmal</a> · Frameworks: Despopoulos source-to-delivery model &amp; Iantosca two-gate quality model
+    </footer>
+  </div>
+</div>
+
+<script>
+(function(){
+  "use strict";
+
+  /* ── State ── */
+  let currentStep = 1;
+  let source = "";
+  let surfaces = [];
+  let transform = "";
+
+  /* ── DOM refs ── */
+  const steps = [null, el("step1"), el("step2"), el("step3"), el("step4")];
+  const dots = document.querySelectorAll(".progress-dot");
+  const lines = document.querySelectorAll(".progress-line");
+
+  function el(id){ return document.getElementById(id); }
+
+  /* ── Navigation ── */
+  function goTo(step){
+    steps[currentStep].classList.remove("active");
+    currentStep = step;
+    steps[currentStep].classList.add("active");
+    updateProgress();
+    window.scrollTo({top:0,behavior:"smooth"});
+    if(step === 4) generateReport();
+  }
+
+  function updateProgress(){
+    dots.forEach(function(d){
+      var s = +d.dataset.step;
+      d.classList.toggle("active", s === currentStep);
+      d.classList.toggle("done", s < currentStep);
+    });
+    lines.forEach(function(l){
+      var s = +l.dataset.line;
+      l.classList.toggle("done", s < currentStep);
+    });
+  }
+
+  /* ── Option cards ── */
+  function bindRadio(groupId, btnId, setter){
+    var group = el(groupId);
+    var btn = el(btnId);
+    group.addEventListener("click", function(e){
+      var card = e.target.closest(".option-card");
+      if(!card) return;
+      group.querySelectorAll(".option-card").forEach(function(c){ c.classList.remove("selected"); });
+      card.classList.add("selected");
+      card.querySelector("input").checked = true;
+      setter(card.querySelector("input").value);
+      btn.disabled = false;
+    });
+  }
+
+  function bindCheckbox(groupId, btnId, setter){
+    var group = el(groupId);
+    var btn = el(btnId);
+    group.addEventListener("click", function(e){
+      var card = e.target.closest(".option-card");
+      if(!card) return;
+      var cb = card.querySelector("input");
+      /* Toggle unless clicked directly on input */
+      if(e.target !== cb) cb.checked = !cb.checked;
+      card.classList.toggle("selected", cb.checked);
+      var vals = [];
+      group.querySelectorAll("input:checked").forEach(function(c){ vals.push(c.value); });
+      setter(vals);
+      btn.disabled = vals.length === 0;
+    });
+  }
+
+  bindRadio("sourceGroup", "btn1next", function(v){ source = v; });
+  bindCheckbox("surfaceGroup", "btn2next", function(v){ surfaces = v; });
+  bindRadio("transformGroup", "btn3next", function(v){ transform = v; });
+
+  el("btn1next").addEventListener("click", function(){ goTo(2); });
+  el("btn2next").addEventListener("click", function(){ goTo(3); });
+  el("btn3next").addEventListener("click", function(){ goTo(4); });
+  el("btn2back").addEventListener("click", function(){ goTo(1); });
+  el("btn3back").addEventListener("click", function(){ goTo(2); });
+  el("btn4back").addEventListener("click", function(){ goTo(3); });
+  el("btn4restart").addEventListener("click", function(){
+    source = ""; surfaces = []; transform = "";
+    document.querySelectorAll(".option-card").forEach(function(c){ c.classList.remove("selected"); });
+    document.querySelectorAll(".option-card input").forEach(function(i){ i.checked = false; });
+    ["btn1next","btn2next","btn3next"].forEach(function(id){ el(id).disabled = true; });
+    goTo(1);
+  });
+
+  el("copyBtn").addEventListener("click", function(){
+    var ta = el("shareText");
+    navigator.clipboard.writeText(ta.value).then(function(){
+      el("copiedMsg").classList.add("show");
+      setTimeout(function(){ el("copiedMsg").classList.remove("show"); }, 2000);
+    });
+  });
+
+  /* ── Labels ── */
+  var sourceLabels = {dita:"DITA XML",markdown:"Markdown",html:"HTML",unstructured:"Unstructured Word/PDF"};
+  var surfaceLabels = {"docs-site":"Docs site (static)","in-app":"In-app help / tooltips","ai-chatbot":"AI chatbot / LLM assistant","api-ref":"API reference (OpenAPI/Swagger)",pdf:"PDF / print"};
+  var transformLabels = {direct:"Direct publish",ssg:"Static site generator",ccms:"CCMS / structured CMS",custom:"Custom pipeline / scripts",none:"No defined process"};
+
+  /* ── Diagnostic Engine ── */
+
+  function riskFor(surf){
+    /* Returns {level, where, why} */
+
+    /* Rule: Unstructured = HIGH for all except PDF */
+    if(source === "unstructured"){
+      if(surf === "pdf") return {level:"LOW",where:"Source",why:"PDF delivery from Word/PDF source is natively compatible — no structural transformation required."};
+      return {level:"HIGH",where:"Source",why:"Unstructured binary content has no semantic markup. Transformation layers cannot reliably extract headings, steps, or relationships."};
+    }
+
+    /* Rule: Direct publish + AI chatbot = HIGH always */
+    if(transform === "direct" && surf === "ai-chatbot"){
+      return {level:"HIGH",where:"Transformation",why:"Direct publish has no semantic preservation layer. AI/LLM ingestion requires structured metadata, topic boundaries, and relationship maps that raw source cannot provide."};
+    }
+
+    /* Rule: No defined process + 3+ surfaces = HIGH */
+    if(transform === "none" && surfaces.length >= 3){
+      return {level:"HIGH",where:"Transformation",why:"No defined transformation process across " + surfaces.length + " surfaces means each output is manually assembled. Inconsistency, drift, and broken cross-references are inevitable."};
+    }
+
+    /* Rule: Markdown + AI chatbot = MEDIUM */
+    if(source === "markdown" && surf === "ai-chatbot"){
+      return {level:"MEDIUM",where:"Source → Transformation",why:"Markdown lacks semantic disambiguation. Headings, lists, and code blocks have no topic-type metadata. AI systems chunk incorrectly without frontmatter schema and taxonomy signals."};
+    }
+
+    /* Rule: DITA + any surface = LOW structural, MEDIUM operational */
+    if(source === "dita"){
+      if(surf === "ai-chatbot") return {level:"MEDIUM",where:"Delivery",why:"DITA's structure is excellent for AI readiness, but most LLM ingestion pipelines don't natively parse DITA maps. Requires DITA-to-JSON/Markdown transform before RAG indexing."};
+      if(surf === "in-app") return {level:"MEDIUM",where:"Transformation",why:"DITA content is well-structured but verbose. In-app tooltips need micro-content extraction — conref and filtering must be configured per UI context."};
+      return {level:"LOW",where:"Minimal risk",why:"DITA's semantic structure, topic typing, and map-based relationships provide clean transformation paths. Operational complexity (toolchain, specialization) is the main risk."};
+    }
+
+    /* HTML source rules */
+    if(source === "html"){
+      if(surf === "ai-chatbot") return {level:"MEDIUM",where:"Source → Delivery",why:"HTML may have semantic tags (article, section) but typically lacks topic-type metadata and relationship maps needed for reliable AI chunking and retrieval."};
+      if(surf === "pdf") return {level:"MEDIUM",where:"Transformation",why:"HTML-to-PDF conversion frequently breaks page layout, headers/footers, and cross-references. Requires dedicated print stylesheet or PDF generation tool (Paged.js, Prince)."};
+      if(surf === "api-ref") return {level:"MEDIUM",where:"Source",why:"Hand-authored HTML and OpenAPI specs are separate artifacts. Keeping descriptions, examples, and error catalogs in sync requires explicit binding or generation from a single source."};
+      if(surf === "in-app") return {level:"MEDIUM",where:"Transformation",why:"HTML content must be stripped, fragmented, and re-contextualized for tooltip delivery. Without a micro-content extraction layer, full-page content leaks into UI surfaces."};
+      if(surf === "docs-site") return {level:"LOW",where:"Minimal risk",why:"HTML source to static docs site is a natural fit. Main risk is lack of templating consistency if pages are hand-authored rather than generated."};
+    }
+
+    /* Markdown misc */
+    if(source === "markdown"){
+      if(surf === "api-ref") return {level:"MEDIUM",where:"Source → Delivery",why:"Markdown cannot express OpenAPI schemas natively. API reference requires either spec-first generation or careful manual sync between .md files and openapi.yaml."};
+      if(surf === "in-app") return {level:"MEDIUM",where:"Transformation",why:"Markdown has no micro-content model. Extracting tooltip-sized snippets requires custom parsing, frontmatter conventions, and possibly a headless CMS layer."};
+      if(surf === "pdf") return {level:"MEDIUM",where:"Transformation",why:"Markdown-to-PDF pipelines (Pandoc, md-to-pdf) produce acceptable output but struggle with complex layouts, page breaks, headers/footers, and cross-references."};
+      if(surf === "docs-site") return {level:"LOW",where:"Minimal risk",why:"Markdown is the native format for most SSGs. Low structural risk when used with consistent frontmatter and folder conventions."};
+    }
+
+    /* Transform-specific adjustments */
+    if(transform === "ccms"){
+      if(surf === "ai-chatbot") return {level:"MEDIUM",where:"Delivery",why:"CCMS output is well-structured but most AI ingestion pipelines expect Markdown or JSON. Requires an export adapter to preserve metadata during RAG indexing."};
+      return {level:"LOW",where:"Minimal risk",why:"CCMS provides structured content management with reuse, filtering, and multi-channel publishing. This is the strongest path for this delivery surface."};
+    }
+
+    if(transform === "none"){
+      return {level:"MEDIUM",where:"Transformation",why:"No formal transformation process adds manual overhead and inconsistency risk, even when source format and delivery surface are compatible."};
+    }
+
+    if(transform === "direct"){
+      if(surf === "api-ref") return {level:"MEDIUM",where:"Transformation",why:"Direct publish to API reference works only if source is already OpenAPI spec. Any narrative content requires a separate process."};
+      return {level:"LOW",where:"Minimal risk",why:"Source-to-surface path is relatively direct. Monitor for drift as content scales."};
+    }
+
+    return {level:"LOW",where:"Minimal risk",why:"This source-surface-transform combination has manageable structural risk. Standard tooling and conventions should handle the transformation."};
+  }
+
+  function gateAssessment(){
+    /* Gate 1: Pre-input structural AI-readiness */
+    var g1 = {};
+    if(source === "unstructured"){
+      g1 = {verdict:"No",css:"gate-fail",explanation:"Unstructured Word/PDF has no semantic markup, no topic boundaries, no metadata schema. Content cannot be reliably parsed by any automated system without manual restructuring."};
+    } else if(source === "dita"){
+      g1 = {verdict:"Yes",css:"gate-pass",explanation:"DITA's topic types, semantic tags, and map relationships provide machine-readable structure that passes automated pre-input validation."};
+    } else if(source === "markdown"){
+      if(transform === "ccms") g1 = {verdict:"Partial",css:"gate-partial",explanation:"Markdown gains structure from CCMS metadata and taxonomy, but the source format itself lacks native semantic disambiguation."};
+      else g1 = {verdict:"Partial",css:"gate-partial",explanation:"Markdown has basic structure (headings, lists, code) but lacks topic-type semantics, relationship metadata, and taxonomy signals without explicit frontmatter conventions."};
+    } else if(source === "html"){
+      g1 = {verdict:"Partial",css:"gate-partial",explanation:"HTML can be semantic (article, section, nav) but typically lacks the topic-type schema and content-model enforcement needed for full structural AI-readiness."};
+    } else {
+      g1 = {verdict:"Partial",css:"gate-partial",explanation:"Source structure provides partial AI-readiness. Additional metadata and schema enforcement would improve automated processing."};
+    }
+
+    /* Gate 2: Go-Live output validation failures */
+    var g2failures = [];
+
+    surfaces.forEach(function(surf){
+      if(source === "unstructured" && surf !== "pdf"){
+        g2failures.push("" + surfaceLabels[surf] + ": Content renders but semantic integrity is lost — broken heading hierarchy, missing cross-references, no topic boundaries.");
+      }
+      if(surf === "ai-chatbot"){
+        if(transform === "direct") g2failures.push("AI chatbot: No metadata preservation. LLM retrieves raw content without context boundaries, producing hallucinated or irrelevant answers.");
+        else if(source === "markdown" && transform !== "ccms") g2failures.push("AI chatbot: Chunk boundaries misaligned with topic boundaries. Retrieval returns partial topics or blended content from adjacent sections.");
+      }
+      if(surf === "pdf" && source !== "unstructured" && source !== "dita"){
+        g2failures.push("PDF: Page breaks inside code blocks; missing running headers/footers; cross-reference links become dead text.");
+      }
+      if(surf === "in-app" && source !== "dita"){
+        g2failures.push("In-app help: Full-length content appears in tooltip context. No micro-content extraction — users see paragraph-level text in a 200px popover.");
+      }
+      if(surf === "api-ref" && source !== "html"){
+        g2failures.push("API reference: Narrative descriptions and OpenAPI spec drift apart. Endpoint examples reference deprecated parameters or missing schemas.");
+      }
+    });
+
+    if(transform === "none" && surfaces.length >= 3){
+      g2failures.push("Multi-surface: No validation scripts means each surface ships with different content versions, broken links, and inconsistent terminology.");
+    }
+
+    if(transform === "ccms"){
+      var hasValidationScript = false; /* assumption: none unless custom */
+      g2failures.push("CCMS output: Structured content publishes cleanly but output validation scripts are needed to catch rendering regressions, broken conrefs, and filter condition conflicts post-build.");
+    }
+
+    if(g2failures.length === 0){
+      g2failures.push("No critical Go-Live failures detected for this combination. Standard QA review recommended before launch.");
+    }
+
+    return {gate1: g1, gate2failures: g2failures};
+  }
+
+  function topFixes(){
+    var fixes = [];
+
+    /* Priority 1: Source problems */
+    if(source === "unstructured"){
+      fixes.push({title:"Migrate to structured authoring",desc:"Convert Word/PDF content to Markdown (minimum) or DITA (ideal). Use Pandoc for bulk conversion, then manually add frontmatter metadata, topic-type tags, and heading hierarchy. This unblocks every downstream surface."});
+    }
+
+    /* Priority 2: Transformation problems */
+    if(transform === "none"){
+      fixes.push({title:"Define a transformation pipeline",desc:"Implement a reproducible build step between source and delivery. Even a simple SSG (Hugo, MkDocs) or CI script that validates and transforms content eliminates manual inconsistency across " + surfaces.length + " surface(s)."});
+    }
+    if(transform === "direct" && surfaces.indexOf("ai-chatbot") !== -1){
+      fixes.push({title:"Add a semantic enrichment layer before AI ingestion",desc:"Insert a preprocessing step that generates JSON-LD or structured frontmatter from your source content. Include topic-type tags, section IDs, and relationship metadata so the LLM retrieval pipeline can chunk and cite accurately."});
+    }
+
+    /* Priority 3: Surface-specific */
+    if(source === "markdown" && surfaces.indexOf("ai-chatbot") !== -1){
+      fixes.push({title:"Implement frontmatter schema + topic-type taxonomy",desc:"Add required frontmatter fields (type: concept|task|reference, audience, product, version) to every Markdown file. Create a taxonomy YAML that maps topics to product areas. This gives AI chunking the semantic signals Markdown lacks natively."});
+    }
+
+    if(surfaces.indexOf("in-app") !== -1 && source !== "dita"){
+      fixes.push({title:"Create a micro-content extraction layer",desc:"Build a content API or script that extracts the first paragraph or a designated \"summary\" field from each topic. Map these micro-content snippets to UI element IDs for tooltip delivery, rather than embedding full docs in the product."});
+    }
+
+    if(surfaces.indexOf("api-ref") !== -1){
+      fixes.push({title:"Adopt spec-first API documentation",desc:"Make the OpenAPI spec the single source of truth for API reference content. Generate narrative pages from the spec using Redoc or Stoplight, rather than maintaining parallel Markdown files that drift from the actual API contract."});
+    }
+
+    if(surfaces.indexOf("pdf") !== -1 && source === "markdown"){
+      fixes.push({title:"Add a dedicated PDF build with print stylesheet",desc:"Use a purpose-built Markdown-to-PDF toolchain (Pandoc + LaTeX, or Paged.js) with a custom print CSS that handles page breaks, running headers, code block overflow, and cross-reference resolution."});
+    }
+
+    if(transform === "ccms"){
+      fixes.push({title:"Add automated output validation scripts",desc:"Create post-build validation that checks for broken conrefs, unresolved filter conditions, rendering regressions, and link integrity across all published outputs. CCMS structure is only as reliable as the output verification."});
+    }
+
+    if(source === "dita" && surfaces.indexOf("ai-chatbot") !== -1){
+      fixes.push({title:"Build a DITA-to-JSON export for RAG pipelines",desc:"Create a DITA Open Toolkit plugin or script that exports topics as JSON with preserved metadata (topic type, parent map, related links, audience). Feed this to your AI ingestion pipeline instead of raw XML or flattened HTML."});
+    }
+
+    if(source === "html" && surfaces.indexOf("docs-site") !== -1){
+      fixes.push({title:"Introduce a templating layer for consistency",desc:"Move from hand-authored HTML pages to a template-driven SSG or component system. This enforces consistent navigation, metadata, and layout across all docs site pages."});
+    }
+
+    /* Fallback generic fix */
+    if(fixes.length < 3){
+      if(surfaces.length >= 2){
+        fixes.push({title:"Implement cross-surface link and terminology validation",desc:"Run automated checks that verify internal links resolve across all delivery surfaces, and that terminology is consistent (same term, same definition) between docs site, in-app help, and API reference outputs."});
+      }
+      fixes.push({title:"Add output-stage regression testing",desc:"Before each publish cycle, run a diff-based check comparing the new build output to the previous version. Flag deleted sections, changed anchors, and modified code examples for manual review."});
+      fixes.push({title:"Document your content pipeline as code",desc:"Create a pipeline definition file (YAML or Makefile) that explicitly declares source → transform → delivery relationships, with validation steps at each stage. Treat the pipeline as a first-class engineering artifact."});
+    }
+
+    return fixes.slice(0,3);
+  }
+
+  /* ── Report Generation ── */
+  function generateReport(){
+    /* Summary bar */
+    var sb = el("summaryBar");
+    sb.innerHTML = "<div class=\"summary-chip\"><strong>Source:</strong>&nbsp;" + esc(sourceLabels[source]) +
+      "</div><div class=\"summary-chip\"><strong>Surfaces:</strong>&nbsp;" + surfaces.map(function(s){return esc(surfaceLabels[s]);}).join(", ") +
+      "</div><div class=\"summary-chip\"><strong>Transform:</strong>&nbsp;" + esc(transformLabels[transform]) + "</div>";
+
+    /* A. Break-points */
+    var bpHTML = "";
+    surfaces.forEach(function(surf){
+      var r = riskFor(surf);
+      var badgeClass = r.level === "HIGH" ? "risk-high" : r.level === "MEDIUM" ? "risk-medium" : "risk-low";
+      bpHTML += "<div class=\"risk-card\">" +
+        "<div class=\"risk-header\">" +
+          "<span class=\"risk-badge " + badgeClass + "\">" + r.level + "</span>" +
+          "<span class=\"risk-surface\">" + esc(surfaceLabels[surf]) + "</span>" +
+        "</div>" +
+        "<div class=\"risk-detail\"><strong>Break location:</strong> " + esc(r.where) + "</div>" +
+        "<div class=\"risk-detail\"><strong>Why:</strong> " + esc(r.why) + "</div>" +
+      "</div>";
+    });
+    el("breakpoints").innerHTML = bpHTML;
+
+    /* B. Gates */
+    var gates = gateAssessment();
+    var gatesHTML = "<div class=\"gate-card\">" +
+      "<div class=\"gate-title\">Gate 1 — Pre-input Structural Assessment</div>" +
+      "<div class=\"gate-verdict " + gates.gate1.css + "\">" + gates.gate1.verdict + "</div>" +
+      "<div class=\"gate-explanation\">" + esc(gates.gate1.explanation) + "</div>" +
+    "</div>";
+    gatesHTML += "<div class=\"gate-card\">" +
+      "<div class=\"gate-title\">Gate 2 — Go-Live Validation</div>" +
+      "<ul class=\"gate-failures\">";
+    gates.gate2failures.forEach(function(f){
+      gatesHTML += "<li>" + esc(f) + "</li>";
+    });
+    gatesHTML += "</ul></div>";
+    el("gates").innerHTML = gatesHTML;
+
+    /* C. Fixes */
+    var fixData = topFixes();
+    var fixHTML = "";
+    fixData.forEach(function(f){
+      fixHTML += "<div class=\"fix-card\">" +
+        "<span class=\"fix-title\">" + esc(f.title) + "</span>" +
+        "<div class=\"fix-desc\">" + esc(f.desc) + "</div>" +
+      "</div>";
+    });
+    el("fixes").innerHTML = fixHTML;
+
+    /* Share text */
+    var highCount = 0, medCount = 0, lowCount = 0;
+    surfaces.forEach(function(s){
+      var r = riskFor(s);
+      if(r.level==="HIGH") highCount++;
+      else if(r.level==="MEDIUM") medCount++;
+      else lowCount++;
+    });
+    var shareLines = [
+      "I just ran my documentation pipeline through the Content Pipeline Health Checker — and the results were eye-opening.",
+      "",
+      "My setup: " + sourceLabels[source] + " source → " + transformLabels[transform] + " → " + surfaces.length + " delivery surface(s).",
+      "",
+      "Results:"
+    ];
+    if(highCount) shareLines.push("🔴 " + highCount + " HIGH-risk break point" + (highCount>1?"s":""));
+    if(medCount) shareLines.push("🟡 " + medCount + " MEDIUM-risk break point" + (medCount>1?"s":""));
+    if(lowCount) shareLines.push("🟢 " + lowCount + " LOW-risk surface" + (lowCount>1?"s":""));
+    shareLines.push("");
+    shareLines.push("Gate 1 (structural AI-readiness): " + gates.gate1.verdict);
+    shareLines.push("");
+    shareLines.push("The gap between \"we have docs\" and \"our docs work across every surface\" is where most pipelines silently break.");
+    shareLines.push("");
+    shareLines.push("Based on Despopoulos's source-to-delivery transformation model and Iantosca's two-gate quality framework.");
+    shareLines.push("");
+    shareLines.push("Try it yourself → [link]");
+    shareLines.push("");
+    shareLines.push("#TechnicalWriting #ContentStrategy #DocsAsCode #AI #DocumentationEngineering");
+
+    el("shareText").value = shareLines.join("\n");
+  }
+
+  function esc(s){
+    var d = document.createElement("div");
+    d.appendChild(document.createTextNode(s));
+    return d.innerHTML;
+  }
+})();
+</script>
+</body>
+</html>
