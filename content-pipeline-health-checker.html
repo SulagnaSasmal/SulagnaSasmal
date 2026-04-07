@@ -361,11 +361,11 @@
     var group = el(groupId);
     var btn = el(btnId);
     group.addEventListener("click", function(e){
+      e.preventDefault();
       var card = e.target.closest(".option-card");
       if(!card) return;
       var cb = card.querySelector("input");
-      /* Toggle unless clicked directly on input */
-      if(e.target !== cb) cb.checked = !cb.checked;
+      cb.checked = !cb.checked;
       card.classList.toggle("selected", cb.checked);
       var vals = [];
       group.querySelectorAll("input:checked").forEach(function(c){ vals.push(c.value); });
