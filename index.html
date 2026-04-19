@@ -6,6 +6,9 @@
   <title>GitHub Profile Analytics — SulagnaSasmal</title>
   <meta name="description" content="Live GitHub profile analytics dashboard for SulagnaSasmal — repos, stars, languages, and activity." />
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💻</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -25,7 +28,7 @@
     }
 
     body {
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', sans-serif;
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
       background: var(--bg);
       color: var(--text);
       min-height: 100vh;
@@ -210,6 +213,56 @@
     .contrib-cell.l3 { background: #26a641; }
     .contrib-cell.l4 { background: #39d353; }
 
+    /* ── Top nav bar ── */
+    .top-nav {
+      background: var(--surface);
+      border-bottom: 1px solid var(--border);
+      padding: 8px 24px;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      font-size: 13px;
+    }
+    .top-nav-brand {
+      font-weight: 600;
+      color: var(--text);
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .top-nav-brand:hover { text-decoration: none; color: var(--blue); }
+    .top-nav-brand-icon {
+      width: 24px; height: 24px;
+      background: var(--blue-dim);
+      border-radius: 5px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 11px;
+      font-weight: 700;
+      color: #fff;
+      flex-shrink: 0;
+    }
+    .top-nav-sep { color: var(--border); }
+    .top-nav-link {
+      color: var(--muted);
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      padding: 4px 8px;
+      border-radius: 6px;
+      border: 1px solid transparent;
+      transition: border-color .15s, color .15s, background .15s;
+    }
+    .top-nav-link:hover {
+      color: var(--text);
+      border-color: var(--border);
+      background: rgba(255,255,255,.04);
+      text-decoration: none;
+    }
+    .top-nav-link.current { color: var(--blue); }
+    .top-nav-spacer { flex: 1; }
+
     /* ── Footer ── */
     .footer {
       text-align: center;
@@ -262,6 +315,27 @@
   </style>
 </head>
 <body>
+
+<nav class="top-nav" aria-label="Site navigation">
+  <a href="portfolio.html" class="top-nav-brand" aria-label="Portfolio home">
+    <span class="top-nav-brand-icon" aria-hidden="true">SS</span>
+    Sulagna Sasmal
+  </a>
+  <span class="top-nav-sep" aria-hidden="true">/</span>
+  <a href="portfolio.html" class="top-nav-link">
+    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg>
+    Portfolio
+  </a>
+  <a href="content-pipeline-health-checker.html" class="top-nav-link">
+    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+    Health Checker
+  </a>
+  <span class="top-nav-spacer"></span>
+  <span class="top-nav-link current" aria-current="page">
+    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+    GitHub Analytics
+  </span>
+</nav>
 
 <header>
   <span class="logo">📊</span>
@@ -335,12 +409,14 @@
 </main>
 
 <footer class="footer">
-  <a href="https://github.com/SulagnaSasmal" target="_blank">SulagnaSasmal</a> ·
-  <a href="https://sulagnasasmal.com" target="_blank">Portfolio</a> ·
-  <a href="https://sulagnasasmal.github.io/doc-portal/" target="_blank">DOC Portal</a> ·
-  <a href="https://sulagnasasmal.github.io/ai-doc-tools/" target="_blank">AI Tools</a>
+  <a href="portfolio.html">Portfolio Hub</a> ·
+  <a href="content-pipeline-health-checker.html">Health Checker</a> ·
+  <a href="https://github.com/SulagnaSasmal" target="_blank" rel="noopener noreferrer">GitHub</a> ·
+  <a href="https://sulagnasasmal.com" target="_blank" rel="noopener noreferrer">sulagnasasmal.com</a> ·
+  <a href="https://sulagnasasmal.github.io/doc-portal/" target="_blank" rel="noopener noreferrer">DOC Portal</a> ·
+  <a href="https://sulagnasasmal.github.io/ai-doc-tools/" target="_blank" rel="noopener noreferrer">AI Tools</a>
   <br/>
-  <span style="margin-top:6px;display:inline-block">Data sourced from the <a href="https://docs.github.com/en/rest" target="_blank">GitHub public API</a> · Refreshes on page load</span>
+  <span style="margin-top:6px;display:inline-block">Data sourced from the <a href="https://docs.github.com/en/rest" target="_blank" rel="noopener noreferrer">GitHub public API</a> · Refreshes on page load</span>
 </footer>
 
 <script>
@@ -391,10 +467,10 @@
       <div class="username">@${user.login}${user.location ? ' · 📍 ' + user.location : ''}</div>
       ${user.bio ? `<div class="bio">${user.bio}</div>` : ''}
       <div class="profile-links">
-        <a href="${user.html_url}" target="_blank">🐙 GitHub</a>
-        ${user.blog ? `<a href="${user.blog.startsWith('http') ? user.blog : 'https://' + user.blog}" target="_blank">🌐 Portfolio</a>` : ''}
-        <a href="https://sulagnasasmal.github.io/doc-portal/" target="_blank">📚 DOC Portal</a>
-        <a href="https://sulagnasasmal.github.io/ai-doc-tools/" target="_blank">🤖 AI Tools</a>
+        <a href="${user.html_url}" target="_blank" rel="noopener noreferrer">🐙 GitHub</a>
+        ${user.blog ? `<a href="${user.blog.startsWith('http') ? user.blog : 'https://' + user.blog}" target="_blank" rel="noopener noreferrer">🌐 Portfolio</a>` : ''}
+        <a href="https://sulagnasasmal.github.io/doc-portal/" target="_blank" rel="noopener noreferrer">📚 DOC Portal</a>
+        <a href="https://sulagnasasmal.github.io/ai-doc-tools/" target="_blank" rel="noopener noreferrer">🤖 AI Tools</a>
       </div>
     </div>
   `;

@@ -1,135 +1,98 @@
 # Architecture
 
-This document describes the architecture and design of the project.
+This is the `SulagnaSasmal/SulagnaSasmal` GitHub profile repository. It serves two purposes:
 
-## Overview
+1. **GitHub profile README** — `README.md` renders at [github.com/SulagnaSasmal](https://github.com/SulagnaSasmal) and is refreshed daily by a GitHub Actions workflow.
+2. **GitHub Pages hub** — static HTML pages deployed to `sulagnasasmal.github.io` (Vercel alias: `sulagnasasmal.com`).
 
-[Provide a high-level overview of the system architecture]
+---
 
-## System Design
+## Static Pages
 
-```
-┌─────────────┐
-│             │
-│  Frontend   │
-│             │
-└──────┬──────┘
-       │
-       │ HTTP/WebSocket
-       │
-┌──────▼──────┐
-│             │
-│  Backend    │
-│             │
-└──────┬──────┘
-       │
-       │ Queries
-       │
-┌──────▼──────┐
-│             │
-│  Database   │
-│             │
-└─────────────┘
-```
+| File | Purpose |
+|---|---|
+| `portfolio.html` | Portfolio hub — 8 documentation projects with sidebar navigation |
+| `index.html` | Live GitHub profile analytics dashboard (dark theme, GitHub REST API) |
+| `content-pipeline-health-checker.html` | Interactive diagnostic tool — identifies where a documentation pipeline breaks across delivery surfaces |
+| `docs/writing-philosophy.html` | Writing craft meta-doc |
+| `docs/information-architecture.html` | IA decisions meta-doc |
+| `docs/doc-as-code-workflow.html` | Docs-as-Code workflow meta-doc |
 
-## Components
+All pages are plain HTML/CSS/JS — no build step, no framework dependency.
+Design system: Inter + JetBrains Mono fonts, teal brand (`#0d9488`), CSS custom properties for light/dark mode, defined in `assets/hub-style.css`.
 
-### 1. Core Module
-**Purpose:** Main business logic
+---
 
-**Responsibilities:**
-- Data processing
-- Business rules enforcement
-- State management
+## Automation Scripts (`scripts/`)
 
-**Key Files:**
-- `src/core/index.js` - Entry point
-- `src/core/processor.js` - Main processing logic
+| Script | Purpose |
+|---|---|
+| `generate-profile.js` | **Entry point.** Fetches GitHub data, writes updated sections to `README.md` |
+| `github-api-queries.js` | GitHub GraphQL API helpers — `getUserStats`, `getTopRepositories`, `getRecentActivity` |
+| `profile-template.js` | README section generators — stats table, top repos list, language chart |
+| `metrics-collector.js` | Collects current stats and appends to `metrics/analytics.json` |
+| `analytics-report.js` | Generates `metrics/REPORT.md` from collected history |
+| `analytics-server.js` | Local Node.js server for analytics event collection (dev only, port 3001) |
+| `generate-documentation.js` | Validates and regenerates `docs/` structure files |
+| `generate-badges.js` | Repository badge generation utilities |
+| `repo-validator.js` | Checks for required files in this repo (`package.json`, `.gitignore`, `README.md`) |
+| `repo-standards-validator.js` | Validates all public repos against documentation standards |
+| `sync-repo-metadata.js` | Syncs GitHub repository topics and descriptions via API |
+| `github-analytics-tracker.js` | Client-side analytics event tracker (used by `index.html`) |
+| `test-automation.js` | Test suite — run with `node scripts/test-automation.js` |
 
-### 2. API Module
-**Purpose:** HTTP API endpoints
+All scripts run in Node.js 18+ with zero npm dependencies (uses built-in `fetch`).
 
-**Responsibilities:**
-- Request routing
-- Input validation
-- Response formatting
+---
 
-**Key Files:**
-- `src/api/server.js` - Server setup
-- `src/api/routes.js` - Route definitions
+## CI Workflows (`.github/workflows/`)
 
-### 3. Database Module
-**Purpose:** Data persistence
+| Workflow | Schedule | What it does |
+|---|---|---|
+| `update-profile.yml` | Daily at 00:00 UTC | Runs `generate-profile.js` and `metrics-collector.js`; auto-commits `README.md` and `metrics/` |
+| `documentation.yml` | Weekly, Sunday 04:00 UTC | Validates docs structure; commits any generated files |
+| `metrics.yml` | Weekly, Sunday 05:00 UTC | Full metrics collection and analytics report |
+| `repo-maintenance.yml` | Weekly, Sunday 02:00 UTC | Standards validation and link checking |
+| `standardize-repos.yml` | Weekly, Sunday 03:00 UTC | Metadata standards check across all repositories |
 
-**Responsibilities:**
-- Database connections
-- Query execution
-- Data models
+All workflows use `actions/checkout@v4` and `actions/setup-node@v4` (Node 18).
+Auto-commits use `stefanzweifel/git-auto-commit-action@v5` with `[skip ci]` to prevent loops.
 
-**Key Files:**
-- `src/db/connection.js` - DB setup
-- `src/db/models.js` - Data models
+---
 
 ## Data Flow
 
-### Request Flow
-
 ```
-1. Client sends HTTP request
-2. Router directs to handler
-3. Handler validates input
-4. Core processes data
-5. Database stores/retrieves data
-6. Response returned to client
-```
-
-## Design Patterns
-
-### Pattern 1: MVC
-Model-View-Controller pattern for separation of concerns
-
-### Pattern 2: Factory Pattern
-Used for creating complex objects
-
-### Pattern 3: Observer Pattern
-Event-driven architecture for real-time updates
-
-## Dependencies
-
-- **Framework:** [Framework name]
-- **Database:** [Database type]
-- **ORM:** [ORM name]
-- **Authentication:** [Auth method]
-
-## Performance Considerations
-
-- Caching strategy implemented
-- Database query optimization
-- API rate limiting
-- Load balancing ready
-
-## Security
-
-- Input validation on all endpoints
-- SQL injection prevention via parameterized queries
-- CORS configured securely
-- Authentication required for protected routes
-
-## Scalability
-
-- Stateless design enables horizontal scaling
-- Database connection pooling implemented
-- Async operations for I/O operations
-- Caching layer supports multiple instances
-
-## Deployment
-
-The system is containerized with Docker and deployed to [platform]:
-
-```
-Development → Staging → Production
+GitHub GraphQL API
+      │
+      ▼
+generate-profile.js
+      │
+      ├─→ profile-template.js ─→ README.md (auto-committed daily)
+      │
+      └─→ metrics-collector.js ─→ metrics/analytics.json
+                                        │
+                                        └─→ analytics-report.js ─→ metrics/REPORT.md
 ```
 
 ---
 
-*Last Updated: 2026-03-04*
+## Environment Variables
+
+| Variable | Required | Default | Purpose |
+|---|---|---|---|
+| `GITHUB_TOKEN` | Yes | — | GitHub API access. In Actions: auto-injected. Locally: set in `.env`. |
+| `GITHUB_USERNAME` | No | `SulagnaSasmal` | Target GitHub account |
+
+See `.env.example` for setup instructions.
+
+---
+
+## Deployment
+
+- **GitHub Pages**: Served from the `main` branch root. No build step.
+- **Vercel**: `vercel.json` at root configures static serving with security headers (`X-Content-Type-Options`, `X-Frame-Options`, `Referrer-Policy`) for the custom domain.
+
+---
+
+Last updated: 2026-04-19

@@ -52,7 +52,7 @@ async function runTests() {
 
 // Test 1: GitHub API helper
 test('GitHub API helper functions', () => {
-  const apiHelper = require('./scripts/github-api-queries');
+  const apiHelper = require('./github-api-queries');
   if (!apiHelper.queryGitHub || !apiHelper.getUserStats) {
     throw new Error('API helper missing required functions');
   }
@@ -60,7 +60,7 @@ test('GitHub API helper functions', () => {
 
 // Test 2: Profile template engine
 test('Profile template engine', () => {
-  const template = require('./scripts/profile-template');
+  const template = require('./profile-template');
   if (!template.generateStatsSection || !template.generateTopReposSection) {
     throw new Error('Template engine missing required functions');
   }

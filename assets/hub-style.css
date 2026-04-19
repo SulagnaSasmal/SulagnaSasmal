@@ -524,6 +524,8 @@ hr { border: none; border-top: 1px solid var(--bd-color); margin: 2rem 0; }
 .tag-portal { background: var(--badge-portal);  color: var(--badge-portal-tx); }
 .tag-default{ background: var(--bg-surface-alt); color: var(--tx-muted); }
 
+.phase-card--current { border-color: var(--clr-brand); }
+
 .phase-link {
   font-size: .8rem;
   font-weight: 600;

@@ -64,6 +64,7 @@
 | **CaseForge Onboarding Kit** | Post-sale customer onboarding · 30-day program · role-based checklists · go-live validation | [View →](https://sulagnasasmal.github.io/caseforge-onboarding/) |
 | **CaseForge SDK Documentation** | Python · Node.js SDK · authentication · error handling · migration guide · versioned changelog | [View →](https://sulagnasasmal.github.io/caseforge-sdk-docs/) |
 | **Documentation Center Platform** | Portfolio hub · writing philosophy · information architecture · doc-as-code workflow | [View →](https://sulagnasasmal.github.io/portfolio.html) |
+| **Content Pipeline Health Checker** | Interactive diagnostic tool — identify where your docs pipeline breaks across delivery surfaces · source formats · transformation layers · AI chatbot readiness | [Try it →](https://sulagnasasmal.github.io/content-pipeline-health-checker.html) |
 | **DocForge Platform** | Docs-as-Code platform dashboard | [View →](https://sulagnasasmal.github.io/Documentation-Center-Platform/docforge-platform.html) |
 | **Docs-as-Code Portal** | DaC methodology documentation | [View →](https://sulagnasasmal.github.io/docs-as-code-portal/) |
 | **RepoDocs AI** | Claude API · docs-as-code framework for SaaS API teams · reusable templates · AI prompt library · GitHub Actions validation · OpenAPI-to-Markdown generation | [View →](https://sulagnasasmal.github.io/repodocs-ai/) |

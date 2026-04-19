@@ -3,12 +3,14 @@
  * Fetches user statistics, repositories, and metrics
  */
 
-const token = process.env.GITHUB_TOKEN;
 const username = process.env.GITHUB_USERNAME || 'SulagnaSasmal';
 
-if (!token) {
-  console.error('ERROR: GITHUB_TOKEN environment variable not set');
-  process.exit(1);
+function getToken() {
+  const token = process.env.GITHUB_TOKEN;
+  if (!token) {
+    throw new Error('GITHUB_TOKEN environment variable not set');
+  }
+  return token;
 }
 
 /**
@@ -18,7 +20,7 @@ async function queryGitHub(query, variables = {}) {
   const response = await fetch('https://api.github.com/graphql', {
     method: 'POST',
     headers: {
-      'Authorization': `Bearer ${token}`,
+      'Authorization': `Bearer ${getToken()}`,
       'Content-Type': 'application/json',
     },
     body: JSON.stringify({

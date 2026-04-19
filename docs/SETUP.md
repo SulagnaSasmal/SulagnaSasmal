@@ -13,96 +13,77 @@ This guide will help you get the project up and running.
 ### Step 1: Clone the Repository
 
 ```bash
-git clone https://github.com/[username]/[repo-name].git
-cd [repo-name]
+git clone https://github.com/SulagnaSasmal/SulagnaSasmal.git
+cd SulagnaSasmal
 ```
 
-### Step 2: Install Dependencies
+### Step 2: Set Up Environment Variables
+
+This repo has **no npm dependencies** — Node.js 18+ is the only requirement.
 
 ```bash
-npm install
-# or
-yarn install
-```
-
-### Step 3: Environment Setup
-
-```bash
-# Copy environment template
 cp .env.example .env
-
-# Edit .env with your configuration
-nano .env
+# Edit .env and add your GitHub personal access token
 ```
 
-### Step 4: Run the Project
+Create a token at [github.com/settings/tokens](https://github.com/settings/tokens) with `read:user` and `public_repo` scopes.
+
+### Step 3: Generate the Profile
 
 ```bash
-npm start
-# or
-npm run dev
+npm run generate-profile
 ```
 
-## Development Setup
+This fetches GitHub API data and updates `README.md` with fresh stats.
 
-For development, use:
+### Step 4: Collect Metrics
 
 ```bash
-npm run dev
+npm run collect-metrics
 ```
 
-This will start the development server with hot-reload enabled.
+Writes current stats to `metrics/analytics.json`.
 
-## Testing
+## Available Commands
+
+| Command | What it does |
+|---|---|
+| `npm run generate-profile` | Fetch GitHub data and update README.md |
+| `npm run collect-metrics` | Collect and save GitHub metrics |
+| `npm run validate-repos` | Check repository standards |
+| `npm run test-api` | Test GitHub API connection |
+
+## Running Tests
 
 ```bash
-npm test
-
-# Run tests in watch mode
-npm test -- --watch
-
-# Run with coverage
-npm test -- --coverage
+node scripts/test-automation.js
 ```
 
-## Building for Production
+Expected: 15 passed, 0 failed.
 
-```bash
-npm run build
+## Viewing the Static Pages Locally
 
-# Preview production build
-npm run preview
-```
+Open any of the HTML files directly in a browser — no build step required:
+
+| Page | File |
+|---|---|
+| Portfolio Hub | `portfolio.html` |
+| GitHub Analytics | `index.html` |
+| Content Pipeline Health Checker | `content-pipeline-health-checker.html` |
 
 ## Troubleshooting
 
-### Issue: Dependencies installation fails
+**Error: GITHUB_TOKEN environment variable not set**
+Make sure you have copied `.env.example` to `.env` and filled in a valid token.
 
-**Solution:** Clear npm cache and try again:
-```bash
-npm cache clean --force
-npm install
-```
-
-### Issue: Port already in use
-
-**Solution:** Use a different port:
-```bash
-npm start -- --port 3001
-```
+**Error: GraphQL Error**
+Your token may not have the `read:user` scope. Check [github.com/settings/tokens](https://github.com/settings/tokens).
 
 ## Getting Help
 
-- 📖 Check the [documentation](../docs/)
-- 🐛 [Report an issue](https://github.com/[username]/[repo-name]/issues)
-- 💬 [Start a discussion](https://github.com/[username]/[repo-name]/discussions)
-
-## Next Steps
-
-- Read the [Architecture Guide](./ARCHITECTURE.md)
-- Check out [Examples](../examples/)
-- Review [API Documentation](./API.md)
+- 🐛 [Report an issue](https://github.com/SulagnaSasmal/SulagnaSasmal/issues)
+- 📖 [Architecture Guide](./ARCHITECTURE.md)
 
 ---
 
-*Last Updated: 2026-03-04*
+Last updated: 2026-04-19

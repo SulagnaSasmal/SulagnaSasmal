@@ -1,153 +1,542 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Content Pipeline Health Checker</title>
+<title>Content Pipeline Health Checker — Sulagna Sasmal</title>
 <meta name="description" content="Diagnose where your documentation pipeline breaks when content crosses from source to delivery surfaces. Based on Despopoulos's source-to-delivery model and Iantosca's two-gate quality model.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<!-- Theme init: prevents flash of wrong theme -->
+<script>
+  (function(){
+    var s=localStorage.getItem('hub-theme');
+    var d=window.matchMedia('(prefers-color-scheme: dark)').matches;
+    document.documentElement.setAttribute('data-theme',s||(d?'dark':'light'));
+  })();
+</script>
 <style>
-  *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-  html{font-size:16px;-webkit-text-size-adjust:100%;text-size-adjust:100%}
-  body{font-family:'Inter',system-ui,-apple-system,sans-serif;color:#1a1a1a;background:#fff;line-height:1.6;min-height:100vh}
-
-  /* Layout */
-  .container{max-width:720px;margin:0 auto;padding:2rem 1.25rem 4rem}
-  header{text-align:center;margin-bottom:2.5rem}
-  header h1{font-size:1.5rem;font-weight:700;letter-spacing:-.02em;margin-bottom:.25rem}
-  header p{font-size:.875rem;color:#666}
-
-  /* Progress */
-  .progress{display:flex;align-items:center;justify-content:center;gap:0;margin-bottom:2.5rem}
-  .progress-step{display:flex;align-items:center;gap:0}
-  .progress-dot{width:32px;height:32px;border-radius:50%;border:2px solid #d1d5db;display:flex;align-items:center;justify-content:center;font-size:.75rem;font-weight:600;color:#9ca3af;transition:all .2s;flex-shrink:0}
-  .progress-dot.active{border-color:#1a1a1a;color:#1a1a1a;background:#f5f5f5}
-  .progress-dot.done{border-color:#639922;color:#fff;background:#639922}
-  .progress-line{width:48px;height:2px;background:#d1d5db;transition:background .2s}
-  .progress-line.done{background:#639922}
-
-  /* Steps */
-  .step{display:none}
-  .step.active{display:block}
-  .step h2{font-size:1.125rem;font-weight:600;margin-bottom:.25rem}
-  .step .step-desc{font-size:.875rem;color:#666;margin-bottom:1.5rem}
-
-  /* Options */
-  .option-group{display:flex;flex-direction:column;gap:.625rem}
-  .option-card{position:relative;border:1.5px solid #e5e7eb;border-radius:8px;padding:.875rem 1rem;cursor:pointer;transition:border-color .15s,background .15s;-webkit-user-select:none;user-select:none}
-  .option-card:hover{border-color:#b0b0b0}
-  .option-card.selected{border-color:#1a1a1a;background:#fafafa}
-  .option-card input{position:absolute;opacity:0;width:1px;height:1px}
-  .option-label{font-size:.9375rem;font-weight:500}
-  .option-sub{font-size:.8125rem;color:#888;margin-top:2px}
-
-  /* Buttons */
-  .btn-row{display:flex;gap:.75rem;margin-top:2rem}
-  .btn{display:inline-flex;align-items:center;justify-content:center;padding:.625rem 1.5rem;border-radius:6px;font-family:inherit;font-size:.875rem;font-weight:500;border:none;cursor:pointer;transition:background .15s,opacity .15s}
-  .btn:disabled{opacity:.4;cursor:not-allowed}
-  .btn-primary{background:#1a1a1a;color:#fff}
-  .btn-primary:hover:not(:disabled){background:#333}
-  .btn-secondary{background:#fff;color:#1a1a1a;border:1.5px solid #d1d5db}
-  .btn-secondary:hover{border-color:#999}
-
-  /* Results */
-  .results-section{margin-bottom:2rem}
-  .results-section h3{font-size:1rem;font-weight:600;margin-bottom:.75rem;padding-bottom:.5rem;border-bottom:1px solid #e5e7eb}
-  .risk-card{border:1.5px solid #e5e7eb;border-radius:8px;padding:1rem 1.125rem;margin-bottom:.75rem}
-  .risk-header{display:flex;align-items:center;gap:.625rem;margin-bottom:.5rem;flex-wrap:wrap}
-  .risk-badge{display:inline-block;padding:2px 10px;border-radius:4px;font-size:.75rem;font-weight:600;color:#fff;text-transform:uppercase;letter-spacing:.03em}
-  .risk-high{background:#E24B4A}
-  .risk-medium{background:#EF9F27}
-  .risk-low{background:#639922}
-  .risk-surface{font-weight:600;font-size:.9375rem}
-  .risk-detail{font-size:.8125rem;color:#555;line-height:1.55}
-  .risk-detail strong{color:#1a1a1a;font-weight:600}
-
-  /* Gate cards */
-  .gate-card{border:1.5px solid #e5e7eb;border-radius:8px;padding:1rem 1.125rem;margin-bottom:.75rem}
-  .gate-title{font-weight:600;font-size:.9375rem;margin-bottom:.375rem}
-  .gate-verdict{display:inline-block;padding:2px 10px;border-radius:4px;font-size:.75rem;font-weight:600;color:#fff;margin-bottom:.375rem}
-  .gate-pass{background:#639922}
-  .gate-partial{background:#EF9F27}
-  .gate-fail{background:#E24B4A}
-  .gate-explanation{font-size:.8125rem;color:#555;line-height:1.55}
-  .gate-failures{margin-top:.5rem;padding-left:1.125rem}
-  .gate-failures li{font-size:.8125rem;color:#555;margin-bottom:.25rem;line-height:1.5}
-
-  /* Fix cards */
-  .fix-card{border:1.5px solid #e5e7eb;border-radius:8px;padding:1rem 1.125rem;margin-bottom:.75rem;counter-increment:fix}
-  .fix-card::before{content:counter(fix);display:inline-flex;align-items:center;justify-content:center;width:22px;height:22px;border-radius:50%;background:#1a1a1a;color:#fff;font-size:.6875rem;font-weight:700;margin-right:.5rem;vertical-align:middle}
-  .fix-title{font-weight:600;font-size:.9375rem;display:inline;vertical-align:middle}
-  .fix-desc{font-size:.8125rem;color:#555;margin-top:.375rem;line-height:1.55}
-  .fixes-list{counter-reset:fix}
-
-  /* Share */
-  .share-section{margin-top:2.5rem;border:1.5px solid #e5e7eb;border-radius:8px;padding:1.25rem}
-  .share-section h3{font-size:1rem;font-weight:600;margin-bottom:.75rem}
-  .share-textarea{width:100%;border:1.5px solid #e5e7eb;border-radius:6px;padding:.75rem;font-family:inherit;font-size:.8125rem;line-height:1.55;color:#333;resize:vertical;min-height:140px;background:#fafafa}
-  .share-textarea:focus{outline:none;border-color:#999}
-  .copy-btn{margin-top:.625rem}
-  .copied-msg{font-size:.8125rem;color:#639922;margin-left:.75rem;opacity:0;transition:opacity .2s}
-  .copied-msg.show{opacity:1}
-
-  /* Summary bar */
-  .summary-bar{display:flex;gap:1rem;margin-bottom:1.5rem;flex-wrap:wrap}
-  .summary-chip{font-size:.8125rem;background:#f5f5f5;border-radius:6px;padding:.375rem .75rem;color:#555}
-  .summary-chip strong{color:#1a1a1a}
-
-  /* Footer */
-  footer{text-align:center;margin-top:3rem;padding-top:1.5rem;border-top:1px solid #e5e7eb;font-size:.75rem;color:#999}
-  footer a{color:#666;text-decoration:none}
-  footer a:hover{text-decoration:underline}
-  .btn-row-flush{margin-bottom:0}
-  .share-copy-row{display:flex;align-items:center}
-
-  /* Print */
-  @media print{
-    .btn-row,.share-section,.progress,header p{display:none}
-    .container{max-width:100%;padding:1rem}
-    .step{display:none!important}
-    .step.results-step{display:block!important}
-    body{font-size:12pt}
+  /* === Design tokens — matches hub-style.css === */
+  :root {
+    --clr-brand:        #0d9488;
+    --clr-brand-dark:   #0f766e;
+    --clr-accent:       #06b6d4;
+    --bg-page:          #f8fafc;
+    --bg-surface:       #ffffff;
+    --bg-surface-alt:   #f1f5f9;
+    --bg-nav:           #ffffff;
+    --bd-color:         #e2e8f0;
+    --tx-base:          #0f172a;
+    --tx-muted:         #475569;
+    --tx-subtle:        #94a3b8;
+    --tx-link:          #0d9488;
+    --tx-on-brand:      #ffffff;
+    --shadow-sm:        0 1px 3px rgba(0,0,0,.08),0 1px 2px rgba(0,0,0,.05);
+    --shadow-card:      0 2px 8px rgba(0,0,0,.07);
+    --header-h:         60px;
+    --risk-high:        #dc2626;
+    --risk-medium:      #d97706;
+    --risk-low:         #16a34a;
+    --dur:              180ms;
+    --ease:             cubic-bezier(.4,0,.2,1);
+  }
+  [data-theme="dark"] {
+    --clr-brand:        #2dd4bf;
+    --clr-brand-dark:   #5eead4;
+    --bg-page:          #0a0f1a;
+    --bg-surface:       #111827;
+    --bg-surface-alt:   #1a2234;
+    --bg-nav:           #0f1623;
+    --bd-color:         #1e2d40;
+    --tx-base:          #f1f5f9;
+    --tx-muted:         #94a3b8;
+    --tx-subtle:        #475569;
+    --tx-link:          #2dd4bf;
+    --tx-on-brand:      #0a0f1a;
+    --risk-high:        #f87171;
+    --risk-medium:      #fbbf24;
+    --risk-low:         #4ade80;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --clr-brand:      #2dd4bf;
+      --clr-brand-dark: #5eead4;
+      --bg-page:        #0a0f1a;
+      --bg-surface:     #111827;
+      --bg-surface-alt: #1a2234;
+      --bg-nav:         #0f1623;
+      --bd-color:       #1e2d40;
+      --tx-base:        #f1f5f9;
+      --tx-muted:       #94a3b8;
+      --tx-subtle:      #475569;
+      --tx-link:        #2dd4bf;
+      --tx-on-brand:    #0a0f1a;
+      --risk-high:      #f87171;
+      --risk-medium:    #fbbf24;
+      --risk-low:       #4ade80;
+    }
   }
 
-  /* Mobile */
-  @media(max-width:600px){
-    .container{padding:1.25rem 1rem 3rem}
-    header h1{font-size:1.25rem}
-    .progress-line{width:28px}
-    .progress-dot{width:28px;height:28px;font-size:.6875rem}
-    .btn-row{flex-direction:column}
-    .btn{width:100%}
-    .summary-bar{flex-direction:column;gap:.5rem}
+  *,*::before,*::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { font-size: 16px; -webkit-text-size-adjust: 100%; text-size-adjust: 100%; scroll-behavior: smooth; }
+  body {
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    color: var(--tx-base);
+    background: var(--bg-page);
+    line-height: 1.6;
+    min-height: 100vh;
+    -webkit-font-smoothing: antialiased;
+    transition: background var(--dur) var(--ease), color var(--dur) var(--ease);
+  }
+  a { color: var(--tx-link); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+
+  /* === Site header === */
+  .site-header {
+    position: sticky;
+    top: 0;
+    height: var(--header-h);
+    background: var(--bg-nav);
+    border-bottom: 1px solid var(--bd-color);
+    display: flex;
+    align-items: center;
+    padding: 0 1.25rem;
+    z-index: 100;
+    gap: .75rem;
+    transition: background var(--dur) var(--ease), border-color var(--dur) var(--ease);
+  }
+  .header-logo {
+    display: flex;
+    align-items: center;
+    gap: .6rem;
+    text-decoration: none !important;
+    flex-shrink: 0;
+  }
+  .header-logo-icon {
+    width: 32px; height: 32px;
+    background: var(--clr-brand);
+    border-radius: 8px;
+    display: flex; align-items: center; justify-content: center;
+    color: var(--tx-on-brand);
+    font-weight: 700;
+    font-size: .875rem;
+    flex-shrink: 0;
+    transition: background var(--dur) var(--ease);
+  }
+  .header-logo-text {
+    font-size: .9rem;
+    font-weight: 600;
+    color: var(--tx-base);
+    line-height: 1.2;
+  }
+  .header-logo-sub {
+    font-size: .68rem;
+    font-weight: 400;
+    color: var(--tx-muted);
+    display: block;
+  }
+  .header-divider {
+    width: 1px;
+    height: 20px;
+    background: var(--bd-color);
+    flex-shrink: 0;
+  }
+  .header-tool-label {
+    font-size: .825rem;
+    color: var(--tx-muted);
+    font-weight: 500;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .header-actions {
+    display: flex;
+    align-items: center;
+    gap: .4rem;
+    margin-left: auto;
+    flex-shrink: 0;
+  }
+  .btn-icon {
+    width: 36px; height: 36px;
+    border-radius: 8px;
+    border: 1px solid var(--bd-color);
+    background: var(--bg-surface);
+    color: var(--tx-muted);
+    cursor: pointer;
+    display: flex; align-items: center; justify-content: center;
+    transition: background var(--dur) var(--ease), color var(--dur) var(--ease), border-color var(--dur) var(--ease);
+    font-family: inherit;
+    text-decoration: none !important;
+    flex-shrink: 0;
+  }
+  .btn-icon:hover { background: var(--bg-surface-alt); color: var(--tx-base); border-color: var(--clr-brand); text-decoration: none; }
+  .back-link {
+    display: flex;
+    align-items: center;
+    gap: .3rem;
+    font-size: .8rem;
+    font-weight: 500;
+    color: var(--tx-muted);
+    padding: .375rem .75rem;
+    border-radius: 6px;
+    border: 1px solid var(--bd-color);
+    background: var(--bg-surface);
+    text-decoration: none !important;
+    transition: color var(--dur) var(--ease), border-color var(--dur) var(--ease), background var(--dur) var(--ease);
+    white-space: nowrap;
+  }
+  .back-link:hover { color: var(--tx-base); border-color: var(--clr-brand); background: var(--bg-surface-alt); text-decoration: none !important; }
+
+  /* === Page layout === */
+  .container { max-width: 720px; margin: 0 auto; padding: 2.5rem 1.25rem 5rem; }
+
+  /* === Tool header === */
+  .tool-header {
+    text-align: center;
+    margin-bottom: 2.5rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid var(--bd-color);
+  }
+  .tool-eyebrow {
+    font-size: .75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: .1em;
+    color: var(--clr-brand);
+    margin-bottom: .5rem;
+  }
+  .tool-header h1 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    letter-spacing: -.02em;
+    margin-bottom: .5rem;
+    color: var(--tx-base);
+  }
+  .tool-header p {
+    font-size: .875rem;
+    color: var(--tx-muted);
+    max-width: 500px;
+    margin: 0 auto;
+    line-height: 1.6;
+  }
+
+  /* === Progress === */
+  .progress {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0;
+    margin-bottom: 2.5rem;
+  }
+  .progress-step { display: flex; align-items: center; gap: 0; }
+  .progress-dot {
+    width: 32px; height: 32px;
+    border-radius: 50%;
+    border: 2px solid var(--bd-color);
+    display: flex; align-items: center; justify-content: center;
+    font-size: .75rem;
+    font-weight: 600;
+    color: var(--tx-subtle);
+    transition: all var(--dur) var(--ease);
+    flex-shrink: 0;
+    background: var(--bg-surface);
+  }
+  .progress-dot.active {
+    border-color: var(--tx-base);
+    color: var(--tx-base);
+    background: var(--bg-surface-alt);
+  }
+  .progress-dot.done {
+    border-color: var(--clr-brand);
+    color: var(--tx-on-brand);
+    background: var(--clr-brand);
+  }
+  .progress-line {
+    width: 48px; height: 2px;
+    background: var(--bd-color);
+    transition: background var(--dur) var(--ease);
+  }
+  .progress-line.done { background: var(--clr-brand); }
+
+  /* === Step panels === */
+  .step { display: none; }
+  .step.active { display: block; }
+  .step h2 { font-size: 1.1rem; font-weight: 600; margin-bottom: .25rem; color: var(--tx-base); }
+  .step .step-desc { font-size: .875rem; color: var(--tx-muted); margin-bottom: 1.5rem; }
+
+  /* === Option cards === */
+  .option-group { display: flex; flex-direction: column; gap: .625rem; }
+  .option-card {
+    position: relative;
+    border: 1.5px solid var(--bd-color);
+    border-radius: 8px;
+    padding: .875rem 1rem;
+    cursor: pointer;
+    transition: border-color var(--dur) var(--ease), background var(--dur) var(--ease);
+    -webkit-user-select: none;
+    user-select: none;
+    background: var(--bg-surface);
+  }
+  .option-card:hover { border-color: var(--tx-subtle); }
+  .option-card.selected { border-color: var(--clr-brand); background: var(--bg-surface-alt); }
+  .option-card input { position: absolute; opacity: 0; width: 1px; height: 1px; }
+  .option-label { font-size: .9375rem; font-weight: 500; color: var(--tx-base); }
+  .option-sub { font-size: .8125rem; color: var(--tx-muted); margin-top: 2px; }
+
+  /* === Buttons === */
+  .btn-row { display: flex; gap: .75rem; margin-top: 2rem; }
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: .625rem 1.5rem;
+    border-radius: 6px;
+    font-family: inherit;
+    font-size: .875rem;
+    font-weight: 500;
+    border: none;
+    cursor: pointer;
+    transition: background var(--dur) var(--ease), opacity var(--dur) var(--ease), border-color var(--dur) var(--ease);
+  }
+  .btn:disabled { opacity: .4; cursor: not-allowed; }
+  .btn-primary { background: var(--clr-brand); color: var(--tx-on-brand); }
+  .btn-primary:hover:not(:disabled) { background: var(--clr-brand-dark); }
+  .btn-secondary {
+    background: var(--bg-surface);
+    color: var(--tx-base);
+    border: 1.5px solid var(--bd-color);
+  }
+  .btn-secondary:hover { border-color: var(--tx-muted); background: var(--bg-surface-alt); }
+
+  /* === Results === */
+  .results-section { margin-bottom: 2rem; }
+  .results-section h3 {
+    font-size: .95rem;
+    font-weight: 600;
+    margin-bottom: .75rem;
+    padding-bottom: .5rem;
+    border-bottom: 1px solid var(--bd-color);
+    color: var(--tx-base);
+  }
+  .risk-card {
+    border: 1.5px solid var(--bd-color);
+    border-radius: 8px;
+    padding: 1rem 1.125rem;
+    margin-bottom: .75rem;
+    background: var(--bg-surface);
+    box-shadow: var(--shadow-card);
+  }
+  .risk-header { display: flex; align-items: center; gap: .625rem; margin-bottom: .5rem; flex-wrap: wrap; }
+  .risk-badge {
+    display: inline-block;
+    padding: 2px 10px;
+    border-radius: 4px;
+    font-size: .725rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: .05em;
+  }
+  .risk-high   { background: #fef2f2; color: var(--risk-high); border: 1px solid #fecaca; }
+  .risk-medium { background: #fffbeb; color: var(--risk-medium); border: 1px solid #fde68a; }
+  .risk-low    { background: #f0fdf4; color: var(--risk-low); border: 1px solid #bbf7d0; }
+  [data-theme="dark"] .risk-high   { background: #450a0a; border-color: #7f1d1d; }
+  [data-theme="dark"] .risk-medium { background: #422006; border-color: #78350f; }
+  [data-theme="dark"] .risk-low    { background: #052e16; border-color: #14532d; }
+  .risk-surface { font-weight: 600; font-size: .9375rem; color: var(--tx-base); }
+  .risk-detail { font-size: .8125rem; color: var(--tx-muted); line-height: 1.55; }
+  .risk-detail strong { color: var(--tx-base); font-weight: 600; }
+
+  /* === Gate cards === */
+  .gate-card {
+    border: 1.5px solid var(--bd-color);
+    border-radius: 8px;
+    padding: 1rem 1.125rem;
+    margin-bottom: .75rem;
+    background: var(--bg-surface);
+    box-shadow: var(--shadow-card);
+  }
+  .gate-title { font-weight: 600; font-size: .9375rem; margin-bottom: .375rem; color: var(--tx-base); }
+  .gate-verdict {
+    display: inline-block;
+    padding: 2px 10px;
+    border-radius: 4px;
+    font-size: .725rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: .05em;
+    margin-bottom: .375rem;
+  }
+  .gate-pass    { background: #f0fdf4; color: var(--risk-low); border: 1px solid #bbf7d0; }
+  .gate-partial { background: #fffbeb; color: var(--risk-medium); border: 1px solid #fde68a; }
+  .gate-fail    { background: #fef2f2; color: var(--risk-high); border: 1px solid #fecaca; }
+  [data-theme="dark"] .gate-pass    { background: #052e16; border-color: #14532d; }
+  [data-theme="dark"] .gate-partial { background: #422006; border-color: #78350f; }
+  [data-theme="dark"] .gate-fail    { background: #450a0a; border-color: #7f1d1d; }
+  .gate-explanation { font-size: .8125rem; color: var(--tx-muted); line-height: 1.55; }
+  .gate-failures { margin-top: .5rem; padding-left: 1.125rem; }
+  .gate-failures li { font-size: .8125rem; color: var(--tx-muted); margin-bottom: .25rem; line-height: 1.5; }
+
+  /* === Fix cards === */
+  .fixes-list { counter-reset: fix; }
+  .fix-card {
+    border: 1.5px solid var(--bd-color);
+    border-radius: 8px;
+    padding: 1rem 1.125rem;
+    margin-bottom: .75rem;
+    counter-increment: fix;
+    background: var(--bg-surface);
+    box-shadow: var(--shadow-card);
+  }
+  .fix-card::before {
+    content: counter(fix);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 22px; height: 22px;
+    border-radius: 50%;
+    background: var(--clr-brand);
+    color: var(--tx-on-brand);
+    font-size: .6875rem;
+    font-weight: 700;
+    margin-right: .5rem;
+    vertical-align: middle;
+  }
+  .fix-title { font-weight: 600; font-size: .9375rem; display: inline; vertical-align: middle; color: var(--tx-base); }
+  .fix-desc { font-size: .8125rem; color: var(--tx-muted); margin-top: .375rem; line-height: 1.55; }
+
+  /* === Share section === */
+  .share-section {
+    margin-top: 2.5rem;
+    border: 1.5px solid var(--bd-color);
+    border-radius: 8px;
+    padding: 1.25rem;
+    background: var(--bg-surface);
+  }
+  .share-section h3 { font-size: .95rem; font-weight: 600; margin-bottom: .75rem; color: var(--tx-base); }
+  .share-textarea {
+    width: 100%;
+    border: 1.5px solid var(--bd-color);
+    border-radius: 6px;
+    padding: .75rem;
+    font-family: 'JetBrains Mono', 'Fira Code', monospace;
+    font-size: .8rem;
+    line-height: 1.55;
+    color: var(--tx-base);
+    resize: vertical;
+    min-height: 140px;
+    background: var(--bg-surface-alt);
+    transition: background var(--dur) var(--ease), color var(--dur) var(--ease), border-color var(--dur) var(--ease);
+  }
+  .share-textarea:focus { outline: none; border-color: var(--clr-brand); }
+  .copy-btn { margin-top: .625rem; }
+  .copied-msg { font-size: .8125rem; color: var(--clr-brand); margin-left: .75rem; opacity: 0; transition: opacity .2s; }
+  .copied-msg.show { opacity: 1; }
+
+  /* === Summary bar === */
+  .summary-bar { display: flex; gap: .75rem; margin-bottom: 1.5rem; flex-wrap: wrap; }
+  .summary-chip {
+    font-size: .8rem;
+    background: var(--bg-surface-alt);
+    border: 1px solid var(--bd-color);
+    border-radius: 6px;
+    padding: .35rem .75rem;
+    color: var(--tx-muted);
+  }
+  .summary-chip strong { color: var(--tx-base); }
+
+  /* === Tool footer === */
+  .tool-footer {
+    text-align: center;
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--bd-color);
+    font-size: .75rem;
+    color: var(--tx-subtle);
+  }
+  .tool-footer a { color: var(--tx-muted); }
+  .tool-footer a:hover { color: var(--tx-link); }
+
+  .btn-row-flush { margin-bottom: 0; }
+  .share-copy-row { display: flex; align-items: center; }
+
+  /* === Print === */
+  @media print {
+    .btn-row, .share-section, .progress, .site-header, .tool-header p { display: none; }
+    .container { max-width: 100%; padding: 1rem; }
+    .step { display: none !important; }
+    .step.results-step { display: block !important; }
+    body { font-size: 12pt; }
+  }
+
+  /* === Mobile === */
+  @media (max-width: 600px) {
+    .container { padding: 1.25rem 1rem 3rem; }
+    .tool-header h1 { font-size: 1.25rem; }
+    .progress-line { width: 28px; }
+    .progress-dot { width: 28px; height: 28px; font-size: .6875rem; }
+    .btn-row { flex-direction: column; }
+    .btn { width: 100%; }
+    .summary-bar { flex-direction: column; gap: .5rem; }
+    .header-tool-label { display: none; }
+    .header-divider { display: none; }
   }
 </style>
 </head>
 <body>
+
+<!-- Site header -->
+<header class="site-header">
+  <a href="portfolio.html" class="header-logo" aria-label="Portfolio home">
+    <span class="header-logo-icon" aria-hidden="true">SS</span>
+    <span class="header-logo-text">
+      Sulagna Sasmal
+      <span class="header-logo-sub">Senior Technical Writer</span>
+    </span>
+  </a>
+  <span class="header-divider" aria-hidden="true"></span>
+  <span class="header-tool-label">Content Pipeline Health Checker</span>
+  <div class="header-actions">
+    <a href="portfolio.html" class="back-link" aria-label="Back to portfolio">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="15 18 9 12 15 6"/></svg>
+      Portfolio
+    </a>
+    <a href="index.html" class="btn-icon" title="GitHub Analytics" aria-label="GitHub Analytics dashboard">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+    </a>
+    <a href="https://github.com/SulagnaSasmal" class="btn-icon" target="_blank" rel="noopener noreferrer" aria-label="GitHub profile">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0 1 12 6.844a9.59 9.59 0 0 1 2.504.337c1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0 0 22 12.017C22 6.484 17.522 2 12 2z"/></svg>
+    </a>
+    <button type="button" class="btn-icon" id="theme-toggle" aria-label="Toggle dark mode">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+    </button>
+  </div>
+</header>
+
 <div class="container">
-  <header>
+
+  <div class="tool-header">
+    <p class="tool-eyebrow">Diagnostic Tool</p>
     <h1>Content Pipeline Health Checker</h1>
-    <p>Diagnose where your documentation pipeline breaks across delivery surfaces</p>
-  </header>
+    <p>Diagnose where your documentation pipeline breaks across delivery surfaces — based on Despopoulos's source-to-delivery model and Iantosca's two-gate quality framework.</p>
+  </div>
 
   <!-- Progress -->
-  <div class="progress" id="progress">
+  <div class="progress" id="progress" aria-label="Progress">
     <div class="progress-step">
-      <div class="progress-dot active" data-step="1">1</div>
+      <div class="progress-dot active" data-step="1" aria-label="Step 1">1</div>
       <div class="progress-line" data-line="1"></div>
     </div>
     <div class="progress-step">
-      <div class="progress-dot" data-step="2">2</div>
+      <div class="progress-dot" data-step="2" aria-label="Step 2">2</div>
       <div class="progress-line" data-line="2"></div>
     </div>
     <div class="progress-step">
-      <div class="progress-dot" data-step="3">3</div>
+      <div class="progress-dot" data-step="3" aria-label="Step 3">3</div>
       <div class="progress-line" data-line="3"></div>
     </div>
     <div class="progress-step">
-      <div class="progress-dot" data-step="4">4</div>
+      <div class="progress-dot" data-step="4" aria-label="Results">4</div>
     </div>
   </div>
 
@@ -178,7 +567,7 @@
       </label>
     </div>
     <div class="btn-row">
-      <button class="btn btn-primary" id="btn1next" disabled>Continue</button>
+      <button type="button" class="btn btn-primary" id="btn1next" disabled>Continue</button>
     </div>
   </div>
 
@@ -214,8 +603,8 @@
       </label>
     </div>
     <div class="btn-row">
-      <button class="btn btn-secondary" id="btn2back">Back</button>
-      <button class="btn btn-primary" id="btn2next" disabled>Continue</button>
+      <button type="button" class="btn btn-secondary" id="btn2back">Back</button>
+      <button type="button" class="btn btn-primary" id="btn2next" disabled>Continue</button>
     </div>
   </div>
 
@@ -251,8 +640,8 @@
       </label>
     </div>
     <div class="btn-row">
-      <button class="btn btn-secondary" id="btn3back">Back</button>
-      <button class="btn btn-primary" id="btn3next" disabled>Run Diagnosis</button>
+      <button type="button" class="btn btn-secondary" id="btn3back">Back</button>
+      <button type="button" class="btn btn-primary" id="btn3next" disabled>Run Diagnosis</button>
     </div>
   </div>
 
@@ -282,9 +671,9 @@
     </div>
 
     <div class="btn-row btn-row-flush">
-      <button class="btn btn-secondary" id="btn4back">Back</button>
-      <button class="btn btn-secondary" id="btn4restart">Start Over</button>
-      <button class="btn btn-primary" onclick="window.print()">Print Report</button>
+      <button type="button" class="btn btn-secondary" id="btn4back">Back</button>
+      <button type="button" class="btn btn-secondary" id="btn4restart">Start Over</button>
+      <button type="button" class="btn btn-primary" onclick="window.print()">Print Report</button>
     </div>
 
     <!-- Share -->
@@ -292,31 +681,54 @@
       <h3>Share Your Results</h3>
       <textarea class="share-textarea" id="shareText" readonly></textarea>
       <div class="share-copy-row">
-        <button class="btn btn-secondary copy-btn" id="copyBtn">Copy to clipboard</button>
+        <button type="button" class="btn btn-secondary copy-btn" id="copyBtn">Copy to clipboard</button>
         <span class="copied-msg" id="copiedMsg">Copied!</span>
       </div>
     </div>
 
-    <footer>
-      Built by <a href="https://www.sulagnasasmal.com" target="_blank" rel="noopener">Sulagna Sasmal</a> · Frameworks: Despopoulos source-to-delivery model &amp; Iantosca two-gate quality model
+    <footer class="tool-footer">
+      Built by <a href="https://sulagnasasmal.com" target="_blank" rel="noopener">Sulagna Sasmal</a> ·
+      Frameworks: Despopoulos source-to-delivery model &amp; Iantosca two-gate quality model ·
+      <a href="portfolio.html">Portfolio</a>
     </footer>
   </div>
-</div>
+
+</div><!-- /.container -->
 
 <script>
 (function(){
   "use strict";
 
+  /* ── Theme toggle ── */
+  var themeBtn = document.getElementById('theme-toggle');
+  if (themeBtn) {
+    updateThemeIcon(themeBtn);
+    themeBtn.addEventListener('click', function () {
+      var current = document.documentElement.getAttribute('data-theme') || 'light';
+      var next = current === 'dark' ? 'light' : 'dark';
+      document.documentElement.setAttribute('data-theme', next);
+      localStorage.setItem('hub-theme', next);
+      updateThemeIcon(themeBtn);
+    });
+  }
+  function updateThemeIcon(btn) {
+    var isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+    btn.setAttribute('aria-label', isDark ? 'Switch to light mode' : 'Switch to dark mode');
+    btn.innerHTML = isDark
+      ? '<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>'
+      : '<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>';
+  }
+
   /* ── State ── */
-  let currentStep = 1;
-  let source = "";
-  let surfaces = [];
-  let transform = "";
+  var currentStep = 1;
+  var source = "";
+  var surfaces = [];
+  var transform = "";
 
   /* ── DOM refs ── */
-  const steps = [null, el("step1"), el("step2"), el("step3"), el("step4")];
-  const dots = document.querySelectorAll(".progress-dot");
-  const lines = document.querySelectorAll(".progress-line");
+  var steps = [null, el("step1"), el("step2"), el("step3"), el("step4")];
+  var dots = document.querySelectorAll(".progress-dot");
+  var lines = document.querySelectorAll(".progress-line");
 
   function el(id){ return document.getElementById(id); }
 
@@ -407,37 +819,29 @@
   /* ── Diagnostic Engine ── */
 
   function riskFor(surf){
-    /* Returns {level, where, why} */
-
-    /* Rule: Unstructured = HIGH for all except PDF */
     if(source === "unstructured"){
       if(surf === "pdf") return {level:"LOW",where:"Source",why:"PDF delivery from Word/PDF source is natively compatible — no structural transformation required."};
       return {level:"HIGH",where:"Source",why:"Unstructured binary content has no semantic markup. Transformation layers cannot reliably extract headings, steps, or relationships."};
     }
 
-    /* Rule: Direct publish + AI chatbot = HIGH always */
     if(transform === "direct" && surf === "ai-chatbot"){
       return {level:"HIGH",where:"Transformation",why:"Direct publish has no semantic preservation layer. AI/LLM ingestion requires structured metadata, topic boundaries, and relationship maps that raw source cannot provide."};
     }
 
-    /* Rule: No defined process + 3+ surfaces = HIGH */
     if(transform === "none" && surfaces.length >= 3){
       return {level:"HIGH",where:"Transformation",why:"No defined transformation process across " + surfaces.length + " surfaces means each output is manually assembled. Inconsistency, drift, and broken cross-references are inevitable."};
     }
 
-    /* Rule: Markdown + AI chatbot = MEDIUM */
     if(source === "markdown" && surf === "ai-chatbot"){
       return {level:"MEDIUM",where:"Source → Transformation",why:"Markdown lacks semantic disambiguation. Headings, lists, and code blocks have no topic-type metadata. AI systems chunk incorrectly without frontmatter schema and taxonomy signals."};
     }
 
-    /* Rule: DITA + any surface = LOW structural, MEDIUM operational */
     if(source === "dita"){
       if(surf === "ai-chatbot") return {level:"MEDIUM",where:"Delivery",why:"DITA's structure is excellent for AI readiness, but most LLM ingestion pipelines don't natively parse DITA maps. Requires DITA-to-JSON/Markdown transform before RAG indexing."};
       if(surf === "in-app") return {level:"MEDIUM",where:"Transformation",why:"DITA content is well-structured but verbose. In-app tooltips need micro-content extraction — conref and filtering must be configured per UI context."};
       return {level:"LOW",where:"Minimal risk",why:"DITA's semantic structure, topic typing, and map-based relationships provide clean transformation paths. Operational complexity (toolchain, specialization) is the main risk."};
     }
 
-    /* HTML source rules */
     if(source === "html"){
       if(surf === "ai-chatbot") return {level:"MEDIUM",where:"Source → Delivery",why:"HTML may have semantic tags (article, section) but typically lacks topic-type metadata and relationship maps needed for reliable AI chunking and retrieval."};
       if(surf === "pdf") return {level:"MEDIUM",where:"Transformation",why:"HTML-to-PDF conversion frequently breaks page layout, headers/footers, and cross-references. Requires dedicated print stylesheet or PDF generation tool (Paged.js, Prince)."};
@@ -446,7 +850,6 @@
       if(surf === "docs-site") return {level:"LOW",where:"Minimal risk",why:"HTML source to static docs site is a natural fit. Main risk is lack of templating consistency if pages are hand-authored rather than generated."};
     }
 
-    /* Markdown misc */
     if(source === "markdown"){
       if(surf === "api-ref") return {level:"MEDIUM",where:"Source → Delivery",why:"Markdown cannot express OpenAPI schemas natively. API reference requires either spec-first generation or careful manual sync between .md files and openapi.yaml."};
       if(surf === "in-app") return {level:"MEDIUM",where:"Transformation",why:"Markdown has no micro-content model. Extracting tooltip-sized snippets requires custom parsing, frontmatter conventions, and possibly a headless CMS layer."};
@@ -454,7 +857,6 @@
       if(surf === "docs-site") return {level:"LOW",where:"Minimal risk",why:"Markdown is the native format for most SSGs. Low structural risk when used with consistent frontmatter and folder conventions."};
     }
 
-    /* Transform-specific adjustments */
     if(transform === "ccms"){
       if(surf === "ai-chatbot") return {level:"MEDIUM",where:"Delivery",why:"CCMS output is well-structured but most AI ingestion pipelines expect Markdown or JSON. Requires an export adapter to preserve metadata during RAG indexing."};
       return {level:"LOW",where:"Minimal risk",why:"CCMS provides structured content management with reuse, filtering, and multi-channel publishing. This is the strongest path for this delivery surface."};
@@ -473,7 +875,6 @@
   }
 
   function gateAssessment(){
-    /* Gate 1: Pre-input structural AI-readiness */
     var g1 = {};
     if(source === "unstructured"){
       g1 = {verdict:"No",css:"gate-fail",explanation:"Unstructured Word/PDF has no semantic markup, no topic boundaries, no metadata schema. Content cannot be reliably parsed by any automated system without manual restructuring."};
@@ -488,7 +889,6 @@
       g1 = {verdict:"Partial",css:"gate-partial",explanation:"Source structure provides partial AI-readiness. Additional metadata and schema enforcement would improve automated processing."};
     }
 
-    /* Gate 2: Go-Live output validation failures */
     var g2failures = [];
 
     surfaces.forEach(function(surf){
@@ -515,7 +915,6 @@
     }
 
     if(transform === "ccms"){
-      var hasValidationScript = false; /* assumption: none unless custom */
       g2failures.push("CCMS output: Structured content publishes cleanly but output validation scripts are needed to catch rendering regressions, broken conrefs, and filter condition conflicts post-build.");
     }
 
@@ -529,12 +928,10 @@
   function topFixes(){
     var fixes = [];
 
-    /* Priority 1: Source problems */
     if(source === "unstructured"){
       fixes.push({title:"Migrate to structured authoring",desc:"Convert Word/PDF content to Markdown (minimum) or DITA (ideal). Use Pandoc for bulk conversion, then manually add frontmatter metadata, topic-type tags, and heading hierarchy. This unblocks every downstream surface."});
     }
 
-    /* Priority 2: Transformation problems */
     if(transform === "none"){
       fixes.push({title:"Define a transformation pipeline",desc:"Implement a reproducible build step between source and delivery. Even a simple SSG (Hugo, MkDocs) or CI script that validates and transforms content eliminates manual inconsistency across " + surfaces.length + " surface(s)."});
     }
@@ -542,7 +939,6 @@
       fixes.push({title:"Add a semantic enrichment layer before AI ingestion",desc:"Insert a preprocessing step that generates JSON-LD or structured frontmatter from your source content. Include topic-type tags, section IDs, and relationship metadata so the LLM retrieval pipeline can chunk and cite accurately."});
     }
 
-    /* Priority 3: Surface-specific */
     if(source === "markdown" && surfaces.indexOf("ai-chatbot") !== -1){
       fixes.push({title:"Implement frontmatter schema + topic-type taxonomy",desc:"Add required frontmatter fields (type: concept|task|reference, audience, product, version) to every Markdown file. Create a taxonomy YAML that maps topics to product areas. This gives AI chunking the semantic signals Markdown lacks natively."});
     }
@@ -571,7 +967,6 @@
       fixes.push({title:"Introduce a templating layer for consistency",desc:"Move from hand-authored HTML pages to a template-driven SSG or component system. This enforces consistent navigation, metadata, and layout across all docs site pages."});
     }
 
-    /* Fallback generic fix */
     if(fixes.length < 3){
       if(surfaces.length >= 2){
         fixes.push({title:"Implement cross-surface link and terminology validation",desc:"Run automated checks that verify internal links resolve across all delivery surfaces, and that terminology is consistent (same term, same definition) between docs site, in-app help, and API reference outputs."});
@@ -585,13 +980,11 @@
 
   /* ── Report Generation ── */
   function generateReport(){
-    /* Summary bar */
     var sb = el("summaryBar");
     sb.innerHTML = "<div class=\"summary-chip\"><strong>Source:</strong>&nbsp;" + esc(sourceLabels[source]) +
       "</div><div class=\"summary-chip\"><strong>Surfaces:</strong>&nbsp;" + surfaces.map(function(s){return esc(surfaceLabels[s]);}).join(", ") +
       "</div><div class=\"summary-chip\"><strong>Transform:</strong>&nbsp;" + esc(transformLabels[transform]) + "</div>";
 
-    /* A. Break-points */
     var bpHTML = "";
     surfaces.forEach(function(surf){
       var r = riskFor(surf);
@@ -607,7 +1000,6 @@
     });
     el("breakpoints").innerHTML = bpHTML;
 
-    /* B. Gates */
     var gates = gateAssessment();
     var gatesHTML = "<div class=\"gate-card\">" +
       "<div class=\"gate-title\">Gate 1 — Pre-input Structural Assessment</div>" +
@@ -623,7 +1015,6 @@
     gatesHTML += "</ul></div>";
     el("gates").innerHTML = gatesHTML;
 
-    /* C. Fixes */
     var fixData = topFixes();
     var fixHTML = "";
     fixData.forEach(function(f){
@@ -634,7 +1025,6 @@
     });
     el("fixes").innerHTML = fixHTML;
 
-    /* Share text */
     var highCount = 0, medCount = 0, lowCount = 0;
     surfaces.forEach(function(s){
       var r = riskFor(s);
@@ -659,7 +1049,7 @@
     shareLines.push("");
     shareLines.push("Based on Despopoulos's source-to-delivery transformation model and Iantosca's two-gate quality framework.");
     shareLines.push("");
-    shareLines.push("Try it yourself → [link]");
+    shareLines.push("Try it yourself → https://sulagnasasmal.github.io/content-pipeline-health-checker.html");
     shareLines.push("");
     shareLines.push("#TechnicalWriting #ContentStrategy #DocsAsCode #AI #DocumentationEngineering");
 
