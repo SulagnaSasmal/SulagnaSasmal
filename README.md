@@ -111,7 +111,7 @@
 
 <div align="center">
 
-<img src="https://github-readme-stats.vercel.app/api?username=SulagnaSasmal&show_icons=true&hide_border=true&count_private=true&include_all_commits=true&title_color=d97706&icon_color=d97706&text_color=1c1814&bg_color=f9f7f4" alt="Sulagna's GitHub Stats" height="170" />
+<img src="https://github-readme-stats.vercel.app/api?username=SulagnaSasmal&show_icons=true&hide_border=true&count_private=true&title_color=d97706&icon_color=d97706&text_color=1c1814&bg_color=f9f7f4" alt="Sulagna's GitHub Stats" height="170" />
 &nbsp;&nbsp;
 <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=SulagnaSasmal&layout=compact&hide_border=true&title_color=d97706&text_color=1c1814&bg_color=f9f7f4&langs_count=6" alt="Top Languages" height="170" />
 
@@ -121,7 +121,7 @@
 
 <br />
 
-<img src="https://github-profile-trophy.vercel.app/?username=SulagnaSasmal&no-frame=true&row=1&column=6&theme=flat&no-bg=true" alt="GitHub Trophies" />
+<img src="https://github-profile-trophy.vercel.app/?username=SulagnaSasmal&no-frame=true&row=1&column=6&theme=flat&no-bg" alt="GitHub Trophies" />
 
 <br />
 
