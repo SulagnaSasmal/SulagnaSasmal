@@ -1,5 +1,3 @@
-﻿
-
 # Hi, I'm Sulagna 👋
 
 **Senior Technical Writer · Documentation Architect · FinTech Specialist**
@@ -53,147 +51,83 @@
 
 ## Portfolio at a glance
 
-| Project | Type | |
+### 🔌 API Documentation & Developer References
+
+| Project | Description | |
 |---|---|---|
 | **FraudShield AI Engine Documentation** | AI fraud detection · risk models · API · explainability | [View →](https://sulagnasasmal.github.io/fraudshield-docs/) |
-| **PayPlus REST API Developer Reference** | Developer API reference | [View →](https://sulagnasasmal.github.io/payments-api-guide/) |
-| **PayPlus Enterprise Administration Guide** | Enterprise admin docs | [View →](https://sulagnasasmal.github.io/payplus-admin-guide/) |
-| **US Payments Hub** | Operations & compliance reference | [View →](https://sulagnasasmal.github.io/us-payments-hub/) |
+| **PayPlus REST API Developer Reference** | Stripe-quality developer API reference | [View →](https://sulagnasasmal.github.io/payments-api-guide/) |
 | **VaultPay API Docs** | Fintech payment API reference | [View →](https://sulagnasasmal.github.io/vaultpay-api-docs/) |
 | **CaseForge API Docs** | Enterprise AML & SAR filing API | [View →](https://sulagnasasmal.github.io/caseforge-api-docs/) |
-| **CaseForge Onboarding Kit** | Post-sale customer onboarding · 30-day program · role-based checklists · go-live validation | [View →](https://sulagnasasmal.github.io/caseforge-onboarding/) |
-| **CaseForge SDK Documentation** | Python · Node.js SDK · authentication · error handling · migration guide · versioned changelog | [View →](https://sulagnasasmal.github.io/caseforge-sdk-docs/) |
-| **Documentation Center Platform** | Portfolio hub · writing philosophy · information architecture · doc-as-code workflow | [View →](https://sulagnasasmal.github.io/portfolio.html) |
-| **Content Pipeline Health Checker** | Interactive diagnostic tool — identify where your docs pipeline breaks across delivery surfaces · source formats · transformation layers · AI chatbot readiness | [Try it →](https://sulagnasasmal.github.io/content-pipeline-health-checker.html) |
-| **DocForge Platform** | Docs-as-Code platform dashboard | [View →](https://sulagnasasmal.github.io/Documentation-Center-Platform/docforge-platform.html) |
-| **Docs-as-Code Portal** | DaC methodology documentation | [View →](https://sulagnasasmal.github.io/docs-as-code-portal/) |
-| **RepoDocs AI** | Claude API · docs-as-code framework for SaaS API teams · reusable templates · AI prompt library · GitHub Actions validation · OpenAPI-to-Markdown generation | [View →](https://sulagnasasmal.github.io/repodocs-ai/) |
-| **DocCraft AI** | Next.js + GPT-4o docs generator | [View →](https://doccraft-ten.vercel.app/) |
+| **CaseForge SDK Documentation** | Python · Node.js SDK · OAuth 2.0 · migration guide | [View →](https://sulagnasasmal.github.io/caseforge-sdk-docs/) |
+| **NexaFlow SDK Documentation** | SDK · API reference · error handling · versioned changelog | [View →](https://sulagnasasmal.github.io/nexaflow-sdk-docs/) |
+| **Developer Onboarding — Payments API** | Zero-to-live-payment in 5 steps | [View →](https://sulagnasasmal.github.io/developer-onboarding/) |
+| **Payments Integration Tutorials** | ACH transfers · webhooks · sandbox testing · API auth | [View →](https://sulagnasasmal.github.io/payments-tutorial-series/) |
+
+### 🏛️ Enterprise Platform & Administration
+
+| Project | Description | |
+|---|---|---|
+| **PayPlus Enterprise Administration Guide** | Enterprise admin docs for a multi-rail payment hub | [View →](https://sulagnasasmal.github.io/payplus-admin-guide/) |
+| **SunBridge Asset Atrium Manager — Platform Docs** | Investment platform · NAV batch · HA · multi-TZ · MSTP | [View →](https://sulagnasasmal.github.io/enterprise-investment-management-platform-docs/) |
+| **CaseForge Onboarding Kit** | Post-sale enterprise onboarding · 30-day program · go-live validation | [View →](https://sulagnasasmal.github.io/caseforge-onboarding/) |
+
+### ⚖️ Compliance & Regulatory
+
+| Project | Description | |
+|---|---|---|
+| **Asset Atrium Compliance Framework** | UCITS · AIFMD · MiFID II · pre/post-trade compliance · MSTP | [View →](https://sulagnasasmal.github.io/compliance-regulatory-hub/) |
+| **US Payments Hub** | ACH · Fedwire · SWIFT · RTP · FedNow · 12 scenario walkthroughs | [View →](https://sulagnasasmal.github.io/us-payments-hub/) |
+| **US ACH Payment Processing Documentation** | End-to-end ACH lifecycle · origination · returns · NOCs | [View →](https://sulagnasasmal.github.io/us-ach-payment-processing-docs/) |
+| **AML Compliance Training Program** | Annual BSA/KYC/CDD/OFAC screening & transaction-monitoring training | [View →](https://sulagnasasmal.github.io/aml-compliance-training/) |
+
+### 🤖 AI & Automation Tools
+
+| Project | Description | |
+|---|---|---|
+| **RepoDocs AI** | Claude API · docs-as-code framework for SaaS API teams | [View →](https://sulagnasasmal.github.io/repodocs-ai/) |
+| **DocCraft AI** | Next.js + GPT-4o documentation generator | [View →](https://doccraft-ten.vercel.app/) |
 | **SpecFlow** | OpenAPI spec → interactive developer portal | [View →](https://sulagnasasmal.github.io/specflow/) |
 | **DocQuery** | RAG-powered documentation chatbot | [View →](https://sulagnasasmal.github.io/docquery/) |
-| **DocPulse** | Documentation analytics dashboard | [View →](https://sulagnasasmal.github.io/docpulse/) |
-| **PPT → MP4 Automation** | Python narrated video pipeline | [GitHub →](https://github.com/SulagnaSasmal/ppt-to-mp4-doc-automation) |
-| **AI & Automation Tools Portal** | All AI tools portal — RepoDocs AI, DocCraft, SpecFlow, DocQuery, DocPulse, PPT→MP4 | [View →](https://sulagnasasmal.github.io/ai-doc-tools/) |
-| **SunBridge Asset Atrium Manager — Platform Docs** | Investment platform architecture · NAV batch · HA · multi-TZ · release governance | [View →](https://sulagnasasmal.github.io/enterprise-investment-management-platform-docs/) |
-| **Asset Atrium Compliance Framework** | Investment compliance · pre-trade · post-trade · mandates · UCITS · AIFMD · MiFID II | [View →](https://sulagnasasmal.github.io/compliance-regulatory-hub/) |
-| **NexaFlow SDK Documentation** | SDK & code library docs · API reference · quickstart · error handling · migration guide · changelog | [View →](https://sulagnasasmal.github.io/nexaflow-sdk-docs/) |
-| **Docs Content Strategy & Style Guide** | IA framework · voice & tone · doc types · audience analysis · metrics · templates · audit tools | [View →](https://sulagnasasmal.github.io/docs-content-strategy/) |
-| **US ACH Payment Processing Documentation** | End-to-end ACH payment lifecycle · origination · returns · NOCs · compliance · developer integration | [View →](https://sulagnasasmal.github.io/us-ach-payment-processing-docs/) |
-| **DOC Portal** | Curated portfolio of API references, admin guides, knowledge bases & AI-powered documentation tools | [View →](https://sulagnasasmal.github.io/doc-portal/) |
-| **Developer Onboarding — Payments API** | Zero-to-live-payment in 5 steps — account, SDK, test calls, webhooks, go-live checklist | [View →](https://sulagnasasmal.github.io/developer-onboarding/) |
-| **FinTech Learning Academy** | Structured courses on payments, fraud detection, ACH processing & compliance | [View →](https://sulagnasasmal.github.io/fintech-learning-academy/) |
-| **AML Compliance Training Program** | Annual BSA/KYC/CDD/OFAC screening & transaction-monitoring training for FinTech | [View →](https://sulagnasasmal.github.io/aml-compliance-training/) |
-| **Payments Integration Tutorials** | Hands-on developer tutorials — ACH transfers, webhooks, sandbox testing & API auth | [View →](https://sulagnasasmal.github.io/payments-tutorial-series/) |
+| **DocPulse** | Documentation health & analytics dashboard | [View →](https://sulagnasasmal.github.io/docpulse/) |
+| **PPT → MP4 Automation** | Python · Azure TTS · FFmpeg narrated video pipeline | [GitHub →](https://github.com/SulagnaSasmal/ppt-to-mp4-doc-automation) |
+| **Content Pipeline Health Checker** | Interactive diagnostic tool for docs delivery pipelines | [Try it →](https://sulagnasasmal.github.io/content-pipeline-health-checker.html) |
+| **AI & Automation Tools Portal** | Hub for all AI-powered documentation tools | [View →](https://sulagnasasmal.github.io/ai-doc-tools/) |
+
+### 📚 Documentation Platforms & Learning
+
+| Project | Description | |
+|---|---|---|
+| **Documentation Center Platform** | Portfolio hub · writing philosophy · information architecture | [View →](https://sulagnasasmal.github.io/Documentation-Center-Platform/) |
+| **DocForge Platform** | Docs-as-Code platform dashboard · live editor · Vale linting | [View →](https://sulagnasasmal.github.io/Documentation-Center-Platform/docforge-platform.html) |
+| **Docs-as-Code Portal** | 16-page DaC methodology documentation site | [View →](https://sulagnasasmal.github.io/docs-as-code-portal/) |
+| **Docs Content Strategy & Style Guide** | IA framework · voice & tone · doc types · metrics · templates | [View →](https://sulagnasasmal.github.io/docs-content-strategy/) |
+| **FinTech Learning Academy** | Structured courses on payments, fraud, ACH & compliance | [View →](https://sulagnasasmal.github.io/fintech-learning-academy/) |
+| **DOC Portal** | Curated portal of all documentation projects | [View →](https://sulagnasasmal.github.io/doc-portal/) |
 
 ---
 
 ## GitHub stats
 
+<div align="center">
 
+<img src="https://github-readme-stats.vercel.app/api?username=SulagnaSasmal&show_icons=true&hide_border=true&count_private=true&include_all_commits=true&title_color=d97706&icon_color=d97706&text_color=1c1814&bg_color=f9f7f4" alt="Sulagna's GitHub Stats" height="170" />
+&nbsp;&nbsp;
+<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=SulagnaSasmal&layout=compact&hide_border=true&title_color=d97706&text_color=1c1814&bg_color=f9f7f4&langs_count=6" alt="Top Languages" height="170" />
 
+<br />
 
+<img src="https://github-readme-streak-stats.herokuapp.com/?user=SulagnaSasmal&hide_border=true&fire=d97706&ring=d97706&currStreakLabel=d97706&sideLabels=4a4540&dates=7a726a&background=f9f7f4&stroke=e0d9d0" alt="GitHub Streak" />
 
+<br />
 
+<img src="https://github-profile-trophy.vercel.app/?username=SulagnaSasmal&no-frame=true&row=1&column=6&theme=flat&no-bg=true" alt="GitHub Trophies" />
 
+<br />
 
+![Snake animation](https://raw.githubusercontent.com/SulagnaSasmal/SulagnaSasmal/output/github-snake.svg)
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+</div>
 
 <!-- GITHUB_STATS_START -->
 
@@ -204,10 +138,10 @@
 <td width="50%">
 
 ### Profile Stats
-- **Total Contributions**: 648 (this year)
-- **Followers**: 2
+- **Total Contributions**: 551 (this year)
+- **Followers**: 1
 - **Following**: 2
-- **Public Repositories**: 33
+- **Public Repositories**: 32
 
 </td>
 <td width="50%">
@@ -216,7 +150,7 @@
 - **Total Stars**: 4
 - **Total Forks**: 0
 - **Top Language**: HTML
-- **Active Projects**: 33
+- **Active Projects**: 32
 
 </td>
 </tr>
@@ -224,217 +158,7 @@
 
 <!-- GITHUB_STATS_END -->
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+---
 
 <!-- TOP_REPOS_START -->
 
@@ -487,442 +211,22 @@
 
 <!-- TOP_REPOS_END -->
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+---
 
 <!-- LANGUAGES_START -->
 
 ## Most Used Languages
 
-**HTML**: ██████████████░░░░░░ 70%
-**Python**: ██░░░░░░░░░░░░░░░░░░ 9%
+**HTML**: ██████████████░░░░░░ 72%
 **TypeScript**: ██░░░░░░░░░░░░░░░░░░ 9%
+**Python**: █░░░░░░░░░░░░░░░░░░░ 6%
 **CSS**: █░░░░░░░░░░░░░░░░░░░ 6%
 **JavaScript**: █░░░░░░░░░░░░░░░░░░░ 3%
 **MDX**: █░░░░░░░░░░░░░░░░░░░ 3%
 
 <!-- LANGUAGES_END -->
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+---
 
 <!-- ACTIVITY_START -->
 
@@ -930,202 +234,26 @@
 
 | Repository | Last Update | Recent Commits |
 |-----------|-------------|----------------|
-| [`SulagnaSasmal`](https://github.com/SulagnaSasmal/SulagnaSasmal) | 6/19/2026 | 3 commits |
-| [`prompthub`](https://github.com/SulagnaSasmal/prompthub) | 6/15/2026 | 3 commits |
-| [`blog`](https://github.com/SulagnaSasmal/blog) | 6/8/2026 | 3 commits |
-| [`sulagnasasmal-site`](https://github.com/SulagnaSasmal/sulagnasasmal-site) | 4/21/2026 | 3 commits |
+| [`SulagnaSasmal`](https://github.com/SulagnaSasmal/SulagnaSasmal) | 4/19/2026 | 3 commits |
+| [`sulagnasasmal-site`](https://github.com/SulagnaSasmal/sulagnasasmal-site) | 4/15/2026 | 3 commits |
 | [`my-docs-practice`](https://github.com/SulagnaSasmal/my-docs-practice) | 4/9/2026 | 3 commits |
+| [`blog`](https://github.com/SulagnaSasmal/blog) | 4/1/2026 | 3 commits |
 | [`repodocs-ai`](https://github.com/SulagnaSasmal/repodocs-ai) | 4/1/2026 | 3 commits |
 | [`ai-doc-tools`](https://github.com/SulagnaSasmal/ai-doc-tools) | 3/30/2026 | 3 commits |
 | [`doccraft-help-center`](https://github.com/SulagnaSasmal/doccraft-help-center) | 3/28/2026 | 3 commits |
 | [`documentation-ai-agent`](https://github.com/SulagnaSasmal/documentation-ai-agent) | 3/27/2026 | 3 commits |
 | [`doc-portal`](https://github.com/SulagnaSasmal/doc-portal) | 3/20/2026 | 3 commits |
+| [`docs-content-strategy`](https://github.com/SulagnaSasmal/docs-content-strategy) | 3/19/2026 | 3 commits |
 
 <!-- ACTIVITY_END -->
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 ---
 
-## 📊 Visitor Analytics System
-
-> A visitor analytics system deployed on Vercel tracks page interactions across this GitHub profile in real time.
+## 📊 Visitor Analytics
 
 [![View Live Dashboard →](https://img.shields.io/badge/View_Live_Dashboard-github--profile--analytics-4F46E5?style=for-the-badge&logo=vercel&logoColor=white)](https://github-profile-analytics-flax.vercel.app/)
 
-This profile includes a comprehensive **visitor analytics system** that tracks how people interact with this GitHub presence. It provides insights into:
-
-- **👁️ Page Views** — Profile visit count, referrer sources, device types, geographic data
-- **🖱️ Click Tracking** — Every link and button clicked, with coordinates and scroll depth
-- **📜 Behavior Patterns** — Time on page, scroll depth, session duration, interaction count
-- **📱 Device Distribution** — Desktop vs. mobile vs. tablet breakdown
-- **🔗 Top Content** — Most-clicked links and most-engaged projects
-
-### Analytics Features
-
-The analytics infrastructure includes:
-
-| Component | Purpose |
-|---|---|
-| **Tracking Script** | Client-side JavaScript that collects visitor data in real-time |
-| **Analytics Server** | Node.js backend storing events in JSONL format by date |
-| **Dashboard Generator** | Auto-generates HTML dashboards and Markdown reports |
-| **Metrics Collection** | Weekly aggregation of GitHub stats, followers, stars |
-| **Historical Tracking** | 90-day rolling analytics history with growth trends |
-
-### How It Works
-
-```
-Visit Profile
-  └─► Tracking script loads
-        └─► Records: page view, device, referrer, timestamp
-              └─► Events sent to analytics backend
-                    └─► Stored in analytics-data/{projectId}/{date}/*.jsonl
-                          └─► Dashboard generated from aggregated data
-                                └─► Markdown report & HTML dashboard available
-```
-
-### Data Collected
-
-The system collects only **non-personal analytics data**:
-- Session ID (anonymous token, not connected to identity)
-- Device type & screen resolution
-- Browser & OS information
-- Referrer source
-- Links clicked and interaction coordinates
-- Scroll depth and time on page
-- Page visit timestamps
-
-### Privacy & GDPR Compliance
-
-✅ **No personal data collected** (no names, emails, or IP addresses logged)
-✅ **Fully anonymized sessions** — Session IDs are random, not linked to identity
-✅ **Optional tracking** — Can be disabled via configuration
-✅ **Local storage first** — Events stored locally before sending
-✅ **User data control** — Data can be cleared from browser localStorage
-
-### Accessing Analytics
-
-For local testing:
-```bash
-# Start the analytics server
-node scripts/analytics-server.js
-# Server runs on http://localhost:3001
-
-# Generate dashboard
-node scripts/dashboard-generator.js
-# Output: analytics-dashboards/index.html & ANALYTICS_REPORT.md
-
-# Collect metrics
-npm run collect-metrics
-# Output: metrics/analytics.json with 90-day history
-```
-
-📖 **Full guide:** See [docs/ANALYTICS_GUIDE.md](docs/ANALYTICS_GUIDE.md) for implementation details, deployment options, and troubleshooting.
+A visitor analytics system tracks page interactions across this profile in real time — page views, click tracking, device breakdown, and top content. See the [live dashboard](https://github-profile-analytics-flax.vercel.app/) for details.
 
 ---
 
@@ -1137,12 +265,10 @@ Each project below is a fully authored, end-to-end documentation site — built 
 
 ### 🌐 Personal portfolio site
 
-> *A light-theme personal portfolio showcasing my work, background, and expertise.*
-
 [![Live Site](https://img.shields.io/badge/Live%20Site-sulagnasasmal.com-E8A84C?style=flat-square&logo=githubpages&logoColor=black)](https://sulagnasasmal.com)
 [![GitHub Repo](https://img.shields.io/badge/GitHub-sulagnasasmal--site-181717?style=flat-square&logo=github)](https://github.com/SulagnaSasmal/sulagnasasmal-site)
 
-A hand-coded personal portfolio site — single HTML file, no frameworks. Covers my professional background, featured documentation projects, compliance expertise, experience timeline, and a personal section on travel and food.
+Hand-coded portfolio site — single HTML file, no frameworks. Professional background, featured projects, compliance expertise, experience timeline, and a personal section on travel and food.
 
 `Light theme` · `Amber accent (#E8A84C)` · `Inter + Outfit + JetBrains Mono` · `No frameworks` · `GitHub Pages`
 
@@ -1150,17 +276,15 @@ A hand-coded personal portfolio site — single HTML file, no frameworks. Covers
 
 ### 🏦 VaultPay Payment API Documentation
 
-> *Enterprise-grade REST API reference for a fintech payment processing platform, aligned to NICE Actimize and global financial compliance standards.*
-
 [![Live Site](https://img.shields.io/badge/Live%20Site-sulagnasasmal.github.io-14b8a6?style=flat-square&logo=githubpages&logoColor=white)](https://sulagnasasmal.github.io/vaultpay-api-docs/)
 [![GitHub Repo](https://img.shields.io/badge/GitHub-vaultpay--api--docs-181717?style=flat-square&logo=github)](https://github.com/SulagnaSasmal/vaultpay-api-docs)
 
-A comprehensive REST API reference for **VaultPay** — a realistically modelled fintech payment platform. Documents the complete payments lifecycle: authentication, settlement, disputes, and compliance reporting. Structured to match the quality bar of real-world developer portals (Stripe, Adyen, Braintree).
+Comprehensive REST API reference for **VaultPay** — structured to match Stripe, Adyen, and Braintree quality. Documents the complete payments lifecycle: authentication, settlement, disputes, and compliance reporting.
 
 | Audience | What they find here |
 |---|---|
-| Backend developers | Complete endpoint reference, request/response schemas, curl examples, SDKs |
-| Compliance teams | PCI DSS, PSD2/SCA, BSA/AML, GDPR coverage, AML alert management |
+| Backend developers | Complete endpoint reference, request/response schemas, curl examples |
+| Compliance teams | PCI DSS, PSD2/SCA, BSA/AML, GDPR, AML alert management |
 | Security engineers | HMAC-SHA256 webhook verification, 3D Secure flow, SCA exemption handling |
 
 `PCI DSS Level 1` · `PSD2 / SCA` · `BSA/AML` · `FATF` · `NICE Actimize: IFM-AI · SAM · CDD · Sanctions`
@@ -1169,12 +293,10 @@ A comprehensive REST API reference for **VaultPay** — a realistically modelled
 
 ### ⚖️ CaseForge Enterprise Case Management API
 
-> *API reference for an enterprise AML/compliance case management platform — SAR filing, tamper-evident audit trails, regulatory workflow automation.*
-
 [![Live Site](https://img.shields.io/badge/Live%20Site-sulagnasasmal.github.io-E8A84C?style=flat-square&logo=githubpages&logoColor=black)](https://sulagnasasmal.github.io/caseforge-api-docs/caseforge-api-docs.html)
 [![GitHub Repo](https://img.shields.io/badge/GitHub-caseforge--api--docs-181717?style=flat-square&logo=github)](https://github.com/SulagnaSasmal/caseforge-api-docs)
 
-A v10.2 API reference for **CaseForge** — an enterprise compliance platform for managing AML investigations, filing SARs with FinCEN, and maintaining tamper-evident audit trails. Written for compliance officers, legal teams, and system integrators.
+v10.2 API reference for **CaseForge** — enterprise AML compliance platform for managing investigations, filing SARs with FinCEN, and maintaining tamper-evident audit trails.
 
 | Audience | What they find here |
 |---|---|
@@ -1189,12 +311,10 @@ A v10.2 API reference for **CaseForge** — an enterprise compliance platform fo
 
 ### ⚙️ DocForge — Docs-as-Code Platform
 
-> *An interactive demonstration of a complete Docs-as-Code platform — from Markdown authoring through CI/CD validation to multi-format publishing.*
-
 [![Live Site](https://img.shields.io/badge/Live%20Site-sulagnasasmal.github.io-a78bfa?style=flat-square&logo=githubpages&logoColor=white)](https://sulagnasasmal.github.io/Documentation-Center-Platform/docforge-platform.html)
 [![GitHub Repo](https://img.shields.io/badge/GitHub-Documentation--Center--Platform-181717?style=flat-square&logo=github)](https://github.com/SulagnaSasmal/Documentation-Center-Platform)
 
-A fully interactive Docs-as-Code platform dashboard — a single-page application with six modules demonstrating the complete documentation engineering pipeline.
+Interactive Docs-as-Code platform dashboard — six modules demonstrating the full documentation engineering pipeline.
 
 | Module | What it does |
 |---|---|
@@ -1211,12 +331,10 @@ A fully interactive Docs-as-Code platform dashboard — a single-page applicatio
 
 ### 📄 Docs-as-Code Portal
 
-> *A full documentation portal explaining the Docs-as-Code methodology — what it is, how the pipeline works, and how to use the platform.*
-
 [![Live Site](https://img.shields.io/badge/Live%20Site-sulagnasasmal.github.io-a78bfa?style=flat-square&logo=githubpages&logoColor=white)](https://sulagnasasmal.github.io/docs-as-code-portal/)
 [![GitHub Repo](https://img.shields.io/badge/GitHub-docs--as--code--portal-181717?style=flat-square&logo=github)](https://github.com/SulagnaSasmal/docs-as-code-portal)
 
-A 16-page documentation portal that explains the Docs-as-Code methodology, the five-stage pipeline, and how the Documentation Center platform works. Built like real product documentation — left nav, table of contents, code examples, step-by-step guides, callouts, comparison tables, and prev/next navigation. Self-referential: the portal is itself built using Docs-as-Code principles.
+16-page documentation portal explaining the Docs-as-Code methodology, five-stage pipeline, and platform usage. Built like real product documentation — left nav, TOC, code examples, callouts, comparison tables, prev/next navigation. Self-referential: the portal is itself built using Docs-as-Code principles.
 
 `Documentation portal design` · `16-page structured content` · `GitHub Actions CI/CD` · `Vale linting` · `MkDocs`
 
@@ -1224,12 +342,10 @@ A 16-page documentation portal that explains the Docs-as-Code methodology, the f
 
 ### 💳 US Payments Hub — Operations & Compliance Reference
 
-> *An enterprise-grade reference site covering all six US payment rails — written for bank operations teams, compliance analysts, and payments professionals.*
-
 [![Live Site](https://img.shields.io/badge/Live%20Site-sulagnasasmal.github.io-14b8a6?style=flat-square&logo=githubpages&logoColor=white)](https://sulagnasasmal.github.io/us-payments-hub/)
 [![GitHub Repo](https://img.shields.io/badge/GitHub-us--payments--hub-181717?style=flat-square&logo=github)](https://github.com/SulagnaSasmal/us-payments-hub)
 
-An eight-page HTML site covering ACH, Fedwire, SWIFT, RTP, FedNow, and Card Networks — the full landscape of US payment rails. Documents how each rail works, who owns it, message standards, key compliance requirements, and 12 real-world payment scenarios. Draws directly on my Fundtech India experience (2008–2010) documenting CashIn and Global CASHplus, the direct predecessors of Finastra GlobalPAYplus.
+Eight-page reference site covering all six US payment rails — ACH, Fedwire, SWIFT, RTP, FedNow, and Card Networks. Draws directly on Fundtech India experience (2008–2010) documenting the predecessors of Finastra GlobalPAYplus.
 
 | Audience | What they find here |
 |---|---|
@@ -1238,56 +354,27 @@ An eight-page HTML site covering ACH, Fedwire, SWIFT, RTP, FedNow, and Card Netw
 | Payments engineers | Message standards (ISO 20022, NACHA, SWIFT MT/MX), routing and BIC lookup |
 | Payments onboarding teams | 12 scenario walkthroughs across all rails |
 
-`ACH` · `Fedwire (ISO 20022 March 2025)` · `SWIFT (MT + MX + gpi)` · `TCH RTP` · `FedNow` · `Card Networks` · `12 scenario walkthroughs`
+`ACH` · `Fedwire (ISO 20022 March 2025)` · `SWIFT (MT + MX + gpi)` · `TCH RTP` · `FedNow` · `Card Networks`
 
 ---
 
 ### 🏛️ PayPlus Enterprise Administration Guide
 
-> *An eight-section system administration guide for a fictional enterprise payment hub — modeled on the GlobalPAYplus class of multi-rail payment platforms.*
-
 [![Live Site](https://img.shields.io/badge/Live%20Site-sulagnasasmal.github.io-E8A84C?style=flat-square&logo=githubpages&logoColor=black)](https://sulagnasasmal.github.io/payplus-admin-guide/)
 [![GitHub Repo](https://img.shields.io/badge/GitHub-payplus--admin--guide-181717?style=flat-square&logo=github)](https://github.com/SulagnaSasmal/payplus-admin-guide)
 
-A full system administration guide for **PayPlus Enterprise v3.2** — a realistically modeled multi-rail payment hub for financial institutions. Covers installation, RBAC/LDAP/SSO, payment rail connector configuration, workflow engine, monitoring, OFAC/BSA/AML compliance controls, and troubleshooting.
+Full system administration guide for **PayPlus Enterprise v3.2** — a realistically modeled multi-rail payment hub. Covers installation, RBAC/LDAP/SSO, payment rail connectors, workflow engine, monitoring, OFAC/BSA/AML controls, and troubleshooting.
 
-| Audience | What they find here |
-|---|---|
-| System administrators | Installation, Java/DB requirements, post-install validation, upgrade procedure |
-| IT security teams | RBAC model, LDAP/AD integration, SAML 2.0 SSO, password policy, session controls |
-| Payments operations | Connector config per rail, approval workflows, STP rules, bulk ACH |
-| Compliance officers | OFAC screening engine, hold queue actions, BSA Travel Rule by rail, AML integration |
-
-```
-Installation · User Management · Payment Rail Connectors · Workflow Engine
-Monitoring & Alerts · Compliance Configuration · Troubleshooting
-```
-
-`RBAC` · `LDAP / SAML 2.0 SSO` · `ISO 20022 pacs.008/pacs.009` · `OFAC sanctions screening`
-`BSA Travel Rule (31 CFR 103.33)` · `AML integration (NICE Actimize / Oracle FCCM)` · `MadCap Flare-inspired HTML`
+`RBAC` · `LDAP / SAML 2.0 SSO` · `ISO 20022 pacs.008/pacs.009` · `OFAC sanctions screening` · `BSA Travel Rule`
 
 ---
 
 ### ⚡ PayPlus REST API Developer Reference
 
-> *A six-section developer API reference for the same fictional payment hub — structured to the quality bar of leading fintech developer portals.*
-
 [![Live Site](https://img.shields.io/badge/Live%20Site-sulagnasasmal.github.io-E8A84C?style=flat-square&logo=githubpages&logoColor=black)](https://sulagnasasmal.github.io/payments-api-guide/)
 [![GitHub Repo](https://img.shields.io/badge/GitHub-payments--api--guide-181717?style=flat-square&logo=github)](https://github.com/SulagnaSasmal/payments-api-guide)
 
-A developer-facing REST API reference for **PayPlus REST API v2.1**. Written to match the quality bar of leading fintech developer portals (Stripe, Plaid) — authentication, ACH payments, instant payments (RTP/FedNow), wire transfers (Fedwire/SWIFT), webhooks, and a complete error code reference.
-
-| Audience | What they find here |
-|---|---|
-| Integration developers | OAuth 2.0, endpoint reference, request/response schemas, JSON examples |
-| Core banking engineers | Idempotency, async ACH/wire pattern, synchronous instant payment response |
-| Security engineers | HMAC-SHA256 webhook verification with replay protection |
-| Compliance teams | OFAC error handling, BSA Travel Rule required fields, ACH return codes |
-
-```
-Authentication · ACH Payments · Instant Payments (RTP/FedNow) · Wire Transfers
-Webhooks · Error Codes
-```
+Developer-facing REST API reference for **PayPlus REST API v2.1** — authentication, ACH payments, instant payments (RTP/FedNow), wire transfers (Fedwire/SWIFT), webhooks, and complete error code reference.
 
 `OAuth 2.0` · `Webhook HMAC-SHA256` · `ISO 20022 (pacs.008, camt.056)` · `ACH return codes R01–R85` · `SWIFT gpi / UETR`
 
@@ -1295,83 +382,41 @@ Webhooks · Error Codes
 
 ### 🛡️ FraudShield AI Engine — Documentation
 
-> *Enterprise documentation for an AI-powered fraud detection platform — risk scoring models, REST API reference, model explainability, and regulatory compliance.*
-
 [![Live Site](https://img.shields.io/badge/Live%20Site-sulagnasasmal.github.io-7c3aed?style=flat-square&logo=githubpages&logoColor=white)](https://sulagnasasmal.github.io/fraudshield-docs/)
 [![GitHub Repo](https://img.shields.io/badge/GitHub-fraudshield--docs-181717?style=flat-square&logo=github)](https://github.com/SulagnaSasmal/fraudshield-docs)
 
-A 9-section enterprise HTML documentation site for **FraudShield AI Engine** — a fictional AI fraud detection platform grounded in real NICE Actimize IFM/AMP architecture. Demonstrates expertise at the intersection of fraud domain knowledge, AI/ML model documentation, REST API reference writing, and financial regulatory compliance.
+9-section enterprise HTML documentation for **FraudShield AI Engine** — grounded in real NICE Actimize IFM/AMP architecture. Demonstrates expertise at the intersection of fraud domain knowledge, AI/ML model documentation, API reference writing, and regulatory compliance.
 
 | Audience | What they find here |
 |---|---|
-| Fraud Operations analysts | Risk scoring model, score ranges, threshold tuning, false positive handling (suppression, whitelisting, step-up challenge flow) |
-| Data Scientists / Model Owners | Model input features (200+ Risk Indicators), champion/challenger retraining cycle, drift triggers, training data requirements |
-| Integration Engineers | Full REST API reference — POST /score, step-up result, case feedback — with JSON request/response examples, error codes, rate limits |
-| Compliance Officers | Audit log schema, model explainability output, SR 11-7, GDPR Article 22, CFPB adverse action, BSA/AML SAR tagging |
+| Fraud Operations analysts | Risk scoring model, threshold tuning, false positive handling |
+| Data Scientists / Model Owners | 200+ Risk Indicators, champion/challenger retraining cycle |
+| Integration Engineers | REST API reference — POST /score, step-up result, case feedback |
+| Compliance Officers | Audit log, model explainability, SR 11-7, GDPR Article 22, CFPB adverse action |
 
-```
-Risk Scoring Model · Model Input Features · System Configuration · Threshold Tuning
-False Positive Handling · Model Retraining Cycle · API Integration · Audit & Explainability
-```
-
-`AI / ML Models` · `Risk Indicators (200+)` · `Champion/Challenger Framework` · `GDPR Art. 22`
-`SR 11-7 Model Risk` · `BSA/AML` · `CFPB Adverse Action` · `REST API Reference` · `MadCap Flare-inspired HTML`
-
----
+`AI / ML Models` · `Risk Indicators (200+)` · `Champion/Challenger` · `GDPR Art. 22` · `SR 11-7` · `BSA/AML`
 
 ---
 
 ### 📐 SunBridge Asset Atrium Manager — Platform Documentation
 
-> *Technical documentation for an enterprise investment management platform — J2EE architecture, NAV batch processing, high availability, multi-time zone fund operations, and release governance. Follows Microsoft Style Guide (MSTP) throughout.*
-
 [![Live Site](https://img.shields.io/badge/Live%20Site-sulagnasasmal.github.io-3b82f6?style=flat-square&logo=githubpages&logoColor=white)](https://sulagnasasmal.github.io/enterprise-investment-management-platform-docs/)
 [![GitHub Repo](https://img.shields.io/badge/GitHub-enterprise--investment--management--platform--docs-181717?style=flat-square&logo=github)](https://github.com/SulagnaSasmal/enterprise-investment-management-platform-docs)
 
-Platform architecture and operations reference for **SunBridge Asset Atrium Manager** — a realistic J2EE institutional investment management platform modelled on the SunGard Asset Arena class of buy-side systems. Fully MSTP-compliant writing throughout: active voice, second person, sentence-case headings, no Latin abbreviations.
+Platform architecture and operations reference for a realistic J2EE institutional investment management platform — modelled on the SunGard Asset Arena class of buy-side systems. Fully MSTP-compliant throughout.
 
-| Audience | What they find here |
-|---|---|
-| Platform engineers | WebLogic cluster design, Oracle RAC, IBM MQ Series, SWIFT Alliance, Bloomberg B-PIPE/BVAL |
-| Operations / SRE | NAV batch orchestration, processing zones, HA design, rolling restarts, DR failover |
-| Release managers | CAB governance, operational impact, backward compatibility, risk framing |
-| Solution architects | J2EE component design, JTA transactions, Oracle Coherence cache, FIX 4.2/4.4 gateway |
-
-```
-Platform Overview · System Architecture · Batch Processing Framework
-High Availability · Multi-Time Zone Processing · Failover & Audit Design
-Database & Configuration · Release Impact Summary · Diagram Library
-```
-
-`J2EE / WebLogic 14c` · `Oracle 19c RAC` · `IBM MQ Series` · `SWIFT Alliance Lite2` · `Bloomberg B-PIPE`
-`NAV batch processing` · `Oracle Coherence` · `FIX 4.2/4.4` · `Mermaid diagrams` · `MSTP`
+`J2EE / WebLogic 14c` · `Oracle 19c RAC` · `IBM MQ Series` · `SWIFT Alliance Lite2` · `Bloomberg B-PIPE` · `NAV batch processing` · `MSTP`
 
 ---
 
 ### 🏛️ Asset Atrium Compliance Framework
 
-> *Investment compliance documentation for an enterprise buy-side platform — pre-trade checking, post-trade monitoring, investment mandate management, exposure limits, regulatory reporting, breach governance, and audit trails. Follows Microsoft Style Guide (MSTP) throughout.*
-
 [![Live Site](https://img.shields.io/badge/Live%20Site-sulagnasasmal.github.io-059669?style=flat-square&logo=githubpages&logoColor=white)](https://sulagnasasmal.github.io/compliance-regulatory-hub/)
 [![GitHub Repo](https://img.shields.io/badge/GitHub-compliance--regulatory--hub-181717?style=flat-square&logo=github)](https://github.com/SulagnaSasmal/compliance-regulatory-hub)
 
-A structured compliance documentation set for **Asset Atrium Manager** — covering the full investment compliance lifecycle. Demonstrates buy-side domain expertise across investment mandate modeling, UCITS/AIFMD/MiFID II regulatory frameworks, breach management workflows, and compliance audit architecture. Fully MSTP-compliant writing throughout.
+Investment compliance documentation covering the full lifecycle — pre-trade checking, post-trade monitoring, mandate management, exposure limits, regulatory reporting, breach governance, and audit trails.
 
-| Audience | What they find here |
-|---|---|
-| Portfolio managers | Pre-trade compliance (hard/soft breaches, override workflow), block order compliance |
-| Compliance officers | Post-trade monitoring, breach lifecycle, escalation matrix, regulatory notification rules |
-| Fund administrators | UCITS 5/10/40, AIFMD Annex IV, Form PF, MiFID II RTS 25, exposure & concentration limits |
-| Operations / Audit | Oracle compliance audit schema, retention policy, Splunk integration, examination readiness |
-
-```
-Overview & Framework · Pre-Trade Compliance · Post-Trade Monitoring
-Investment Mandates · Exposure & Concentration · Regulatory Reporting
-Breach Management · Audit Trail & Logging
-```
-
-`UCITS (5/10/40)` · `AIFMD Annex IV` · `MiFID II / RTS 25` · `Form PF` · `Solvency II` · `EMIR` · `CPO-PQR`
-`Pre-trade / Post-trade compliance` · `Breach lifecycle` · `Oracle audit schema` · `MSTP`
+`UCITS (5/10/40)` · `AIFMD Annex IV` · `MiFID II / RTS 25` · `Form PF` · `Solvency II` · `EMIR` · `CPO-PQR` · `MSTP`
 
 ---
 
@@ -1383,66 +428,35 @@ Beyond documentation, I build automation tools that solve real workflow problems
 
 ### 🤖 DocCraft AI — Intelligent Documentation Generator
 
-> *A full-stack AI application that converts raw content into polished, MSTP-compliant documentation — with auto-compliance checking, one-click fixes, and context-aware generation.*
-
 [![Live Demo](https://img.shields.io/badge/Live%20Demo-doccraft--ten.vercel.app-4c6ef5?style=flat-square&logo=vercel&logoColor=white)](https://doccraft-ten.vercel.app/)
 [![GitHub Repo](https://img.shields.io/badge/GitHub-Doccraft-181717?style=flat-square&logo=github)](https://github.com/SulagnaSasmal/Doccraft)
 [![Next.js](https://img.shields.io/badge/Next.js_14-App_Router-000000?style=flat-square&logo=next.js&logoColor=white)](https://github.com/SulagnaSasmal/Doccraft)
 [![OpenAI](https://img.shields.io/badge/OpenAI-GPT--4o-412991?style=flat-square&logo=openai&logoColor=white)](https://github.com/SulagnaSasmal/Doccraft)
 
-Feed DocCraft raw content — meeting notes, specs, screenshots, anything — and it produces publication-ready documentation. It thinks like a senior technical writer: analyzing gaps, asking clarifying questions, then generating structured output aligned to your existing style.
-
-```
-Upload raw content + context docs (style guide, glossary, OpenAPI spec)
-  └─► AI gap analysis → clarifying Q&A loop
-        └─► GPT-4o generates structured documentation
-              └─► MSTP compliance check runs automatically
-                    └─► One-click Fix per issue (instant replace or AI rewrite)
-                          └─► Export: HTML · Markdown · PDF
-```
-
-| Feature | What it does |
-|---|---|
-| **Context Layer** | Upload previous docs, glossaries, style guides, or OpenAPI specs — AI writes consistently with your existing content |
-| **MSTP Compliance Mode** | Auto-runs after generation — checks forbidden words, passive voice, Title Case headings, non-imperative steps |
-| **One-click Fix** | Instant string replace for terminology; AI-assisted rewrite for voice/structure issues |
-| **Inline AI editing** | Select any text → Simplify, Expand, Add Example, Make Concise |
+Feed DocCraft raw content — meeting notes, specs, screenshots, anything — and it produces publication-ready documentation. MSTP compliance check runs automatically after generation, with one-click fixes per issue and multi-format export (HTML · Markdown · PDF).
 
 `Next.js 14` · `TypeScript` · `Tailwind CSS` · `OpenAI GPT-4o / GPT-4o-mini` · `React Markdown` · `Vercel`
 
 ---
 
-### � AI & Automation Tools Portal
-
-> *Central landing page for all AI-powered and automation tools — browse, explore, and link to DocCraft AI, SpecFlow, DocQuery, DocPulse, and the PPT→MP4 pipeline.*
+### 🤖 AI & Automation Tools Portal
 
 [![Live Site](https://img.shields.io/badge/Live%20Site-sulagnasasmal.github.io-4F46E5?style=flat-square&logo=githubpages&logoColor=white)](https://sulagnasasmal.github.io/ai-doc-tools/)
 [![GitHub Repo](https://img.shields.io/badge/GitHub-ai--doc--tools-181717?style=flat-square&logo=github)](https://github.com/SulagnaSasmal/ai-doc-tools)
 
-A single-page portal that surfaces all five AI and automation tools in one place — each with a live link, tech stack, and description. Clean navigation, consistent branding with the main portfolio site, and direct links to every tool's GitHub repo and live deployment.
+Central landing page for all five AI and automation tools with live links, tech stack descriptions, and GitHub repos.
 
 `HTML` · `GitHub Pages` · `Amber + Indigo + Teal theme` · `Responsive design` · `No frameworks`
 
 ---
 
-### �🎬 PPT → MP4 Documentation Automation
-
-> *An end-to-end pipeline that converts PowerPoint presentations into narrated MP4 videos — no screen recording, no manual voiceover.*
+### 🎬 PPT → MP4 Documentation Automation
 
 [![GitHub Repo](https://img.shields.io/badge/GitHub-ppt--to--mp4--doc--automation-181717?style=flat-square&logo=github)](https://github.com/SulagnaSasmal/ppt-to-mp4-doc-automation)
 [![Python](https://img.shields.io/badge/Python-FastAPI-3776AB?style=flat-square&logo=python&logoColor=white)](https://github.com/SulagnaSasmal/ppt-to-mp4-doc-automation)
 [![Azure TTS](https://img.shields.io/badge/Azure-Text--to--Speech-0078D4?style=flat-square&logo=microsoft-azure&logoColor=white)](https://github.com/SulagnaSasmal/ppt-to-mp4-doc-automation)
 
-Fully automated pipeline: upload a `.pptx` → get back a narrated `.mp4`. No manual recording, no screen capture.
-
-```
-PowerPoint file
-  └─► Extract slide notes (python-pptx)
-        └─► Generate AI narration (Azure TTS — Jenny Neural)
-              └─► Export animated video (PowerPoint COM)
-                    └─► Mux audio + video (FFmpeg)
-                          └─► Download final.mp4
-```
+Upload a `.pptx` → get back a narrated `.mp4`. No manual recording, no screen capture. Uses Python, FastAPI, Azure TTS (Jenny Neural), PowerPoint COM, and FFmpeg.
 
 `Python` · `FastAPI` · `Azure Text-to-Speech` · `PowerPoint COM` · `FFmpeg` · `pywin32`
 
@@ -1450,22 +464,10 @@ PowerPoint file
 
 ### 🔌 SpecFlow — OpenAPI Developer Portal Generator
 
-> *A Next.js application that transforms any OpenAPI 3.x specification into a fully interactive, Stripe-quality developer portal — with a live Try-It Console, authentication panel, and webhooks explorer.*
-
 [![Live Site](https://img.shields.io/badge/Live%20Site-sulagnasasmal.github.io-6366f1?style=flat-square&logo=githubpages&logoColor=white)](https://sulagnasasmal.github.io/specflow/)
 [![GitHub Repo](https://img.shields.io/badge/GitHub-specflow-181717?style=flat-square&logo=github)](https://github.com/SulagnaSasmal/specflow)
-[![Next.js](https://img.shields.io/badge/Next.js_14-App_Router-000000?style=flat-square&logo=next.js&logoColor=white)](https://github.com/SulagnaSasmal/specflow)
-[![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white)](https://github.com/SulagnaSasmal/specflow)
 
-Upload or paste any OpenAPI 3.x spec (YAML/JSON) and instantly get a fully rendered developer portal. Features grouped endpoint navigation, request/response schema trees with expand/collapse, an interactive Try-It Console for live API calls, authentication panel (API Key, Bearer, OAuth2, HTTP Basic), server selector, webhook payload explorer, and a search bar.
-
-```
-OpenAPI spec (YAML/JSON)
-  └─► Parse & validate (swagger-parser)
-        └─► Render grouped endpoints with schema trees
-              └─► Try-It Console with live API execution
-                    └─► Auth panel + Server selector + Webhooks
-```
+Upload or paste any OpenAPI 3.x spec (YAML/JSON) → instantly rendered developer portal. Features grouped endpoint navigation, schema trees, interactive Try-It Console, auth panel (API Key, Bearer, OAuth2), server selector, and webhook explorer.
 
 `Next.js 14` · `TypeScript` · `Tailwind CSS` · `swagger-parser` · `Monaco Editor` · `Interactive API Console`
 
@@ -1473,28 +475,10 @@ OpenAPI spec (YAML/JSON)
 
 ### 💬 DocQuery — RAG Documentation Chatbot
 
-> *A RAG-powered chatbot that lets users ask natural-language questions against documentation — with source citations, confidence scoring, and automatic content gap detection.*
-
 [![Live Site](https://img.shields.io/badge/Live%20Site-sulagnasasmal.github.io-10b981?style=flat-square&logo=githubpages&logoColor=white)](https://sulagnasasmal.github.io/docquery/)
 [![GitHub Repo](https://img.shields.io/badge/GitHub-docquery-181717?style=flat-square&logo=github)](https://github.com/SulagnaSasmal/docquery)
-[![Python](https://img.shields.io/badge/Python-FastAPI-3776AB?style=flat-square&logo=python&logoColor=white)](https://github.com/SulagnaSasmal/docquery)
-[![OpenAI](https://img.shields.io/badge/OpenAI-Embeddings-412991?style=flat-square&logo=openai&logoColor=white)](https://github.com/SulagnaSasmal/docquery)
 
-A complete RAG pipeline: crawl documentation sites, split content using section-aware chunking (respects heading hierarchy, never splits code blocks), embed with OpenAI text-embedding-3-small, store in ChromaDB, and answer questions with GPT-4o-mini citing exact sources. The Next.js chat frontend features message bubbles, source citation cards, confidence badges (green/amber/red), collection selector, and dark/light mode. Low-confidence answers are automatically logged as content gaps.
-
-```
-Doc sites → Crawl → Section-aware chunking → Embed (OpenAI)
-  └─► ChromaDB vector store
-        └─► Query → Retrieve → GPT-4o-mini → Answer + Citations
-              └─► Low confidence? → Auto-log content gap
-```
-
-| Component | What it does |
-|---|---|
-| **Ingestion** | Async web crawler + section-aware chunker + OpenAI embeddings → ChromaDB |
-| **Query Pipeline** | Vector retrieval + confidence scoring (HIGH/MEDIUM/LOW) + conversation memory |
-| **Chat Frontend** | Next.js UI with source cards, confidence badges, collection selector, dark mode |
-| **Gap Tracker** | Auto-detects low-confidence answers and surfaces documentation gaps |
+RAG pipeline: crawl documentation sites, embed with OpenAI, store in ChromaDB, answer natural-language questions with GPT-4o-mini citing exact sources. Low-confidence answers are automatically logged as content gaps.
 
 `Python` · `FastAPI` · `LangChain` · `ChromaDB` · `OpenAI` · `Next.js 14` · `TypeScript` · `Tailwind CSS`
 
@@ -1502,28 +486,10 @@ Doc sites → Crawl → Section-aware chunking → Embed (OpenAI)
 
 ### 📊 DocPulse — Documentation Analytics Dashboard
 
-> *A lightweight analytics platform for documentation sites — tracks page views, reading time, search queries, content freshness, and feature coverage with a full Next.js dashboard.*
-
 [![Live Site](https://img.shields.io/badge/Live%20Site-sulagnasasmal.github.io-f59e0b?style=flat-square&logo=githubpages&logoColor=white)](https://sulagnasasmal.github.io/docpulse/)
 [![GitHub Repo](https://img.shields.io/badge/GitHub-docpulse-181717?style=flat-square&logo=github)](https://github.com/SulagnaSasmal/docpulse)
-[![Python](https://img.shields.io/badge/Python-FastAPI-3776AB?style=flat-square&logo=python&logoColor=white)](https://github.com/SulagnaSasmal/docpulse)
-[![Next.js](https://img.shields.io/badge/Next.js_14-Dashboard-000000?style=flat-square&logo=next.js&logoColor=white)](https://github.com/SulagnaSasmal/docpulse)
 
-A complete documentation analytics platform with two parts: a lightweight JavaScript tracker (<5KB, no cookies, anonymous sessions, batched events) that embeds in any doc site, and a FastAPI + SQLite backend with a Next.js dashboard. Dashboard includes an overview with metric cards and time-series charts, search analytics (top queries, failed searches), GitHub-based content freshness scoring, feature-to-documentation coverage matrix, feedback collection, and weekly report generation.
-
-```
-Doc site → tracker.js (pageview, scroll, search, feedback)
-  └─► Batch events → FastAPI → SQLite
-        └─► Next.js dashboard: Overview · Search · Freshness · Coverage · Reports
-```
-
-| Dashboard Page | What it shows |
-|---|---|
-| **Overview** | Page views, unique visitors, reading time, top pages, time-series charts |
-| **Search Analytics** | Top queries, failed searches, content gaps from search |
-| **Freshness** | GitHub-based staleness scoring (fresh/aging/stale/abandoned) |
-| **Coverage Matrix** | Feature × endpoint × doc page mapping with status badges |
-| **Reports** | One-click weekly performance report (Markdown) |
+Lightweight analytics platform for documentation sites — tracks page views, reading time, search queries, content freshness (GitHub-based staleness scoring), and feature-to-documentation coverage matrix.
 
 `JavaScript` · `Python` · `FastAPI` · `SQLite` · `Next.js 14` · `Recharts` · `Tailwind CSS`
 
@@ -1557,4 +523,3 @@ If you're looking for a Technical Writer who thinks like an engineer and writes 
 <div align="center">
   <sub>Built with Docs-as-Code principles · Maintained in Git · © 2026 Sulagna Sasmal</sub>
 </div>
-
