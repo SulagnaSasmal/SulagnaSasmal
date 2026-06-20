@@ -121,7 +121,7 @@
 
 <br />
 
-<img src="https://github-profile-trophy.vercel.app/?username=SulagnaSasmal&no-frame=true&row=1&column=6&theme=flat&no-bg" alt="GitHub Trophies" />
+<img src="https://github-profile-trophy.vercel.app/?username=SulagnaSasmal&no-frame=true&theme=flat" alt="GitHub Trophies" />
 
 <br />
 
