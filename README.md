@@ -91,7 +91,6 @@
 | **DocQuery** | RAG-powered documentation chatbot | [View →](https://sulagnasasmal.github.io/docquery/) |
 | **DocPulse** | Documentation health & analytics dashboard | [View →](https://sulagnasasmal.github.io/docpulse/) |
 | **PPT → MP4 Automation** | Python · Azure TTS · FFmpeg narrated video pipeline | [GitHub →](https://github.com/SulagnaSasmal/ppt-to-mp4-doc-automation) |
-| **Content Pipeline Health Checker** | Interactive diagnostic tool for docs delivery pipelines | [Try it →](https://sulagnasasmal.github.io/content-pipeline-health-checker.html) |
 | **AI & Automation Tools Portal** | Hub for all AI-powered documentation tools | [View →](https://sulagnasasmal.github.io/ai-doc-tools/) |
 
 ### 📚 Documentation Platforms & Learning
@@ -121,7 +120,7 @@
 
 <br />
 
-<img src="https://github-profile-trophy.vercel.app/?username=SulagnaSasmal&no-frame=true&theme=flat" alt="GitHub Trophies" />
+<img src="https://github-readme-activity-graph.vercel.app/graph?username=SulagnaSasmal&bg_color=f9f7f4&color=4a4540&line=d97706&point=d97706&area=true&area_color=d97706&hide_border=true&title_color=1c1814" alt="Contribution Activity Graph" width="100%" />
 
 <br />
 
