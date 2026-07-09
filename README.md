@@ -146,6 +146,7 @@
 
 
 
+
 <!-- GITHUB_STATS_START -->
 
 ## GitHub Statistics
@@ -155,10 +156,10 @@
 <td width="50%">
 
 ### Profile Stats
-- **Total Contributions**: 709 (this year)
-- **Followers**: 1
+- **Total Contributions**: 725 (this year)
+- **Followers**: 2
 - **Following**: 4
-- **Public Repositories**: 33
+- **Public Repositories**: 34
 
 </td>
 <td width="50%">
@@ -167,7 +168,7 @@
 - **Total Stars**: 4
 - **Total Forks**: 0
 - **Top Language**: HTML
-- **Active Projects**: 33
+- **Active Projects**: 34
 
 </td>
 </tr>
@@ -193,7 +194,9 @@
 
 
 
+
 ---
+
 
 
 
@@ -282,7 +285,9 @@
 
 
 
+
 ---
+
 
 
 
@@ -306,9 +311,9 @@
 
 ## Most Used Languages
 
-**HTML**: ██████████████░░░░░░ 70%
+**HTML**: ██████████████░░░░░░ 68%
+**TypeScript**: ██░░░░░░░░░░░░░░░░░░ 12%
 **Python**: ██░░░░░░░░░░░░░░░░░░ 9%
-**TypeScript**: ██░░░░░░░░░░░░░░░░░░ 9%
 **CSS**: █░░░░░░░░░░░░░░░░░░░ 6%
 **JavaScript**: █░░░░░░░░░░░░░░░░░░░ 3%
 **MDX**: █░░░░░░░░░░░░░░░░░░░ 3%
@@ -333,7 +338,9 @@
 
 
 
+
 ---
+
 
 
 
@@ -359,7 +366,8 @@
 
 | Repository | Last Update | Recent Commits |
 |-----------|-------------|----------------|
-| [`SulagnaSasmal`](https://github.com/SulagnaSasmal/SulagnaSasmal) | 7/7/2026 | 3 commits |
+| [`video-editor-mvp`](https://github.com/SulagnaSasmal/video-editor-mvp) | 7/8/2026 | 3 commits |
+| [`SulagnaSasmal`](https://github.com/SulagnaSasmal/SulagnaSasmal) | 7/8/2026 | 3 commits |
 | [`sulagnasasmal-site`](https://github.com/SulagnaSasmal/sulagnasasmal-site) | 6/22/2026 | 3 commits |
 | [`prompthub`](https://github.com/SulagnaSasmal/prompthub) | 6/22/2026 | 3 commits |
 | [`my-docs-practice`](https://github.com/SulagnaSasmal/my-docs-practice) | 6/20/2026 | 3 commits |
@@ -368,9 +376,9 @@
 | [`ai-doc-tools`](https://github.com/SulagnaSasmal/ai-doc-tools) | 3/30/2026 | 3 commits |
 | [`doccraft-help-center`](https://github.com/SulagnaSasmal/doccraft-help-center) | 3/28/2026 | 3 commits |
 | [`documentation-ai-agent`](https://github.com/SulagnaSasmal/documentation-ai-agent) | 3/27/2026 | 3 commits |
-| [`doc-portal`](https://github.com/SulagnaSasmal/doc-portal) | 3/20/2026 | 3 commits |
 
 <!-- ACTIVITY_END -->
+
 
 
 
