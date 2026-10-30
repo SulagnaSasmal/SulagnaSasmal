@@ -259,6 +259,7 @@
 
 
 
+
 <!-- GITHUB_STATS_START -->
 
 ## GitHub Statistics
@@ -268,10 +269,10 @@
 <td width="50%">
 
 ### Profile Stats
-- **Total Contributions**: 855 (this year)
+- **Total Contributions**: 857 (this year)
 - **Followers**: 1
 - **Following**: 4
-- **Public Repositories**: 34
+- **Public Repositories**: 35
 
 </td>
 <td width="50%">
@@ -280,7 +281,7 @@
 - **Total Stars**: 4
 - **Total Forks**: 0
 - **Top Language**: HTML
-- **Active Projects**: 34
+- **Active Projects**: 35
 
 </td>
 </tr>
@@ -419,7 +420,9 @@
 
 
 
+
 ---
+
 
 
 
@@ -734,7 +737,9 @@
 
 
 
+
 ---
+
 
 
 
@@ -871,9 +876,9 @@
 
 ## Most Used Languages
 
-**HTML**: ██████████████░░░░░░ 68%
-**TypeScript**: ██░░░░░░░░░░░░░░░░░░ 12%
-**Python**: ██░░░░░░░░░░░░░░░░░░ 9%
+**HTML**: █████████████░░░░░░░ 66%
+**Python**: ██░░░░░░░░░░░░░░░░░░ 11%
+**TypeScript**: ██░░░░░░░░░░░░░░░░░░ 11%
 **CSS**: █░░░░░░░░░░░░░░░░░░░ 6%
 **JavaScript**: █░░░░░░░░░░░░░░░░░░░ 3%
 **MDX**: █░░░░░░░░░░░░░░░░░░░ 3%
@@ -1011,7 +1016,9 @@
 
 
 
+
 ---
+
 
 
 
@@ -1150,7 +1157,8 @@
 
 | Repository | Last Update | Recent Commits |
 |-----------|-------------|----------------|
-| [`SulagnaSasmal`](https://github.com/SulagnaSasmal/SulagnaSasmal) | 10/28/2026 | 3 commits |
+| [`docs-as-interface-skills`](https://github.com/SulagnaSasmal/docs-as-interface-skills) | 10/29/2026 | 1 commits |
+| [`SulagnaSasmal`](https://github.com/SulagnaSasmal/SulagnaSasmal) | 10/29/2026 | 3 commits |
 | [`prompthub`](https://github.com/SulagnaSasmal/prompthub) | 10/24/2026 | 3 commits |
 | [`my-docs-practice`](https://github.com/SulagnaSasmal/my-docs-practice) | 10/24/2026 | 3 commits |
 | [`blog`](https://github.com/SulagnaSasmal/blog) | 10/24/2026 | 3 commits |
@@ -1159,9 +1167,9 @@
 | [`sulagnasasmal-site`](https://github.com/SulagnaSasmal/sulagnasasmal-site) | 10/24/2026 | 3 commits |
 | [`ppt-to-mp4-doc-automation`](https://github.com/SulagnaSasmal/ppt-to-mp4-doc-automation) | 10/24/2026 | 3 commits |
 | [`video-editor`](https://github.com/SulagnaSasmal/video-editor) | 7/9/2026 | 3 commits |
-| [`doccraft-help-center`](https://github.com/SulagnaSasmal/doccraft-help-center) | 3/28/2026 | 3 commits |
 
 <!-- ACTIVITY_END -->
+
 
 
 
